@@ -1,4 +1,12 @@
 {
-  "processed": [],
-  "scheduled_slots": []
+  "processed": [
+    "1RXAEFdoBz4QrSv95nlhINXoLQipBeBWy",
+    "12w5novArIqccEeQs2cPS87VjvW4xvb7I",
+    "1RQgYbOWwYq9YkibCekG1rJqG7S5RYMYk"
+  ],
+  "scheduled_slots": [
+    "2026-05-04T21:00:00-03:00",
+    "2026-05-05T21:00:00-03:00",
+    "2026-05-06T21:00:00-03:00"
+  ]
 }
