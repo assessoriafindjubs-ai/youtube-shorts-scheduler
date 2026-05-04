@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Shorts — Painel de Agendamentos</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f0f;
+    color: #e8e8e8;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(255,0,0,0.3);
+  }
+
+  header svg { width: 36px; height: 36px; fill: white; flex-shrink: 0; }
+
+  header h1 { font-size: 1.4rem; font-weight: 700; color: white; }
+  header p  { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 2px; }
+
+  .last-update {
+    margin-left: auto;
+    text-align: right;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .stat-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .stat-card .number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ff4444;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-card .label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222;
+  }
+
+  /* Video cards */
+  .cards { display: flex; flex-direction: column; gap: 16px; }
+
+  .card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: #ff4444; }
+
+  .card-thumb {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    background: #111;
+    flex-shrink: 0;
+  }
+
+  .card-thumb-placeholder {
+    width: 140px;
+    height: 100px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 2rem;
+  }
+
+  .card-body {
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    overflow: hidden;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f0f0f0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-caption {
+    font-size: 0.82rem;
+    color: #bbb;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-file {
+    font-size: 0.72rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .card-side {
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-left: 1px solid #242424;
+    min-width: 150px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .badge-future {
+    background: rgba(255,200,0,0.12);
+    color: #ffc800;
+    border: 1px solid rgba(255,200,0,0.25);
+  }
+
+  .badge-past {
+    background: rgba(50,205,50,0.12);
+    color: #50cc50;
+    border: 1px solid rgba(50,205,50,0.25);
+  }
+
+  .scheduled-time {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    text-align: right;
+    line-height: 1.3;
+  }
+
+  .scheduled-time span {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .btn-yt {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #ff0000;
+    color: white;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .btn-yt:hover { background: #cc0000; }
+
+  /* Empty state */
+  .empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: #444;
+  }
+
+  .empty svg { width: 64px; height: 64px; fill: #333; margin-bottom: 16px; }
+  .empty h2 { color: #555; font-size: 1.1rem; margin-bottom: 8px; }
+  .empty p  { font-size: 0.85rem; }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 80px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    .card { grid-template-columns: 100px 1fr; }
+    .card-side { display: none; }
+    .card-thumb, .card-thumb-placeholder { width: 100px; height: 80px; }
+    header h1 { font-size: 1.1rem; }
+    .last-update { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+  <div>
+    <h1>YouTube Shorts — Agendamentos</h1>
+    <p>Painel automático de controle</p>
+  </div>
+  <div class="last-update" id="last-update">Carregando...</div>
+</header>
+
+<div class="container">
+  <div id="root"><div class="loading">Carregando relatório...</div></div>
+</div>
+
+<script>
+const REPORT_URL = './report.json';
+
+function formatDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
+}
+
+function formatTime(iso) {
+  const d = new Date(iso);
+  return d.toLocaleTimeString('pt-BR', { hour:'2-digit', minute:'2-digit', timeZone:'America/Sao_Paulo' });
+}
+
+function formatDateTime(iso) {
+  const d = new Date(iso);
+  return d.toLocaleString('pt-BR', {
+    day:'2-digit', month:'2-digit', year:'numeric',
+    hour:'2-digit', minute:'2-digit',
+    timeZone:'America/Sao_Paulo'
+  });
+}
+
+function isPast(iso) {
+  return new Date(iso) < new Date();
+}
+
+function buildStats(videos) {
+  const total     = videos.length;
+  const published = videos.filter(v => isPast(v.scheduled_for)).length;
+  const pending   = total - published;
+  const next      = videos.find(v => !isPast(v.scheduled_for));
+
+  return `
+    <div class="stats">
+      <div class="stat-card">
+        <div class="number">${total}</div>
+        <div class="label">Total agendados</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">${published}</div>
+        <div class="label">Publicados</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">${pending}</div>
+        <div class="label">Aguardando</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">${next ? formatTime(next.scheduled_for) : '—'}</div>
+        <div class="label">${next ? 'Próximo em ' + formatDate(next.scheduled_for) : 'Sem próximo'}</div>
+      </div>
+    </div>`;
+}
+
+function buildCard(v) {
+  const past   = isPast(v.scheduled_for);
+  const badge  = past
+    ? `<span class="badge badge-past">✓ Publicado</span>`
+    : `<span class="badge badge-future">⏰ Agendado</span>`;
+
+  const thumb = v.thumbnail
+    ? `<img class="card-thumb" src="${v.thumbnail}" alt="thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+    : '';
+
+  return `
+    <div class="card">
+      ${thumb}
+      <div class="card-thumb-placeholder" style="display:${v.thumbnail ? 'none' : 'flex'}">▶</div>
+      <div class="card-body">
+        <div class="card-title">${v.title} #Shorts</div>
+        <div class="card-caption">${v.caption}</div>
+        <div class="card-file">📁 ${v.drive_file}</div>
+      </div>
+      <div class="card-side">
+        ${badge}
+        <div class="scheduled-time">
+          ${formatDate(v.scheduled_for)}
+          <span>${formatTime(v.scheduled_for)} (Brasília)</span>
+        </div>
+        <a class="btn-yt" href="${v.url}" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          Ver no YouTube
+        </a>
+      </div>
+    </div>`;
+}
+
+async function render() {
+  try {
+    const res    = await fetch(REPORT_URL + '?t=' + Date.now());
+    const data   = await res.json();
+    const videos = data.videos || [];
+
+    document.getElementById('last-update').innerHTML =
+      `Última atualização<br><strong>${data.last_updated ? formatDateTime(data.last_updated) : '—'}</strong>`;
+
+    if (videos.length === 0) {
+      document.getElementById('root').innerHTML = `
+        <div class="empty">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <h2>Nenhum vídeo agendado ainda</h2>
+          <p>Coloque um vídeo na pasta <strong>Shorts</strong> do Google Drive e aguarde!</p>
+        </div>`;
+      return;
+    }
+
+    document.getElementById('root').innerHTML =
+      buildStats(videos) +
+      `<div class="section-title">Vídeos agendados</div>` +
+      `<div class="cards">${videos.map(buildCard).join('')}</div>`;
+
+  } catch (e) {
+    document.getElementById('root').innerHTML = `
+      <div class="empty">
+        <h2>Erro ao carregar relatório</h2>
+        <p>${e.message}</p>
+      </div>`;
+  }
+}
+
+render();
+setInterval(render, 60000); // atualiza a cada minuto
+</script>
+</body>
+</html>

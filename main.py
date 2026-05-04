@@ -209,34 +209,64 @@ def upload_short(yt, video_path: str, title: str, description: str,
     return response["id"]
 
 
+# ── Relatório ────────────────────────────────────────────────────────────────
+REPORT_FILE = "report.json"
+
+def load_report() -> dict:
+    if Path(REPORT_FILE).exists():
+        with open(REPORT_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    return {"videos": []}
+
+def save_report(report: dict):
+    report["last_updated"] = datetime.now(BRAZIL_TZ).isoformat()
+    with open(REPORT_FILE, "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
+
+def add_to_report(report: dict, video_name: str, title: str, caption: str,
+                  slot: datetime, video_id: str):
+    report["videos"].insert(0, {
+        "id":            video_id,
+        "drive_file":    video_name,
+        "title":         title,
+        "caption":       caption,
+        "scheduled_for": slot.isoformat(),
+        "scheduled_fmt": slot.strftime("%d/%m/%Y às %Hh"),
+        "thumbnail":     f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
+        "url":           f"https://youtube.com/shorts/{video_id}",
+        "created_at":    datetime.now(BRAZIL_TZ).isoformat(),
+    })
+
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 def main():
-    state = load_state()
+    state  = load_state()
+    report = load_report()
     groq_client = Groq(api_key=GROQ_API_KEY)
     drive = drive_service()
-    yt = youtube_service()
+    yt    = youtube_service()
 
     new_videos = list_new_videos(drive, state["processed"])
 
     if not new_videos:
-        print("Nenhum vídeo novo na pasta do Drive.")
+        print("Nenhum video novo na pasta do Drive.")
         return
 
-    print(f"{len(new_videos)} vídeo(s) novo(s) encontrado(s).\n")
+    print(f"{len(new_videos)} video(s) novo(s) encontrado(s).\n")
 
-    print("Verificando slots já ocupados no YouTube...")
+    print("Verificando slots ja ocupados no YouTube...")
     yt_booked = get_youtube_booked_slots(yt)
     if yt_booked:
-        print(f"  Slots ocupados no YouTube: {sorted(yt_booked)}")
+        print(f"  Slots ocupados: {sorted(yt_booked)}")
 
     for video in new_videos:
         slot = next_available_slot(state, yt_booked)
         if not slot:
-            print("Sem slots disponíveis nos próximos 60 dias.")
+            print("Sem slots disponiveis nos proximos 60 dias.")
             break
 
-        print(f"▶ {video['name']}")
-        print(f"  Agendado para: {slot.strftime('%d/%m/%Y às %Hh%M')} (Brasília)")
+        print(f"> {video['name']}")
+        print(f"  Agendado para: {slot.strftime('%d/%m/%Y as %Hh')} (Brasilia)")
 
         ext = Path(video["name"]).suffix or ".mp4"
         with tempfile.NamedTemporaryFile(suffix=ext, delete=False) as tmp:
@@ -255,14 +285,18 @@ def main():
             print("  Enviando para o YouTube...")
             video_id = upload_short(yt, tmp_path, title, caption, slot)
 
-            print(f"  ✓ Publicado! youtube.com/shorts/{video_id}\n")
+            print(f"  OK! youtube.com/shorts/{video_id}\n")
 
             state["processed"].append(video["id"])
             state["scheduled_slots"].append(slot.isoformat())
+            yt_booked.add(slot.strftime("%Y-%m-%dT%H:00:00"))
             save_state(state)
 
+            add_to_report(report, video["name"], title, caption, slot, video_id)
+            save_report(report)
+
         except Exception as exc:
-            print(f"  ✗ Erro: {exc}")
+            print(f"  Erro: {exc}")
             raise
         finally:
             Path(tmp_path).unlink(missing_ok=True)
