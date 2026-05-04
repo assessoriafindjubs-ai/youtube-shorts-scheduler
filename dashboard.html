@@ -28,13 +28,124 @@
   header h1 { font-size: 1.4rem; font-weight: 700; color: white; }
   header p  { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 2px; }
 
-  .last-update {
+  .header-right {
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .last-update {
     text-align: right;
     font-size: 0.78rem;
     color: rgba(255,255,255,0.7);
     line-height: 1.5;
   }
+
+  /* Botão disparar */
+  .btn-run {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+  }
+  .btn-run:hover  { background: rgba(255,255,255,0.25); }
+  .btn-run:active { transform: scale(0.97); }
+  .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-run svg { width: 14px; height: 14px; fill: white; flex-shrink: 0; }
+
+  /* Toast */
+  #toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #222;
+    color: #e8e8e8;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    white-space: nowrap;
+    border-left: 4px solid #ff4444;
+  }
+  #toast.show { transform: translateX(-50%) translateY(0); }
+  #toast.success { border-left-color: #50cc50; }
+  #toast.error   { border-left-color: #ff4444; }
+
+  /* Modal token */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 460px;
+    margin: 20px;
+  }
+  .modal h2 { font-size: 1.1rem; margin-bottom: 8px; }
+  .modal p  { font-size: 0.83rem; color: #aaa; line-height: 1.5; margin-bottom: 20px; }
+  .modal a  { color: #ff6666; }
+
+  .modal input {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #e8e8e8;
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    outline: none;
+  }
+  .modal input:focus { border-color: #ff4444; }
+
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+  .btn-cancel {
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    font-size: 0.82rem;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .btn-save {
+    background: #ff0000;
+    border: none;
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .btn-save:hover { background: #cc0000; }
 
   .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
 
@@ -241,6 +352,7 @@
     .card-thumb, .card-thumb-placeholder { width: 100px; height: 80px; }
     header h1 { font-size: 1.1rem; }
     .last-update { display: none; }
+    .btn-run span { display: none; }
   }
 </style>
 </head>
@@ -252,16 +364,112 @@
     <h1>YouTube Shorts — Agendamentos</h1>
     <p>Painel automático de controle</p>
   </div>
-  <div class="last-update" id="last-update">Carregando...</div>
+  <div class="header-right">
+    <div class="last-update" id="last-update">Carregando...</div>
+    <button class="btn-run" id="btn-run" onclick="handleRun()">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <span>Disparar agora</span>
+    </button>
+  </div>
 </header>
+
+<!-- Modal de token -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>Token do GitHub necessário</h2>
+    <p>
+      Para disparar o workflow você precisa de um <strong>Personal Access Token</strong> com permissão <code>workflow</code>.<br><br>
+      Crie em: <a href="https://github.com/settings/tokens/new?scopes=workflow&description=shorts-dashboard" target="_blank">github.com/settings/tokens</a>
+      → marque <strong>workflow</strong> → Generate token.<br><br>
+      O token fica salvo apenas no seu navegador (localStorage).
+    </p>
+    <input type="password" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn-save" onclick="saveToken()">Salvar e disparar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
 
 <div class="container">
   <div id="root"><div class="loading">Carregando relatório...</div></div>
 </div>
 
 <script>
-const REPORT_URL = 'https://raw.githubusercontent.com/assessoriafindjubs-ai/youtube-shorts-scheduler/main/report.json';
+const REPORT_URL   = 'https://raw.githubusercontent.com/assessoriafindjubs-ai/youtube-shorts-scheduler/main/report.json';
+const REPO         = 'assessoriafindjubs-ai/youtube-shorts-scheduler';
+const WORKFLOW     = 'scheduler.yml';
+const TOKEN_KEY    = 'gh_workflow_token';
 
+// ── Toast ────────────────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg, type = 'success') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = `show ${type}`;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = ''; }, 4000);
+}
+
+// ── Modal ────────────────────────────────────────────────────────────────────
+function openModal()  { document.getElementById('modal').classList.add('open'); }
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+function saveToken() {
+  const val = document.getElementById('token-input').value.trim();
+  if (!val) return;
+  localStorage.setItem(TOKEN_KEY, val);
+  closeModal();
+  triggerWorkflow(val);
+}
+
+// ── Disparar workflow ─────────────────────────────────────────────────────────
+async function handleRun() {
+  const token = localStorage.getItem(TOKEN_KEY);
+  if (!token) { openModal(); return; }
+  await triggerWorkflow(token);
+}
+
+async function triggerWorkflow(token) {
+  const btn = document.getElementById('btn-run');
+  btn.disabled = true;
+  btn.querySelector('span').textContent = 'Disparando...';
+
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+
+    if (res.status === 204) {
+      showToast('Workflow disparado! Aguarde ~1 minuto e atualize.', 'success');
+    } else if (res.status === 401) {
+      localStorage.removeItem(TOKEN_KEY);
+      showToast('Token inválido. Clique em "Disparar" para inserir um novo.', 'error');
+    } else {
+      const body = await res.json().catch(() => ({}));
+      showToast(`Erro ${res.status}: ${body.message || 'tente novamente'}`, 'error');
+    }
+  } catch (e) {
+    showToast('Falha na requisição: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.querySelector('span').textContent = 'Disparar agora';
+  }
+}
+
+// ── Formatação de datas ───────────────────────────────────────────────────────
 function formatDate(iso) {
   const d = new Date(iso);
   return d.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
@@ -285,6 +493,7 @@ function isPast(iso) {
   return new Date(iso) < new Date();
 }
 
+// ── Renderização ──────────────────────────────────────────────────────────────
 function buildStats(videos) {
   const total     = videos.length;
   const published = videos.filter(v => isPast(v.scheduled_for)).length;
@@ -313,8 +522,8 @@ function buildStats(videos) {
 }
 
 function buildCard(v) {
-  const past   = isPast(v.scheduled_for);
-  const badge  = past
+  const past  = isPast(v.scheduled_for);
+  const badge = past
     ? `<span class="badge badge-past">✓ Publicado</span>`
     : `<span class="badge badge-future">⏰ Agendado</span>`;
 
@@ -327,7 +536,7 @@ function buildCard(v) {
       ${thumb}
       <div class="card-thumb-placeholder" style="display:${v.thumbnail ? 'none' : 'flex'}">▶</div>
       <div class="card-body">
-        <div class="card-title">${v.title} #Shorts</div>
+        <div class="card-title">${v.title}</div>
         <div class="card-caption">${v.caption}</div>
         <div class="card-file">📁 ${v.drive_file}</div>
       </div>
@@ -379,7 +588,7 @@ async function render() {
 }
 
 render();
-setInterval(render, 60000); // atualiza a cada minuto
+setInterval(render, 60000);
 </script>
 </body>
 </html>
