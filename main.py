@@ -19,7 +19,8 @@ DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
 GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
 
 DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive.readonly"]
-YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+                  "https://www.googleapis.com/auth/youtube.readonly"]
 
 VIDEO_MIMETYPES = ("video/mp4", "video/quicktime", "video/x-msvideo",
                    "video/webm", "video/mpeg")
@@ -38,17 +39,56 @@ def save_state(state: dict):
 
 
 # ── Agendamento ─────────────────────────────────────────────────────────────
-def next_available_slot(state: dict) -> datetime | None:
+def get_youtube_booked_slots(yt) -> set[str]:
+    """Consulta o YouTube e retorna os horários já agendados (em ISO, fuso Brasília)."""
+    booked = set()
+    try:
+        # Lista os vídeos mais recentes do canal (custa 100 + 1/vídeo de quota)
+        search_resp = yt.search().list(
+            part="id",
+            forMine=True,
+            type="video",
+            maxResults=50,
+            order="date"
+        ).execute()
+
+        video_ids = [item["id"]["videoId"] for item in search_resp.get("items", [])]
+        if not video_ids:
+            return booked
+
+        videos_resp = yt.videos().list(
+            part="status",
+            id=",".join(video_ids)
+        ).execute()
+
+        for video in videos_resp.get("items", []):
+            publish_at = video.get("status", {}).get("publishAt")
+            if publish_at:
+                dt_utc = datetime.fromisoformat(publish_at.replace("Z", "+00:00"))
+                dt_br  = dt_utc.astimezone(BRAZIL_TZ)
+                # guarda só data+hora (ignora minutos/segundos)
+                booked.add(dt_br.strftime("%Y-%m-%dT%H:00:00"))
+    except Exception as e:
+        print(f"  Aviso: nao foi possivel verificar slots do YouTube: {e}")
+    return booked
+
+
+def next_available_slot(state: dict, yt_booked: set[str]) -> datetime | None:
     now = datetime.now(BRAZIL_TZ)
-    booked = set(state.get("scheduled_slots", []))
+    # slots já registrados pelo bot
+    state_booked = set(state.get("scheduled_slots", []))
 
     for day_offset in range(60):
         date = now.date() + timedelta(days=day_offset)
         for hour in SCHEDULE_HOURS:
             slot = datetime(date.year, date.month, date.day,
                             hour, 0, 0, tzinfo=BRAZIL_TZ)
-            # precisa de pelo menos 15 min de margem para o YouTube processar
-            if slot > now + timedelta(minutes=15) and slot.isoformat() not in booked:
+            slot_key    = slot.isoformat()                    # para state.json
+            slot_hkey   = slot.strftime("%Y-%m-%dT%H:00:00") # para comparar com YouTube
+
+            if (slot > now + timedelta(minutes=15)
+                    and slot_key  not in state_booked
+                    and slot_hkey not in yt_booked):
                 return slot
     return None
 
@@ -184,8 +224,13 @@ def main():
 
     print(f"{len(new_videos)} vídeo(s) novo(s) encontrado(s).\n")
 
+    print("Verificando slots já ocupados no YouTube...")
+    yt_booked = get_youtube_booked_slots(yt)
+    if yt_booked:
+        print(f"  Slots ocupados no YouTube: {sorted(yt_booked)}")
+
     for video in new_videos:
-        slot = next_available_slot(state)
+        slot = next_available_slot(state, yt_booked)
         if not slot:
             print("Sem slots disponíveis nos próximos 60 dias.")
             break
