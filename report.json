@@ -1,6 +1,17 @@
 {
-  "last_updated": "2026-05-04T06:44:17.402419-03:00",
+  "last_updated": "2026-05-04T18:45:19.202055-03:00",
   "videos": [
+    {
+      "id": "6HHV2XE6gLg",
+      "drive_file": "copy_64FB8EB5-FDCC-4CE0-A5D9-023A7AD330A2.mov",
+      "title": "Até mais, pessoal! #Tchau #AteMais #Despedida",
+      "caption": "Até mais, pessoal! #Tchau #AteMais #Despedida",
+      "scheduled_for": "2026-05-07T21:00:00-03:00",
+      "scheduled_fmt": "07/05/2026 às 21h",
+      "thumbnail": "https://img.youtube.com/vi/6HHV2XE6gLg/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/6HHV2XE6gLg",
+      "created_at": "2026-05-04T18:45:19.202046-03:00"
+    },
     {
       "id": "zzFuYywqArA",
       "drive_file": "ca9fed5180b9466ca9425eed65658536.mp4",
