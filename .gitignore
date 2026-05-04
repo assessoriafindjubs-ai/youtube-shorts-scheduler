@@ -1,0 +1,16 @@
+# Credenciais — NUNCA subir para o repositório
+client_secret.json
+drive_token.json
+youtube_token.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Temporários
+*.tmp
+*.log

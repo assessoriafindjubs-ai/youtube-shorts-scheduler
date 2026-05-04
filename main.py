@@ -1,0 +1,227 @@
+import os
+import json
+import tempfile
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+from pathlib import Path
+
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
+from groq import Groq
+
+# ── Configuração ────────────────────────────────────────────────────────────
+BRAZIL_TZ       = ZoneInfo("America/Sao_Paulo")
+SCHEDULE_HOURS  = [18, 21]          # horários fixos de publicação
+STATE_FILE      = "state.json"
+DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
+GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
+
+DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive.readonly"]
+YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+
+VIDEO_MIMETYPES = ("video/mp4", "video/quicktime", "video/x-msvideo",
+                   "video/webm", "video/mpeg")
+
+# ── Estado ──────────────────────────────────────────────────────────────────
+def load_state() -> dict:
+    if Path(STATE_FILE).exists():
+        with open(STATE_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    return {"processed": [], "scheduled_slots": []}
+
+
+def save_state(state: dict):
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2, ensure_ascii=False)
+
+
+# ── Agendamento ─────────────────────────────────────────────────────────────
+def next_available_slot(state: dict) -> datetime | None:
+    now = datetime.now(BRAZIL_TZ)
+    booked = set(state.get("scheduled_slots", []))
+
+    for day_offset in range(60):
+        date = now.date() + timedelta(days=day_offset)
+        for hour in SCHEDULE_HOURS:
+            slot = datetime(date.year, date.month, date.day,
+                            hour, 0, 0, tzinfo=BRAZIL_TZ)
+            # precisa de pelo menos 15 min de margem para o YouTube processar
+            if slot > now + timedelta(minutes=15) and slot.isoformat() not in booked:
+                return slot
+    return None
+
+
+# ── Google APIs ─────────────────────────────────────────────────────────────
+def _creds_from_file(token_file: str, scopes: list[str]) -> Credentials:
+    creds = Credentials.from_authorized_user_file(token_file, scopes)
+    if creds.expired and creds.refresh_token:
+        creds.refresh(Request())
+        with open(token_file, "w") as f:
+            f.write(creds.to_json())
+    return creds
+
+
+def drive_service():
+    return build("drive", "v3",
+                 credentials=_creds_from_file("drive_token.json", DRIVE_SCOPES),
+                 cache_discovery=False)
+
+
+def youtube_service():
+    return build("youtube", "v3",
+                 credentials=_creds_from_file("youtube_token.json", YOUTUBE_SCOPES),
+                 cache_discovery=False)
+
+
+# ── Drive ────────────────────────────────────────────────────────────────────
+def list_new_videos(drive, processed_ids: list) -> list[dict]:
+    mime_filter = " or ".join(f"mimeType='{m}'" for m in VIDEO_MIMETYPES)
+    query = f"'{DRIVE_FOLDER_ID}' in parents and ({mime_filter}) and trashed=false"
+
+    result = drive.files().list(
+        q=query,
+        fields="files(id, name, mimeType, createdTime)",
+        orderBy="createdTime"
+    ).execute()
+
+    return [f for f in result.get("files", []) if f["id"] not in processed_ids]
+
+
+def download_video(drive, file_id: str, dest: str):
+    request = drive.files().get_media(fileId=file_id)
+    with open(dest, "wb") as fh:
+        dl = MediaIoBaseDownload(fh, request, chunksize=50 * 1024 * 1024)
+        done = False
+        while not done:
+            status, done = dl.next_chunk()
+            if status:
+                print(f"  Download: {int(status.progress() * 100)}%")
+
+
+# ── Legenda com IA ───────────────────────────────────────────────────────────
+def generate_caption(filename: str, groq_client: Groq) -> str:
+    clean_name = Path(filename).stem.replace("_", " ").replace("-", " ")
+
+    resp = groq_client.chat.completions.create(
+        model="llama3-8b-8192",
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "Você é especialista em conteúdo para YouTube Shorts e Instagram Reels. "
+                    "Crie uma legenda curta (máx. 200 caracteres), em português brasileiro, "
+                    "envolvente e com no máximo 3 hashtags relevantes no final. "
+                    "Não use aspas. Retorne APENAS a legenda pronta."
+                ),
+            },
+            {
+                "role": "user",
+                "content": f"Nome do vídeo: '{clean_name}'",
+            },
+        ],
+        max_tokens=150,
+        temperature=0.85,
+    )
+    return resp.choices[0].message.content.strip()
+
+
+# ── YouTube Upload ───────────────────────────────────────────────────────────
+def upload_short(yt, video_path: str, title: str, description: str,
+                 scheduled_dt: datetime) -> str:
+    publish_at = (scheduled_dt.astimezone(ZoneInfo("UTC"))
+                  .strftime("%Y-%m-%dT%H:%M:%S.000Z"))
+
+    # título limpo + tag obrigatória para Shorts
+    yt_title = f"{title[:90]} #Shorts"
+
+    body = {
+        "snippet": {
+            "title": yt_title,
+            "description": description,
+            "tags": ["shorts", "short", "brasil"],
+            "categoryId": "22",   # People & Blogs
+            "defaultLanguage": "pt",
+        },
+        "status": {
+            "privacyStatus": "private",  # torna público no horário agendado
+            "publishAt": publish_at,
+            "selfDeclaredMadeForKids": False,
+            "madeForKids": False,
+        },
+    }
+
+    ext = Path(video_path).suffix.lower()
+    mime = "video/mp4" if ext in (".mp4", ".m4v") else "video/quicktime"
+
+    media = MediaFileUpload(video_path, mimetype=mime,
+                            chunksize=50 * 1024 * 1024, resumable=True)
+    request = yt.videos().insert(part="snippet,status", body=body,
+                                  media_body=media)
+
+    response = None
+    while response is None:
+        status, response = request.next_chunk()
+        if status:
+            print(f"  Upload: {int(status.progress() * 100)}%")
+
+    return response["id"]
+
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+def main():
+    state = load_state()
+    groq_client = Groq(api_key=GROQ_API_KEY)
+    drive = drive_service()
+    yt = youtube_service()
+
+    new_videos = list_new_videos(drive, state["processed"])
+
+    if not new_videos:
+        print("Nenhum vídeo novo na pasta do Drive.")
+        return
+
+    print(f"{len(new_videos)} vídeo(s) novo(s) encontrado(s).\n")
+
+    for video in new_videos:
+        slot = next_available_slot(state)
+        if not slot:
+            print("Sem slots disponíveis nos próximos 60 dias.")
+            break
+
+        print(f"▶ {video['name']}")
+        print(f"  Agendado para: {slot.strftime('%d/%m/%Y às %Hh%M')} (Brasília)")
+
+        ext = Path(video["name"]).suffix or ".mp4"
+        with tempfile.NamedTemporaryFile(suffix=ext, delete=False) as tmp:
+            tmp_path = tmp.name
+
+        try:
+            print("  Baixando do Drive...")
+            download_video(drive, video["id"], tmp_path)
+
+            print("  Gerando legenda com IA...")
+            caption = generate_caption(video["name"], groq_client)
+            print(f"  Legenda: {caption}")
+
+            title = Path(video["name"]).stem.replace("_", " ").replace("-", " ")
+
+            print("  Enviando para o YouTube...")
+            video_id = upload_short(yt, tmp_path, title, caption, slot)
+
+            print(f"  ✓ Publicado! youtube.com/shorts/{video_id}\n")
+
+            state["processed"].append(video["id"])
+            state["scheduled_slots"].append(slot.isoformat())
+            save_state(state)
+
+        except Exception as exc:
+            print(f"  ✗ Erro: {exc}")
+            raise
+        finally:
+            Path(tmp_path).unlink(missing_ok=True)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,67 @@
+name: YouTube Shorts Auto-Scheduler
+
+on:
+  # Roda a cada hora para verificar novos vídeos no Drive
+  schedule:
+    - cron: "0 * * * *"
+
+  # Permite rodar manualmente pelo painel do GitHub
+  workflow_dispatch:
+
+jobs:
+  schedule-shorts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # necessário para salvar o state.json de volta
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      # Recria os arquivos de token a partir dos secrets
+      - name: Restaurar credenciais do Google
+        env:
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          DRIVE_TOKEN:          ${{ secrets.DRIVE_TOKEN }}
+          YOUTUBE_TOKEN:        ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          echo "$GOOGLE_CLIENT_SECRET" > client_secret.json
+          echo "$DRIVE_TOKEN"          > drive_token.json
+          echo "$YOUTUBE_TOKEN"        > youtube_token.json
+
+      - name: Executar automação
+        env:
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          GROQ_API_KEY:    ${{ secrets.GROQ_API_KEY }}
+        run: python main.py
+
+      # Se novos tokens foram gerados (refresh), atualiza os secrets
+      - name: Atualizar tokens refreshed nos secrets
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if [ -f drive_token.json ]; then
+            gh secret set DRIVE_TOKEN   < drive_token.json
+          fi
+          if [ -f youtube_token.json ]; then
+            gh secret set YOUTUBE_TOKEN < youtube_token.json
+          fi
+
+      # Salva o state.json atualizado no repositório
+      - name: Salvar state.json no repositório
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state.json || true
+          git diff --staged --quiet || git commit -m "chore: atualiza state.json [skip ci]"
+          git push || true
