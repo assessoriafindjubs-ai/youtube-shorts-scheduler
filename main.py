@@ -1,6 +1,7 @@
 import os
 import json
 import tempfile
+import subprocess
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -141,8 +142,53 @@ def download_video(drive, file_id: str, dest: str):
 
 
 # ── Legenda com IA ───────────────────────────────────────────────────────────
-def generate_caption(filename: str, groq_client: Groq) -> str:
-    clean_name = Path(filename).stem.replace("_", " ").replace("-", " ")
+SILENT_CAPTION = "Me segue #emagrecimento"
+
+def transcribe_video(video_path: str, groq_client: Groq) -> str:
+    """Extrai áudio do vídeo e transcreve com Whisper. Retorna '' se mudo."""
+    audio_path = video_path + ".mp3"
+    try:
+        result = subprocess.run(
+            ["ffmpeg", "-i", video_path,
+             "-vn", "-ar", "16000", "-ac", "1", "-b:a", "32k",
+             audio_path, "-y", "-loglevel", "error"],
+            capture_output=True, timeout=120
+        )
+        if result.returncode != 0 or not Path(audio_path).exists():
+            return ""
+
+        # Arquivo menor que 5KB = silêncio ou vídeo sem áudio
+        if Path(audio_path).stat().st_size < 5_000:
+            return ""
+
+        with open(audio_path, "rb") as f:
+            transcription = groq_client.audio.transcriptions.create(
+                file=("audio.mp3", f, "audio/mpeg"),
+                model="whisper-large-v3",
+                language="pt",
+                response_format="text"
+            )
+
+        text = transcription.strip() if isinstance(transcription, str) else transcription.text.strip()
+        return text
+
+    except Exception as e:
+        print(f"  Aviso na transcricao: {e}")
+        return ""
+    finally:
+        Path(audio_path).unlink(missing_ok=True)
+
+
+def generate_caption(video_path: str, groq_client: Groq) -> str:
+    """Gera legenda baseada na transcrição do vídeo. Vídeo mudo = legenda padrão."""
+    print("  Transcrevendo audio com Whisper...")
+    transcription = transcribe_video(video_path, groq_client)
+
+    if not transcription:
+        print("  Video mudo — usando legenda padrao.")
+        return SILENT_CAPTION
+
+    print(f"  Transcricao: {transcription[:120]}{'...' if len(transcription) > 120 else ''}")
 
     resp = groq_client.chat.completions.create(
         model="llama3-8b-8192",
@@ -150,15 +196,15 @@ def generate_caption(filename: str, groq_client: Groq) -> str:
             {
                 "role": "system",
                 "content": (
-                    "Você é especialista em conteúdo para YouTube Shorts e Instagram Reels. "
-                    "Crie uma legenda curta (máx. 200 caracteres), em português brasileiro, "
-                    "envolvente e com no máximo 3 hashtags relevantes no final. "
-                    "Não use aspas. Retorne APENAS a legenda pronta."
+                    "Voce e especialista em conteudo para YouTube Shorts e Instagram Reels. "
+                    "Com base na transcricao do video, crie uma legenda curta (max. 200 caracteres), "
+                    "em portugues brasileiro, envolvente e com no maximo 3 hashtags relevantes no final. "
+                    "Nao use aspas. Retorne APENAS a legenda pronta."
                 ),
             },
             {
                 "role": "user",
-                "content": f"Nome do vídeo: '{clean_name}'",
+                "content": f"Transcricao do video: '{transcription[:600]}'",
             },
         ],
         max_tokens=150,
@@ -277,7 +323,7 @@ def main():
             download_video(drive, video["id"], tmp_path)
 
             print("  Gerando legenda com IA...")
-            caption = generate_caption(video["name"], groq_client)
+            caption = generate_caption(tmp_path, groq_client)
             print(f"  Legenda: {caption}")
 
             title = Path(video["name"]).stem.replace("_", " ").replace("-", " ")

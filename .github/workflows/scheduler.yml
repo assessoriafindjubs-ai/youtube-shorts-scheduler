@@ -23,6 +23,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Instalar ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
