@@ -234,8 +234,7 @@ def upload_short(yt, video_path: str, title: str, description: str,
     publish_at = (scheduled_dt.astimezone(ZoneInfo("UTC"))
                   .strftime("%Y-%m-%dT%H:%M:%S.000Z"))
 
-    # título limpo + tag obrigatória para Shorts
-    yt_title = f"{title[:90]} #Shorts"
+    yt_title = title[:100]
 
     body = {
         "snippet": {
@@ -341,10 +340,10 @@ def main():
             caption = generate_caption(tmp_path, groq_client)
             print(f"  Legenda: {caption}")
 
-            title = Path(video["name"]).stem.replace("_", " ").replace("-", " ")
+            title = caption
 
             print("  Enviando para o YouTube...")
-            video_id = upload_short(yt, tmp_path, title, caption, slot)
+            video_id = upload_short(yt, tmp_path, title, "", slot)
 
             print(f"  OK! youtube.com/shorts/{video_id}\n")
 
