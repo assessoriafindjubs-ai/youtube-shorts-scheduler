@@ -41,34 +41,49 @@ def save_state(state: dict):
 
 # ── Agendamento ─────────────────────────────────────────────────────────────
 def get_youtube_booked_slots(yt) -> set[str]:
-    """Consulta o YouTube e retorna os horários já agendados (em ISO, fuso Brasília)."""
+    """
+    Retorna todos os horários já agendados no canal via playlist de uploads.
+    Usa playlist em vez de search para garantir que vídeos privados/agendados
+    apareçam independentemente do volume total de vídeos no canal.
+    """
     booked = set()
     try:
-        # Lista os vídeos mais recentes do canal (custa 100 + 1/vídeo de quota)
-        search_resp = yt.search().list(
-            part="id",
-            forMine=True,
-            type="video",
-            maxResults=50,
-            order="date"
-        ).execute()
+        # 1. Descobre a playlist de uploads do canal
+        ch = yt.channels().list(part="contentDetails", mine=True).execute()
+        if not ch.get("items"):
+            return booked
+        uploads_id = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
 
-        video_ids = [item["id"]["videoId"] for item in search_resp.get("items", [])]
+        # 2. Pagina pela playlist para pegar todos os IDs (máx 200 para não gastar quota)
+        video_ids = []
+        next_page = None
+        while True:
+            pl = yt.playlistItems().list(
+                part="contentDetails",
+                playlistId=uploads_id,
+                maxResults=50,
+                pageToken=next_page
+            ).execute()
+            video_ids += [i["contentDetails"]["videoId"] for i in pl.get("items", [])]
+            next_page = pl.get("nextPageToken")
+            if not next_page or len(video_ids) >= 200:
+                break
+
         if not video_ids:
             return booked
 
-        videos_resp = yt.videos().list(
-            part="status",
-            id=",".join(video_ids)
-        ).execute()
+        # 3. Verifica publishAt de cada vídeo em lotes de 50
+        for i in range(0, len(video_ids), 50):
+            batch = video_ids[i:i + 50]
+            resp = yt.videos().list(part="status", id=",".join(batch)).execute()
+            for video in resp.get("items", []):
+                publish_at = video.get("status", {}).get("publishAt")
+                if publish_at:
+                    dt_utc = datetime.fromisoformat(publish_at.replace("Z", "+00:00"))
+                    dt_br  = dt_utc.astimezone(BRAZIL_TZ)
+                    booked.add(dt_br.strftime("%Y-%m-%dT%H:00:00"))
 
-        for video in videos_resp.get("items", []):
-            publish_at = video.get("status", {}).get("publishAt")
-            if publish_at:
-                dt_utc = datetime.fromisoformat(publish_at.replace("Z", "+00:00"))
-                dt_br  = dt_utc.astimezone(BRAZIL_TZ)
-                # guarda só data+hora (ignora minutos/segundos)
-                booked.add(dt_br.strftime("%Y-%m-%dT%H:00:00"))
+        print(f"  {len(booked)} slot(s) ocupado(s) encontrado(s) no YouTube.")
     except Exception as e:
         print(f"  Aviso: nao foi possivel verificar slots do YouTube: {e}")
     return booked
