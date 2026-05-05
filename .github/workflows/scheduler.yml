@@ -1,9 +1,9 @@
 name: YouTube Shorts Auto-Scheduler
 
 on:
-  # Roda a cada hora para verificar novos vídeos no Drive
+  # Roda a cada 30 minutos para verificar novos vídeos no Drive
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/30 * * * *"
 
   # Permite rodar manualmente pelo painel do GitHub
   workflow_dispatch:
