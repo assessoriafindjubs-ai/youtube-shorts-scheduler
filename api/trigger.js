@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const token = process.env.GH_TOKEN;
+  const token = (process.env.GH_TOKEN || '').replace(/^﻿/, '').trim();
   if (!token) {
     return res.status(500).json({ error: 'GH_TOKEN não configurado no Vercel' });
   }
