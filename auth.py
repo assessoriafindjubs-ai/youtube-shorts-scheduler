@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive.readonly"]
+DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive"]
 YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
                   "https://www.googleapis.com/auth/youtube.readonly"]
 

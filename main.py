@@ -19,7 +19,7 @@ STATE_FILE      = "state.json"
 DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
 GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
 
-DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive.readonly"]
+DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive"]
 YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
                   "https://www.googleapis.com/auth/youtube.readonly"]
 
@@ -143,6 +143,34 @@ def list_new_videos(drive, processed_ids: list) -> list[dict]:
     ).execute()
 
     return [f for f in result.get("files", []) if f["id"] not in processed_ids]
+
+
+def get_or_create_agendados_folder(drive) -> str:
+    """Retorna o ID da pasta 'agendados' dentro de DRIVE_FOLDER_ID, criando se não existir."""
+    query = (f"'{DRIVE_FOLDER_ID}' in parents and "
+             f"mimeType='application/vnd.google-apps.folder' and "
+             f"name='agendados' and trashed=false")
+    result = drive.files().list(q=query, fields="files(id)").execute()
+    files = result.get("files", [])
+    if files:
+        return files[0]["id"]
+    folder = drive.files().create(
+        body={"name": "agendados", "mimeType": "application/vnd.google-apps.folder",
+              "parents": [DRIVE_FOLDER_ID]},
+        fields="id"
+    ).execute()
+    print("  Pasta 'agendados' criada no Drive.")
+    return folder["id"]
+
+
+def move_to_agendados(drive, file_id: str, agendados_id: str):
+    """Move o arquivo para a pasta 'agendados', removendo da pasta original."""
+    drive.files().update(
+        fileId=file_id,
+        addParents=agendados_id,
+        removeParents=DRIVE_FOLDER_ID,
+        fields="id, parents"
+    ).execute()
 
 
 def download_video(drive, file_id: str, dest: str):
@@ -307,6 +335,7 @@ def main():
     yt    = youtube_service()
 
     new_videos = list_new_videos(drive, state["processed"])
+    agendados_id = get_or_create_agendados_folder(drive) if new_videos else None
 
     if not new_videos:
         print("Nenhum video novo na pasta do Drive.")
@@ -354,6 +383,10 @@ def main():
 
             add_to_report(report, video["name"], title, caption, slot, video_id)
             save_report(report)
+
+            print("  Movendo para pasta 'agendados' no Drive...")
+            move_to_agendados(drive, video["id"], agendados_id)
+            print("  Movido!")
 
         except Exception as exc:
             print(f"  Erro: {exc}")
