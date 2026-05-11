@@ -14,7 +14,7 @@ from groq import Groq
 
 # ── Configuração ────────────────────────────────────────────────────────────
 BRAZIL_TZ       = ZoneInfo("America/Sao_Paulo")
-SCHEDULE_HOURS  = [18, 21]          # horários fixos de publicação
+SCHEDULE_SLOTS  = [(9, 0), (12, 30), (19, 0)]  # (hora, minuto) — Brasília
 STATE_FILE      = "state.json"
 DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
 GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
@@ -96,11 +96,11 @@ def next_available_slot(state: dict, yt_booked: set[str]) -> datetime | None:
 
     for day_offset in range(60):
         date = now.date() + timedelta(days=day_offset)
-        for hour in SCHEDULE_HOURS:
+        for hour, minute in SCHEDULE_SLOTS:
             slot = datetime(date.year, date.month, date.day,
-                            hour, 0, 0, tzinfo=BRAZIL_TZ)
-            slot_key    = slot.isoformat()                    # para state.json
-            slot_hkey   = slot.strftime("%Y-%m-%dT%H:00:00") # para comparar com YouTube
+                            hour, minute, 0, tzinfo=BRAZIL_TZ)
+            slot_key  = slot.isoformat()                    # para state.json
+            slot_hkey = slot.strftime("%Y-%m-%dT%H:00:00") # para comparar com YouTube
 
             if (slot > now + timedelta(minutes=15)
                     and slot_key  not in state_booked
