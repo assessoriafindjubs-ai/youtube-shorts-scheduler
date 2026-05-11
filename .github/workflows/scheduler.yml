@@ -36,9 +36,9 @@ jobs:
           DRIVE_TOKEN:          ${{ secrets.DRIVE_TOKEN }}
           YOUTUBE_TOKEN:        ${{ secrets.YOUTUBE_TOKEN }}
         run: |
-          echo "$GOOGLE_CLIENT_SECRET" > client_secret.json
-          echo "$DRIVE_TOKEN"          > drive_token.json
-          echo "$YOUTUBE_TOKEN"        > youtube_token.json
+          printf '%s' "$GOOGLE_CLIENT_SECRET" > client_secret.json
+          printf '%s' "$DRIVE_TOKEN"          > drive_token.json
+          printf '%s' "$YOUTUBE_TOKEN"        > youtube_token.json
 
       - name: Executar automação
         env:
