@@ -14,7 +14,7 @@ from groq import Groq
 
 # ── Configuração ────────────────────────────────────────────────────────────
 BRAZIL_TZ       = ZoneInfo("America/Sao_Paulo")
-SCHEDULE_SLOTS  = [(9, 0), (12, 30), (19, 0)]  # (hora, minuto) — Brasília
+SCHEDULE_SLOTS  = [(9, 0), (12, 30), (18, 0)]  # (hora, minuto) — Brasília
 STATE_FILE      = "state.json"
 DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
 GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
