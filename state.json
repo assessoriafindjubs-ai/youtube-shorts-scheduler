@@ -44,7 +44,12 @@
     "18S10CF7QUgVq27fmvzQxbOQKNZrL_OJK",
     "1hT-coEdVjgTaMnmgJwjmKNzd8otGcBLV",
     "1ipN-B0Ne_qrkpt1TVoI96w6viLzJD6xX",
-    "1HeM_yvZ4gdTpfPKJcXT2vQZbhRw-pSgN"
+    "1HeM_yvZ4gdTpfPKJcXT2vQZbhRw-pSgN",
+    "1vJXBCefIPRBQAW-oL3W7ywsztyhbMdW2",
+    "1WGNvv4rUretX4Ypym40l4ne8tgn1jMrI",
+    "1CrU1wCxm82Hw59pK_cK-ipqgivq1TRLn",
+    "1epeKbOWHVOsyqTUI2oJ7LkMEf7r0zh56",
+    "13jQifVi3uJF28cWDxZFF0xVMBpr9_nrb"
   ],
   "scheduled_slots": [
     "2026-05-04T21:00:00-03:00",
@@ -91,6 +96,11 @@
     "2026-05-14T12:30:00-03:00",
     "2026-05-15T09:00:00-03:00",
     "2026-05-15T12:30:00-03:00",
-    "2026-05-16T09:00:00-03:00"
+    "2026-05-16T09:00:00-03:00",
+    "2026-05-17T09:00:00-03:00",
+    "2026-05-17T12:30:00-03:00",
+    "2026-05-18T09:00:00-03:00",
+    "2026-05-18T12:30:00-03:00",
+    "2026-05-19T09:00:00-03:00"
   ]
 }
