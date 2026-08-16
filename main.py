@@ -21,7 +21,8 @@ GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
 DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive"]
 YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube",
                   "https://www.googleapis.com/auth/youtube.upload",
-                  "https://www.googleapis.com/auth/youtube.readonly"]
+                  "https://www.googleapis.com/auth/youtube.readonly",
+                  "https://www.googleapis.com/auth/yt-analytics.readonly"]
 
 CONFIG_FILE   = "config.json"
 METRICS_FILE  = "metrics.json"
@@ -375,6 +376,28 @@ def fetch_and_save_metrics(yt, report: dict):
                 "video_count":  int(s.get("videoCount", 0)),
             }
 
+        # Busca inscritos ganhos por vídeo via YouTube Analytics API
+        subs_by_video = {}
+        try:
+            analytics = build(
+                "youtubeAnalytics", "v2",
+                credentials=_creds_from_file("youtube_token.json", YOUTUBE_SCOPES),
+                cache_discovery=False,
+            )
+            today = datetime.now(BRAZIL_TZ).strftime("%Y-%m-%d")
+            ana_resp = analytics.reports().query(
+                ids="channel==MINE",
+                startDate="2020-01-01",
+                endDate=today,
+                metrics="subscribersGained",
+                dimensions="video",
+                maxResults=200,
+                sort="-subscribersGained",
+            ).execute()
+            subs_by_video = {row[0]: int(row[1]) for row in ana_resp.get("rows", [])}
+        except Exception as e:
+            print(f"  Aviso ao buscar inscritos por video: {e}")
+
         video_ids = [v["id"] for v in report.get("videos", []) if v.get("id")]
         id_to_meta = {v["id"]: v for v in report.get("videos", [])}
         for i in range(0, len(video_ids), 50):
@@ -385,14 +408,15 @@ def fetch_and_save_metrics(yt, report: dict):
                 s   = item.get("statistics", {})
                 meta = id_to_meta.get(vid, {})
                 metrics["videos"].append({
-                    "id":            vid,
-                    "title":         meta.get("title", ""),
-                    "scheduled_for": meta.get("scheduled_for", ""),
-                    "url":           meta.get("url", ""),
-                    "thumbnail":     meta.get("thumbnail", ""),
-                    "views":         int(s.get("viewCount",   0)),
-                    "likes":         int(s.get("likeCount",   0)),
-                    "comments":      int(s.get("commentCount", 0)),
+                    "id":                 vid,
+                    "title":              meta.get("title", ""),
+                    "scheduled_for":      meta.get("scheduled_for", ""),
+                    "url":                meta.get("url", ""),
+                    "thumbnail":          meta.get("thumbnail", ""),
+                    "views":              int(s.get("viewCount",   0)),
+                    "likes":              int(s.get("likeCount",   0)),
+                    "comments":           int(s.get("commentCount", 0)),
+                    "subscribers_gained": subs_by_video.get(vid, 0),
                 })
 
         metrics["videos"].sort(key=lambda v: v["views"], reverse=True)

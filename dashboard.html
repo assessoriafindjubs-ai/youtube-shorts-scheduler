@@ -751,6 +751,7 @@ async function renderMetrics() {
       <td class="metrics-num">${fmtNum(v.views)}</td>
       <td class="metrics-num">${fmtNum(v.likes)}</td>
       <td class="metrics-num">${fmtNum(v.comments)}</td>
+      <td class="metrics-num">${v.subscribers_gained!=null?fmtNum(v.subscribers_gained):'—'}</td>
       <td><a class="metrics-link" href="${v.url||'#'}" target="_blank">Abrir ↗</a></td>
     </tr>`).join('');
 
@@ -758,7 +759,7 @@ async function renderMetrics() {
       <div class="section-title">Vídeos (ordenados por views)</div>
       <div class="metrics-table-wrap">
         <table class="metrics-table">
-          <thead><tr><th></th><th>Título</th><th>👁 Views</th><th>👍 Likes</th><th>💬 Comentários</th><th></th></tr></thead>
+          <thead><tr><th></th><th>Título</th><th>👁 Views</th><th>👍 Likes</th><th>💬 Comentários</th><th>👥 Inscritos</th><th></th></tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
       </div>`;
