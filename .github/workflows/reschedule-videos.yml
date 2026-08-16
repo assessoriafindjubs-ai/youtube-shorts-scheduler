@@ -1,0 +1,67 @@
+name: Reschedule Videos
+
+on:
+  workflow_dispatch:
+    inputs:
+      old_hour:
+        description: 'Hora antiga (0-23)'
+        required: true
+      old_minute:
+        description: 'Minuto antigo (0-59)'
+        required: true
+      new_hour:
+        description: 'Nova hora (0-23)'
+        required: true
+      new_minute:
+        description: 'Novo minuto (0-59)'
+        required: true
+
+jobs:
+  reschedule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+
+      - name: Restaurar credenciais
+        env:
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YOUTUBE_TOKEN:        ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          printf '%s' "$GOOGLE_CLIENT_SECRET" > client_secret.json
+          printf '%s' "$YOUTUBE_TOKEN"        > youtube_token.json
+
+      - name: Reagendar vídeos
+        env:
+          OLD_HOUR:   ${{ github.event.inputs.old_hour }}
+          OLD_MINUTE: ${{ github.event.inputs.old_minute }}
+          NEW_HOUR:   ${{ github.event.inputs.new_hour }}
+          NEW_MINUTE: ${{ github.event.inputs.new_minute }}
+        run: python reschedule_videos.py
+
+      - name: Salvar token atualizado
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if [ -f youtube_token.json ]; then
+            gh secret set YOUTUBE_TOKEN < youtube_token.json
+          fi
+
+      - name: Commit report e state atualizados
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add report.json state.json || true
+          git diff --staged --quiet || git commit -m "chore: reagenda videos [skip ci]"
+          git push || true
