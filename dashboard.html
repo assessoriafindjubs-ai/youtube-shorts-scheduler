@@ -528,6 +528,10 @@ async function handleRun() {
 }
 
 // ── Modal editar legenda ──────────────────────────────────────────────────────
+function openModalFromBtn(btn) {
+  openModal(btn.dataset.vid, btn.dataset.caption);
+}
+
 function openModal(videoId, currentCaption) {
   currentVideoId = videoId;
   const input = document.getElementById('modal-input');
@@ -697,7 +701,7 @@ function buildCard(v) {
     Ver no YouTube
   </a>`;
 
-  const editBtn = `<button class="btn-edit" onclick="openModal('${v.id}', ${JSON.stringify(caption)})">
+  const editBtn = `<button class="btn-edit" data-vid="${v.id}" data-caption="${caption.replace(/"/g,'&quot;').replace(/'/g,'&#39;')}" onclick="openModalFromBtn(this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
     Editar
   </button>`;
