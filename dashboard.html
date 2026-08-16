@@ -9,23 +9,23 @@
 
   body {
     font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #0f0f0f;
-    color: #e8e8e8;
+    background: #FFFAFA;
+    color: #1a1a1a;
     min-height: 100vh;
   }
 
   /* ── Header ── */
   header {
     background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-    padding: 20px 20px;
+    padding: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 4px 20px rgba(255,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(255,0,0,0.25);
   }
   header svg.logo { width: 32px; height: 32px; fill: white; flex-shrink: 0; }
   header h1 { font-size: 1.2rem; font-weight: 700; color: white; }
-  header p  { font-size: 0.78rem; color: rgba(255,255,255,0.8); margin-top: 2px; }
+  header p  { font-size: 0.78rem; color: rgba(255,255,255,0.85); margin-top: 2px; }
 
   .header-right {
     margin-left: auto;
@@ -34,20 +34,18 @@
     align-items: flex-end;
     gap: 8px;
   }
-
   .last-update {
     font-size: 0.72rem;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.8);
     text-align: right;
     line-height: 1.4;
   }
-
   .btn-run {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
     color: white;
     font-size: 0.82rem;
     font-weight: 600;
@@ -57,7 +55,7 @@
     transition: background 0.2s, transform 0.1s;
     white-space: nowrap;
   }
-  .btn-run:hover  { background: rgba(255,255,255,0.25); }
+  .btn-run:hover  { background: rgba(255,255,255,0.28); }
   .btn-run:active { transform: scale(0.97); }
   .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
   .btn-run svg { width: 13px; height: 13px; fill: white; }
@@ -68,24 +66,23 @@
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%) translateY(80px);
-    background: #222;
-    color: #e8e8e8;
+    background: #1a1a1a;
+    color: #f0f0f0;
     padding: 11px 22px;
     border-radius: 10px;
     font-size: 0.86rem;
     font-weight: 500;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
     z-index: 9999;
-    white-space: nowrap;
     border-left: 4px solid #ff4444;
     max-width: 90vw;
     white-space: normal;
     text-align: center;
   }
   #toast.show    { transform: translateX(-50%) translateY(0); }
-  #toast.success { border-left-color: #50cc50; }
-  #toast.error   { border-left-color: #ff4444; }
+  #toast.success { border-left-color: #22c55e; }
+  #toast.error   { border-left-color: #ef4444; }
 
   /* ── Layout ── */
   .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
@@ -98,16 +95,17 @@
     margin-bottom: 28px;
   }
   .stat-card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: #fff;
+    border: 1px solid #e8e8e8;
     border-radius: 12px;
     padding: 16px;
     text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
   .stat-card .number {
     font-size: 2rem;
     font-weight: 800;
-    color: #ff4444;
+    color: #e00000;
     line-height: 1;
     margin-bottom: 5px;
   }
@@ -120,29 +118,32 @@
 
   /* ── Section title ── */
   .section-title {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 600;
-    color: #aaa;
+    color: #888;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 14px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #e8e8e8;
   }
 
   /* ── Cards ── */
-  .cards { display: flex; flex-direction: column; gap: 12px; }
+  .cards { display: flex; flex-direction: column; gap: 10px; }
 
   .card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
     overflow: hidden;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
-  .card:hover { border-color: #ff4444; }
+  .card:hover {
+    border-color: #ff0000;
+    box-shadow: 0 2px 10px rgba(255,0,0,0.1);
+  }
 
-  /* Desktop: 3 colunas */
   .card-inner {
     display: grid;
     grid-template-columns: 130px 1fr auto;
@@ -153,17 +154,17 @@
     width: 130px;
     height: 90px;
     object-fit: cover;
-    background: #111;
+    background: #f0f0f0;
     display: block;
   }
   .card-thumb-placeholder {
     width: 130px;
     height: 90px;
-    background: #222;
+    background: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #444;
+    color: #ccc;
     font-size: 1.8rem;
   }
 
@@ -172,21 +173,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
     overflow: hidden;
     min-width: 0;
   }
   .card-title {
     font-size: 0.92rem;
     font-weight: 600;
-    color: #f0f0f0;
+    color: #111;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .card-caption {
     font-size: 0.8rem;
-    color: #bbb;
+    color: #555;
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -195,14 +196,13 @@
   }
   .card-file {
     font-size: 0.7rem;
-    color: #555;
+    color: #aaa;
     margin-top: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  /* Desktop side */
   .card-side {
     padding: 12px 16px;
     display: flex;
@@ -210,20 +210,20 @@
     align-items: flex-end;
     justify-content: center;
     gap: 8px;
-    border-left: 1px solid #242424;
+    border-left: 1px solid #f0f0f0;
     min-width: 160px;
     flex-shrink: 0;
   }
 
-  /* Mobile footer — sempre visível */
   .card-footer {
     display: none;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
     padding: 10px 12px;
-    border-top: 1px solid #222;
+    border-top: 1px solid #f0f0f0;
     flex-wrap: wrap;
+    background: #fafafa;
   }
   .card-footer-left  { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .card-footer-right { display: flex; align-items: center; gap: 6px; }
@@ -241,13 +241,13 @@
     letter-spacing: 0.03em;
     white-space: nowrap;
   }
-  .badge-future { background: rgba(255,200,0,0.12); color: #ffc800; border: 1px solid rgba(255,200,0,0.25); }
-  .badge-past   { background: rgba(50,205,50,0.12);  color: #50cc50; border: 1px solid rgba(50,205,50,0.25); }
+  .badge-future { background: #fff8e1; color: #b45309; border: 1px solid #fde68a; }
+  .badge-past   { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
 
   .scheduled-time {
     font-size: 0.85rem;
     font-weight: 700;
-    color: #e0e0e0;
+    color: #222;
     text-align: right;
     line-height: 1.3;
   }
@@ -255,7 +255,7 @@
     display: block;
     font-size: 0.7rem;
     font-weight: 400;
-    color: #666;
+    color: #999;
   }
 
   /* ── Botões ── */
@@ -280,8 +280,8 @@
     align-items: center;
     gap: 4px;
     background: transparent;
-    border: 1px solid #444;
-    color: #aaa;
+    border: 1px solid #ddd;
+    color: #666;
     font-size: 0.75rem;
     font-weight: 600;
     padding: 5px 10px;
@@ -290,15 +290,50 @@
     transition: border-color 0.2s, color 0.2s;
     white-space: nowrap;
   }
-  .btn-edit:hover { border-color: #ff4444; color: #ff4444; }
+  .btn-edit:hover { border-color: #ff0000; color: #ff0000; }
   .btn-edit svg { width: 11px; height: 11px; }
+
+  /* ── Paginação ── */
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .pg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    color: #444;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .pg-btn:hover:not(:disabled) { border-color: #ff0000; color: #ff0000; }
+  .pg-btn.active { background: #ff0000; border-color: #ff0000; color: #fff; }
+  .pg-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .pg-info {
+    font-size: 0.8rem;
+    color: #999;
+    padding: 0 4px;
+  }
 
   /* ── Modal ── */
   .modal-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.45);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -307,14 +342,14 @@
   .modal-overlay.open { display: flex; }
 
   .modal {
-    background: #1e1e1e;
-    border: 1px solid #333;
+    background: #fff;
+    border: 1px solid #e8e8e8;
     border-radius: 16px;
     width: 100%;
     max-width: 480px;
     padding: 24px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-    animation: modal-in 0.2s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    animation: modal-in 0.18s ease;
   }
   @keyframes modal-in { from { opacity:0; transform:scale(0.95); } to { opacity:1; transform:scale(1); } }
 
@@ -324,29 +359,26 @@
     justify-content: space-between;
     margin-bottom: 16px;
   }
-  .modal-title { font-size: 1rem; font-weight: 700; color: #f0f0f0; }
+  .modal-title { font-size: 1rem; font-weight: 700; color: #111; }
   .modal-close {
     background: none;
     border: none;
-    color: #666;
+    color: #aaa;
     font-size: 1.4rem;
     cursor: pointer;
     line-height: 1;
     padding: 2px 6px;
+    border-radius: 4px;
   }
-  .modal-close:hover { color: #fff; }
+  .modal-close:hover { background: #f5f5f5; color: #333; }
 
-  .modal-label {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 8px;
-  }
+  .modal-label { font-size: 0.8rem; color: #777; margin-bottom: 8px; }
   .modal-textarea {
     width: 100%;
-    background: #111;
-    border: 1px solid #333;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    color: #f0f0f0;
+    color: #111;
     font-size: 0.9rem;
     font-family: inherit;
     padding: 12px;
@@ -355,27 +387,23 @@
     outline: none;
     transition: border-color 0.2s;
   }
-  .modal-textarea:focus { border-color: #ff4444; }
+  .modal-textarea:focus { border-color: #ff0000; background: #fff; }
 
   .modal-counter {
     font-size: 0.72rem;
-    color: #555;
+    color: #bbb;
     text-align: right;
     margin-top: 4px;
     margin-bottom: 16px;
   }
-  .modal-counter.warn { color: #ff8800; }
-  .modal-counter.over { color: #ff4444; }
+  .modal-counter.warn { color: #f59e0b; }
+  .modal-counter.over { color: #ef4444; }
 
-  .modal-actions {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-  }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
   .btn-cancel {
     background: transparent;
-    border: 1px solid #444;
-    color: #aaa;
+    border: 1px solid #e0e0e0;
+    color: #666;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 8px 18px;
@@ -383,7 +411,7 @@
     cursor: pointer;
     transition: border-color 0.2s;
   }
-  .btn-cancel:hover { border-color: #666; color: #fff; }
+  .btn-cancel:hover { border-color: #aaa; color: #333; }
   .btn-save {
     background: #ff0000;
     border: none;
@@ -403,26 +431,20 @@
   .empty {
     text-align: center;
     padding: 70px 20px;
-    color: #444;
+    color: #ccc;
   }
-  .empty svg { width: 56px; height: 56px; fill: #333; margin-bottom: 14px; }
-  .empty h2  { color: #555; font-size: 1rem; margin-bottom: 8px; }
-  .empty p   { font-size: 0.82rem; }
-  .loading   { text-align: center; padding: 70px; color: #555; font-size: 0.9rem; }
+  .empty svg { width: 56px; height: 56px; fill: #ddd; margin-bottom: 14px; }
+  .empty h2  { color: #aaa; font-size: 1rem; margin-bottom: 8px; }
+  .empty p   { font-size: 0.82rem; color: #bbb; }
+  .loading   { text-align: center; padding: 70px; color: #bbb; font-size: 0.9rem; }
 
   /* ── Responsive ── */
   @media (max-width: 640px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
-
     .card-inner { grid-template-columns: 90px 1fr; }
     .card-thumb, .card-thumb-placeholder { width: 90px; height: 75px; }
-
-    /* Esconde side no mobile */
     .card-side { display: none; }
-
-    /* Mostra footer no mobile */
     .card-footer { display: flex; }
-
     header h1 { font-size: 1rem; }
     .last-update { display: none; }
     .btn-run span { display: none; }
@@ -470,8 +492,11 @@
 </div>
 
 <script>
-const REPORT_URL = 'https://raw.githubusercontent.com/assessoriafindjubs-ai/youtube-shorts-scheduler/main/report.json';
+const REPORT_URL  = 'https://raw.githubusercontent.com/assessoriafindjubs-ai/youtube-shorts-scheduler/main/report.json';
+const PER_PAGE    = 20;
 
+let allVideos      = [];
+let currentPage    = 1;
 let currentVideoId = null;
 
 // ── Toast ────────────────────────────────────────────────────────────────────
@@ -534,7 +559,6 @@ async function saveCaption() {
   const btn = document.getElementById('btn-save');
   btn.disabled = true;
   btn.textContent = 'Salvando...';
-
   try {
     const res  = await fetch('/api/update-caption', {
       method: 'POST',
@@ -542,11 +566,10 @@ async function saveCaption() {
       body: JSON.stringify({ videoId: currentVideoId, newTitle }),
     });
     const data = await res.json().catch(() => ({}));
-
     if (res.ok) {
       document.getElementById('modal-overlay').classList.remove('open');
       showToast('Legenda atualizada! O YouTube processa em ~30 s.', 'success');
-      setTimeout(render, 35000); // recarrega após o workflow terminar
+      setTimeout(render, 35000);
     } else {
       showToast(`Erro: ${data.error || 'tente novamente'}`, 'error');
     }
@@ -577,7 +600,59 @@ function fmtDateTime(iso) {
 }
 function isPast(iso) { return new Date(iso) < new Date(); }
 
-// ── Render ────────────────────────────────────────────────────────────────────
+// ── Paginação ─────────────────────────────────────────────────────────────────
+function buildPagination(total) {
+  const pages = Math.ceil(total / PER_PAGE);
+  if (pages <= 1) return '';
+
+  let btns = '';
+
+  // Prev
+  btns += `<button class="pg-btn" ${currentPage===1?'disabled':''} onclick="goPage(${currentPage-1})">&#8592;</button>`;
+
+  // Números (máx 7 botões visíveis)
+  const range = paginate(currentPage, pages);
+  for (const p of range) {
+    if (p === '…') {
+      btns += `<span class="pg-info">…</span>`;
+    } else {
+      btns += `<button class="pg-btn${p===currentPage?' active':''}" onclick="goPage(${p})">${p}</button>`;
+    }
+  }
+
+  // Next
+  btns += `<button class="pg-btn" ${currentPage===pages?'disabled':''} onclick="goPage(${currentPage+1})">&#8594;</button>`;
+
+  const from = (currentPage - 1) * PER_PAGE + 1;
+  const to   = Math.min(currentPage * PER_PAGE, total);
+  return `
+    <div class="pagination">${btns}</div>
+    <div style="text-align:center;margin-top:10px;font-size:0.75rem;color:#aaa">
+      Exibindo ${from}–${to} de ${total} vídeos
+    </div>`;
+}
+
+// Gera sequência com reticências
+function paginate(cur, total) {
+  if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);
+  const out = [];
+  if (cur <= 4) {
+    out.push(1,2,3,4,5,'…',total);
+  } else if (cur >= total - 3) {
+    out.push(1,'…',total-4,total-3,total-2,total-1,total);
+  } else {
+    out.push(1,'…',cur-1,cur,cur+1,'…',total);
+  }
+  return out;
+}
+
+function goPage(p) {
+  currentPage = p;
+  renderCards();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Build HTML ────────────────────────────────────────────────────────────────
 function buildStats(videos) {
   const total     = videos.length;
   const published = videos.filter(v => isPast(v.scheduled_for)).length;
@@ -605,10 +680,11 @@ function buildStats(videos) {
 }
 
 function buildCard(v) {
-  const past  = isPast(v.scheduled_for);
-  const badge = past
+  const past    = isPast(v.scheduled_for);
+  const badge   = past
     ? `<span class="badge badge-past">✓ Publicado</span>`
     : `<span class="badge badge-future">⏰ Agendado</span>`;
+  const caption = v.caption || v.title;
 
   const dateHtml = `
     <div class="scheduled-time">
@@ -616,12 +692,12 @@ function buildCard(v) {
       <span>${fmtTime(v.scheduled_for)} (Brasília)</span>
     </div>`;
 
-  const ytBtn  = `<a class="btn-yt" href="${v.url}" target="_blank">
+  const ytBtn = `<a class="btn-yt" href="${v.url}" target="_blank">
     <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
     Ver no YouTube
   </a>`;
 
-  const editBtn = `<button class="btn-edit" onclick="openModal('${v.id}', ${JSON.stringify(v.caption || v.title)})">
+  const editBtn = `<button class="btn-edit" onclick="openModal('${v.id}', ${JSON.stringify(caption)})">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
     Editar
   </button>`;
@@ -634,10 +710,10 @@ function buildCard(v) {
     <div class="card">
       <div class="card-inner">
         ${thumbHtml}
-        <div class="card-thumb-placeholder" style="display:${v.thumbnail ? 'none' : 'flex'}">▶</div>
+        <div class="card-thumb-placeholder" style="display:${v.thumbnail?'none':'flex'}">▶</div>
         <div class="card-body">
           <div class="card-title">${v.title}</div>
-          <div class="card-caption">${v.caption || v.title}</div>
+          <div class="card-caption">${caption}</div>
           <div class="card-file">📁 ${v.drive_file}</div>
         </div>
         <div class="card-side">
@@ -647,11 +723,10 @@ function buildCard(v) {
           ${ytBtn}
         </div>
       </div>
-      <!-- Footer visível só no mobile -->
       <div class="card-footer">
         <div class="card-footer-left">
           ${badge}
-          <span style="font-size:0.8rem;font-weight:700;color:#e0e0e0">${fmtDate(v.scheduled_for)} · ${fmtTime(v.scheduled_for)}</span>
+          <span style="font-size:0.8rem;font-weight:700;color:#333">${fmtDate(v.scheduled_for)} · ${fmtTime(v.scheduled_for)}</span>
         </div>
         <div class="card-footer-right">
           ${editBtn}
@@ -661,16 +736,27 @@ function buildCard(v) {
     </div>`;
 }
 
+// ── Renderização dos cards (reutilizada na paginação) ─────────────────────────
+function renderCards() {
+  const start   = (currentPage - 1) * PER_PAGE;
+  const page    = allVideos.slice(start, start + PER_PAGE);
+  const cardsEl = document.getElementById('cards-container');
+  const pgEl    = document.getElementById('pagination-container');
+  if (cardsEl) cardsEl.innerHTML = page.map(buildCard).join('');
+  if (pgEl)    pgEl.innerHTML    = buildPagination(allVideos.length);
+}
+
+// ── Fetch e render principal ──────────────────────────────────────────────────
 async function render() {
   try {
-    const res    = await fetch(REPORT_URL + '?t=' + Date.now());
-    const data   = await res.json();
-    const videos = data.videos || [];
+    const res  = await fetch(REPORT_URL + '?t=' + Date.now());
+    const data = await res.json();
+    allVideos  = data.videos || [];
 
     document.getElementById('last-update').innerHTML =
       `Atualizado<br><strong>${data.last_updated ? fmtDateTime(data.last_updated) : '—'}</strong>`;
 
-    if (videos.length === 0) {
+    if (allVideos.length === 0) {
       document.getElementById('root').innerHTML = `
         <div class="empty">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
@@ -680,10 +766,17 @@ async function render() {
       return;
     }
 
+    // Mantém página atual se possível após refresh silencioso
+    const maxPage = Math.ceil(allVideos.length / PER_PAGE);
+    if (currentPage > maxPage) currentPage = maxPage;
+
     document.getElementById('root').innerHTML =
-      buildStats(videos) +
+      buildStats(allVideos) +
       `<div class="section-title">Vídeos agendados</div>` +
-      `<div class="cards">${videos.map(buildCard).join('')}</div>`;
+      `<div class="cards" id="cards-container"></div>` +
+      `<div id="pagination-container"></div>`;
+
+    renderCards();
 
   } catch(e) {
     document.getElementById('root').innerHTML = `
@@ -694,7 +787,6 @@ async function render() {
   }
 }
 
-// Fecha modal com Escape
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
 });
