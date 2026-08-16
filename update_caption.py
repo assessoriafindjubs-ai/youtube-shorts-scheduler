@@ -11,6 +11,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
 YOUTUBE_SCOPES = [
+    "https://www.googleapis.com/auth/youtube",
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.readonly",
 ]

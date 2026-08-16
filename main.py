@@ -20,7 +20,8 @@ DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
 GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
 
 DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive"]
-YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube",
+                  "https://www.googleapis.com/auth/youtube.upload",
                   "https://www.googleapis.com/auth/youtube.readonly"]
 
 VIDEO_MIMETYPES = ("video/mp4", "video/quicktime", "video/x-msvideo",
