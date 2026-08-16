@@ -14,46 +14,44 @@
     min-height: 100vh;
   }
 
+  /* ── Header ── */
   header {
     background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-    padding: 28px 32px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     box-shadow: 0 4px 20px rgba(255,0,0,0.3);
   }
-
-  header svg { width: 36px; height: 36px; fill: white; flex-shrink: 0; }
-
-  header h1 { font-size: 1.4rem; font-weight: 700; color: white; }
-  header p  { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 2px; }
+  header svg.logo { width: 32px; height: 32px; fill: white; flex-shrink: 0; }
+  header h1 { font-size: 1.2rem; font-weight: 700; color: white; }
+  header p  { font-size: 0.78rem; color: rgba(255,255,255,0.8); margin-top: 2px; }
 
   .header-right {
     margin-left: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
+    gap: 8px;
   }
 
   .last-update {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.75);
     text-align: right;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
-  /* Botão disparar */
   .btn-run {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 6px;
     background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.35);
     color: white;
     font-size: 0.82rem;
     font-weight: 600;
-    padding: 7px 16px;
+    padding: 7px 14px;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
@@ -62,9 +60,9 @@
   .btn-run:hover  { background: rgba(255,255,255,0.25); }
   .btn-run:active { transform: scale(0.97); }
   .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
-  .btn-run svg { width: 14px; height: 14px; fill: white; flex-shrink: 0; }
+  .btn-run svg { width: 13px; height: 13px; fill: white; }
 
-  /* Toast */
+  /* ── Toast ── */
   #toast {
     position: fixed;
     bottom: 24px;
@@ -72,119 +70,122 @@
     transform: translateX(-50%) translateY(80px);
     background: #222;
     color: #e8e8e8;
-    padding: 12px 24px;
+    padding: 11px 22px;
     border-radius: 10px;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 500;
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
-    z-index: 999;
+    z-index: 9999;
     white-space: nowrap;
     border-left: 4px solid #ff4444;
+    max-width: 90vw;
+    white-space: normal;
+    text-align: center;
   }
-  #toast.show { transform: translateX(-50%) translateY(0); }
+  #toast.show    { transform: translateX(-50%) translateY(0); }
   #toast.success { border-left-color: #50cc50; }
   #toast.error   { border-left-color: #ff4444; }
 
-  .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+  /* ── Layout ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
 
-  /* Stats */
+  /* ── Stats ── */
   .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
-    margin-bottom: 36px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
   }
-
   .stat-card {
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 12px;
-    padding: 20px 24px;
+    padding: 16px;
     text-align: center;
   }
-
   .stat-card .number {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #ff4444;
     line-height: 1;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
-
   .stat-card .label {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     color: #888;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
 
-  /* Section title */
+  /* ── Section title ── */
   .section-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #aaa;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #222;
   }
 
-  /* Video cards */
-  .cards { display: flex; flex-direction: column; gap: 16px; }
+  /* ── Cards ── */
+  .cards { display: flex; flex-direction: column; gap: 12px; }
 
   .card {
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 14px;
-    display: grid;
-    grid-template-columns: 140px 1fr auto;
     overflow: hidden;
     transition: border-color 0.2s;
   }
-
   .card:hover { border-color: #ff4444; }
 
-  .card-thumb {
-    width: 140px;
-    height: 100px;
-    object-fit: cover;
-    background: #111;
-    flex-shrink: 0;
+  /* Desktop: 3 colunas */
+  .card-inner {
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    align-items: stretch;
   }
 
+  .card-thumb {
+    width: 130px;
+    height: 90px;
+    object-fit: cover;
+    background: #111;
+    display: block;
+  }
   .card-thumb-placeholder {
-    width: 140px;
-    height: 100px;
+    width: 130px;
+    height: 90px;
     background: #222;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #444;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .card-body {
-    padding: 14px 18px;
+    padding: 12px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
     overflow: hidden;
+    min-width: 0;
   }
-
   .card-title {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 600;
     color: #f0f0f0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
   .card-caption {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: #bbb;
     line-height: 1.4;
     display: -webkit-box;
@@ -192,64 +193,72 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
   .card-file {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: #555;
     margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
+  /* Desktop side */
   .card-side {
-    padding: 14px 20px;
+    padding: 12px 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: 10px;
-    flex-shrink: 0;
+    gap: 8px;
     border-left: 1px solid #242424;
-    min-width: 150px;
+    min-width: 160px;
+    flex-shrink: 0;
   }
 
+  /* Mobile footer — sempre visível */
+  .card-footer {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid #222;
+    flex-wrap: wrap;
+  }
+  .card-footer-left  { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .card-footer-right { display: flex; align-items: center; gap: 6px; }
+
+  /* ── Badge ── */
   .badge {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 4px 10px;
+    gap: 4px;
+    padding: 3px 9px;
     border-radius: 20px;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
   }
-
-  .badge-future {
-    background: rgba(255,200,0,0.12);
-    color: #ffc800;
-    border: 1px solid rgba(255,200,0,0.25);
-  }
-
-  .badge-past {
-    background: rgba(50,205,50,0.12);
-    color: #50cc50;
-    border: 1px solid rgba(50,205,50,0.25);
-  }
+  .badge-future { background: rgba(255,200,0,0.12); color: #ffc800; border: 1px solid rgba(255,200,0,0.25); }
+  .badge-past   { background: rgba(50,205,50,0.12);  color: #50cc50; border: 1px solid rgba(50,205,50,0.25); }
 
   .scheduled-time {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #e0e0e0;
     text-align: right;
     line-height: 1.3;
   }
-
   .scheduled-time span {
     display: block;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 400;
     color: #666;
   }
 
+  /* ── Botões ── */
   .btn-yt {
     display: inline-flex;
     align-items: center;
@@ -259,37 +268,162 @@
     text-decoration: none;
     font-size: 0.75rem;
     font-weight: 600;
-    padding: 5px 12px;
+    padding: 5px 11px;
     border-radius: 6px;
     transition: background 0.2s;
+    white-space: nowrap;
   }
-
   .btn-yt:hover { background: #cc0000; }
 
-  /* Empty state */
+  .btn-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .btn-edit:hover { border-color: #ff4444; color: #ff4444; }
+  .btn-edit svg { width: 11px; height: 11px; }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    animation: modal-in 0.2s ease;
+  }
+  @keyframes modal-in { from { opacity:0; transform:scale(0.95); } to { opacity:1; transform:scale(1); } }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .modal-title { font-size: 1rem; font-weight: 700; color: #f0f0f0; }
+  .modal-close {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 6px;
+  }
+  .modal-close:hover { color: #fff; }
+
+  .modal-label {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .modal-textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    font-family: inherit;
+    padding: 12px;
+    resize: vertical;
+    min-height: 100px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .modal-textarea:focus { border-color: #ff4444; }
+
+  .modal-counter {
+    font-size: 0.72rem;
+    color: #555;
+    text-align: right;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+  .modal-counter.warn { color: #ff8800; }
+  .modal-counter.over { color: #ff4444; }
+
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .btn-cancel {
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .btn-cancel:hover { border-color: #666; color: #fff; }
+  .btn-save {
+    background: #ff0000;
+    border: none;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-save:hover   { background: #cc0000; }
+  .btn-save:active  { transform: scale(0.97); }
+  .btn-save:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* ── Empty / Loading ── */
   .empty {
     text-align: center;
-    padding: 80px 20px;
+    padding: 70px 20px;
     color: #444;
   }
+  .empty svg { width: 56px; height: 56px; fill: #333; margin-bottom: 14px; }
+  .empty h2  { color: #555; font-size: 1rem; margin-bottom: 8px; }
+  .empty p   { font-size: 0.82rem; }
+  .loading   { text-align: center; padding: 70px; color: #555; font-size: 0.9rem; }
 
-  .empty svg { width: 64px; height: 64px; fill: #333; margin-bottom: 16px; }
-  .empty h2 { color: #555; font-size: 1.1rem; margin-bottom: 8px; }
-  .empty p  { font-size: 0.85rem; }
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
 
-  /* Loading */
-  .loading {
-    text-align: center;
-    padding: 80px;
-    color: #555;
-    font-size: 0.9rem;
-  }
+    .card-inner { grid-template-columns: 90px 1fr; }
+    .card-thumb, .card-thumb-placeholder { width: 90px; height: 75px; }
 
-  @media (max-width: 600px) {
-    .card { grid-template-columns: 100px 1fr; }
+    /* Esconde side no mobile */
     .card-side { display: none; }
-    .card-thumb, .card-thumb-placeholder { width: 100px; height: 80px; }
-    header h1 { font-size: 1.1rem; }
+
+    /* Mostra footer no mobile */
+    .card-footer { display: flex; }
+
+    header h1 { font-size: 1rem; }
     .last-update { display: none; }
     .btn-run span { display: none; }
   }
@@ -298,7 +432,7 @@
 <body>
 
 <header>
-  <svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+  <svg class="logo" viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
   <div>
     <h1>YouTube Shorts — Agendamentos</h1>
     <p>Painel automático de controle</p>
@@ -312,8 +446,24 @@
   </div>
 </header>
 
-<!-- Toast -->
 <div id="toast"></div>
+
+<!-- Modal editar legenda -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <span class="modal-title">✏️ Editar legenda</span>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-label">Nova legenda (também será o título no YouTube)</div>
+    <textarea class="modal-textarea" id="modal-input" maxlength="100" oninput="updateCounter()"></textarea>
+    <div class="modal-counter" id="modal-counter">0 / 100</div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn-save"   id="btn-save" onclick="saveCaption()">Salvar</button>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div id="root"><div class="loading">Carregando relatório...</div></div>
@@ -321,6 +471,8 @@
 
 <script>
 const REPORT_URL = 'https://raw.githubusercontent.com/assessoriafindjubs-ai/youtube-shorts-scheduler/main/report.json';
+
+let currentVideoId = null;
 
 // ── Toast ────────────────────────────────────────────────────────────────────
 let toastTimer;
@@ -337,60 +489,105 @@ async function handleRun() {
   const btn = document.getElementById('btn-run');
   btn.disabled = true;
   btn.querySelector('span').textContent = 'Disparando...';
-
   try {
-    const res = await fetch('/api/trigger', { method: 'POST' });
+    const res  = await fetch('/api/trigger', { method: 'POST' });
     const data = await res.json().catch(() => ({}));
-
-    if (res.ok) {
-      showToast('Workflow disparado! Aguarde ~1 min para novos vídeos aparecerem.', 'success');
-    } else {
-      showToast(`Erro: ${data.error || 'tente novamente'}`, 'error');
-    }
-  } catch (e) {
-    showToast('Falha na requisição: ' + e.message, 'error');
+    if (res.ok) showToast('Workflow disparado! Aguarde ~1 min.', 'success');
+    else        showToast(`Erro: ${data.error || 'tente novamente'}`, 'error');
+  } catch(e) {
+    showToast('Falha: ' + e.message, 'error');
   } finally {
     btn.disabled = false;
     btn.querySelector('span').textContent = 'Disparar agora';
   }
 }
 
-// ── Formatação de datas ───────────────────────────────────────────────────────
-function formatDate(iso) {
-  const d = new Date(iso);
-  return d.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
+// ── Modal editar legenda ──────────────────────────────────────────────────────
+function openModal(videoId, currentCaption) {
+  currentVideoId = videoId;
+  const input = document.getElementById('modal-input');
+  input.value = currentCaption;
+  updateCounter();
+  document.getElementById('modal-overlay').classList.add('open');
+  setTimeout(() => input.focus(), 50);
 }
 
-function formatTime(iso) {
-  const d = new Date(iso);
-  return d.toLocaleTimeString('pt-BR', { hour:'2-digit', minute:'2-digit', timeZone:'America/Sao_Paulo' });
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('modal-overlay')) return;
+  document.getElementById('modal-overlay').classList.remove('open');
+  currentVideoId = null;
 }
 
-function formatDateTime(iso) {
-  const d = new Date(iso);
-  return d.toLocaleString('pt-BR', {
-    day:'2-digit', month:'2-digit', year:'numeric',
-    hour:'2-digit', minute:'2-digit',
-    timeZone:'America/Sao_Paulo'
+function updateCounter() {
+  const input   = document.getElementById('modal-input');
+  const counter = document.getElementById('modal-counter');
+  const len = input.value.length;
+  counter.textContent = `${len} / 100`;
+  counter.className = 'modal-counter' + (len > 90 ? ' over' : len > 70 ? ' warn' : '');
+}
+
+async function saveCaption() {
+  const newTitle = document.getElementById('modal-input').value.trim();
+  if (!newTitle) { showToast('A legenda não pode ser vazia.', 'error'); return; }
+  if (!currentVideoId) return;
+
+  const btn = document.getElementById('btn-save');
+  btn.disabled = true;
+  btn.textContent = 'Salvando...';
+
+  try {
+    const res  = await fetch('/api/update-caption', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ videoId: currentVideoId, newTitle }),
+    });
+    const data = await res.json().catch(() => ({}));
+
+    if (res.ok) {
+      document.getElementById('modal-overlay').classList.remove('open');
+      showToast('Legenda atualizada! O YouTube processa em ~30 s.', 'success');
+      setTimeout(render, 35000); // recarrega após o workflow terminar
+    } else {
+      showToast(`Erro: ${data.error || 'tente novamente'}`, 'error');
+    }
+  } catch(e) {
+    showToast('Falha: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Salvar';
+  }
+}
+
+// ── Datas ────────────────────────────────────────────────────────────────────
+function fmtDate(iso) {
+  return new Date(iso).toLocaleDateString('pt-BR', {
+    day:'2-digit', month:'2-digit', year:'numeric', timeZone:'America/Sao_Paulo'
   });
 }
-
-function isPast(iso) {
-  return new Date(iso) < new Date();
+function fmtTime(iso) {
+  return new Date(iso).toLocaleTimeString('pt-BR', {
+    hour:'2-digit', minute:'2-digit', timeZone:'America/Sao_Paulo'
+  });
 }
+function fmtDateTime(iso) {
+  return new Date(iso).toLocaleString('pt-BR', {
+    day:'2-digit', month:'2-digit', year:'numeric',
+    hour:'2-digit', minute:'2-digit', timeZone:'America/Sao_Paulo'
+  });
+}
+function isPast(iso) { return new Date(iso) < new Date(); }
 
-// ── Renderização ──────────────────────────────────────────────────────────────
+// ── Render ────────────────────────────────────────────────────────────────────
 function buildStats(videos) {
   const total     = videos.length;
   const published = videos.filter(v => isPast(v.scheduled_for)).length;
   const pending   = total - published;
   const next      = videos.find(v => !isPast(v.scheduled_for));
-
   return `
     <div class="stats">
       <div class="stat-card">
         <div class="number">${total}</div>
-        <div class="label">Total agendados</div>
+        <div class="label">Total</div>
       </div>
       <div class="stat-card">
         <div class="number">${published}</div>
@@ -401,8 +598,8 @@ function buildStats(videos) {
         <div class="label">Aguardando</div>
       </div>
       <div class="stat-card">
-        <div class="number">${next ? formatTime(next.scheduled_for) : '—'}</div>
-        <div class="label">${next ? 'Próximo em ' + formatDate(next.scheduled_for) : 'Sem próximo'}</div>
+        <div class="number" style="font-size:1.4rem">${next ? fmtTime(next.scheduled_for) : '—'}</div>
+        <div class="label">${next ? 'Próximo · ' + fmtDate(next.scheduled_for) : 'Sem próximo'}</div>
       </div>
     </div>`;
 }
@@ -413,29 +610,53 @@ function buildCard(v) {
     ? `<span class="badge badge-past">✓ Publicado</span>`
     : `<span class="badge badge-future">⏰ Agendado</span>`;
 
-  const thumb = v.thumbnail
+  const dateHtml = `
+    <div class="scheduled-time">
+      ${fmtDate(v.scheduled_for)}
+      <span>${fmtTime(v.scheduled_for)} (Brasília)</span>
+    </div>`;
+
+  const ytBtn  = `<a class="btn-yt" href="${v.url}" target="_blank">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+    Ver no YouTube
+  </a>`;
+
+  const editBtn = `<button class="btn-edit" onclick="openModal('${v.id}', ${JSON.stringify(v.caption || v.title)})">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+    Editar
+  </button>`;
+
+  const thumbHtml = v.thumbnail
     ? `<img class="card-thumb" src="${v.thumbnail}" alt="thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
     : '';
 
   return `
     <div class="card">
-      ${thumb}
-      <div class="card-thumb-placeholder" style="display:${v.thumbnail ? 'none' : 'flex'}">▶</div>
-      <div class="card-body">
-        <div class="card-title">${v.title}</div>
-        <div class="card-caption">${v.caption}</div>
-        <div class="card-file">📁 ${v.drive_file}</div>
-      </div>
-      <div class="card-side">
-        ${badge}
-        <div class="scheduled-time">
-          ${formatDate(v.scheduled_for)}
-          <span>${formatTime(v.scheduled_for)} (Brasília)</span>
+      <div class="card-inner">
+        ${thumbHtml}
+        <div class="card-thumb-placeholder" style="display:${v.thumbnail ? 'none' : 'flex'}">▶</div>
+        <div class="card-body">
+          <div class="card-title">${v.title}</div>
+          <div class="card-caption">${v.caption || v.title}</div>
+          <div class="card-file">📁 ${v.drive_file}</div>
         </div>
-        <a class="btn-yt" href="${v.url}" target="_blank">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-          Ver no YouTube
-        </a>
+        <div class="card-side">
+          ${badge}
+          ${dateHtml}
+          ${editBtn}
+          ${ytBtn}
+        </div>
+      </div>
+      <!-- Footer visível só no mobile -->
+      <div class="card-footer">
+        <div class="card-footer-left">
+          ${badge}
+          <span style="font-size:0.8rem;font-weight:700;color:#e0e0e0">${fmtDate(v.scheduled_for)} · ${fmtTime(v.scheduled_for)}</span>
+        </div>
+        <div class="card-footer-right">
+          ${editBtn}
+          ${ytBtn}
+        </div>
       </div>
     </div>`;
 }
@@ -447,7 +668,7 @@ async function render() {
     const videos = data.videos || [];
 
     document.getElementById('last-update').innerHTML =
-      `Última atualização<br><strong>${data.last_updated ? formatDateTime(data.last_updated) : '—'}</strong>`;
+      `Atualizado<br><strong>${data.last_updated ? fmtDateTime(data.last_updated) : '—'}</strong>`;
 
     if (videos.length === 0) {
       document.getElementById('root').innerHTML = `
@@ -464,7 +685,7 @@ async function render() {
       `<div class="section-title">Vídeos agendados</div>` +
       `<div class="cards">${videos.map(buildCard).join('')}</div>`;
 
-  } catch (e) {
+  } catch(e) {
     document.getElementById('root').innerHTML = `
       <div class="empty">
         <h2>Erro ao carregar relatório</h2>
@@ -472,6 +693,11 @@ async function render() {
       </div>`;
   }
 }
+
+// Fecha modal com Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
+});
 
 render();
 setInterval(render, 60000);

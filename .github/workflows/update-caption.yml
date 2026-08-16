@@ -1,0 +1,61 @@
+name: Update Video Caption
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: 'ID do vídeo no YouTube'
+        required: true
+      new_title:
+        description: 'Nova legenda / título'
+        required: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+
+      - name: Restaurar credenciais
+        env:
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YOUTUBE_TOKEN:        ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          printf '%s' "$GOOGLE_CLIENT_SECRET" > client_secret.json
+          printf '%s' "$YOUTUBE_TOKEN"        > youtube_token.json
+
+      - name: Atualizar legenda no YouTube
+        env:
+          VIDEO_ID:  ${{ github.event.inputs.video_id }}
+          NEW_TITLE: ${{ github.event.inputs.new_title }}
+        run: python update_caption.py
+
+      - name: Salvar token atualizado
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if [ -f youtube_token.json ]; then
+            gh secret set YOUTUBE_TOKEN < youtube_token.json
+          fi
+
+      - name: Commit report.json
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add report.json || true
+          git diff --staged --quiet || git commit -m "chore: atualiza legenda [skip ci]"
+          git push || true
