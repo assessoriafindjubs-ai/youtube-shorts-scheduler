@@ -14,7 +14,6 @@ from groq import Groq
 
 # ── Configuração ────────────────────────────────────────────────────────────
 BRAZIL_TZ       = ZoneInfo("America/Sao_Paulo")
-SCHEDULE_SLOTS  = [(9, 0), (12, 30), (18, 0)]  # (hora, minuto) — Brasília
 STATE_FILE      = "state.json"
 DRIVE_FOLDER_ID = os.environ["DRIVE_FOLDER_ID"]
 GROQ_API_KEY    = os.environ["GROQ_API_KEY"]
@@ -23,6 +22,18 @@ DRIVE_SCOPES   = ["https://www.googleapis.com/auth/drive"]
 YOUTUBE_SCOPES = ["https://www.googleapis.com/auth/youtube",
                   "https://www.googleapis.com/auth/youtube.upload",
                   "https://www.googleapis.com/auth/youtube.readonly"]
+
+CONFIG_FILE   = "config.json"
+METRICS_FILE  = "metrics.json"
+DEFAULT_SLOTS = [(9, 0), (12, 30), (18, 0)]
+
+
+def load_schedule() -> list[tuple[int, int]]:
+    if Path(CONFIG_FILE).exists():
+        with open(CONFIG_FILE, encoding="utf-8") as f:
+            cfg = json.load(f)
+        return [tuple(s) for s in cfg.get("schedule_slots", DEFAULT_SLOTS)]
+    return DEFAULT_SLOTS
 
 VIDEO_MIMETYPES = ("video/mp4", "video/quicktime", "video/x-msvideo",
                    "video/webm", "video/mpeg")
@@ -90,14 +101,14 @@ def get_youtube_booked_slots(yt) -> set[str]:
     return booked
 
 
-def next_available_slot(state: dict, yt_booked: set[str]) -> datetime | None:
+def next_available_slot(state: dict, yt_booked: set[str],
+                        schedule: list[tuple[int, int]]) -> datetime | None:
     now = datetime.now(BRAZIL_TZ)
-    # slots já registrados pelo bot
     state_booked = set(state.get("scheduled_slots", []))
 
     for day_offset in range(60):
         date = now.date() + timedelta(days=day_offset)
-        for hour, minute in SCHEDULE_SLOTS:
+        for hour, minute in sorted(schedule):
             slot = datetime(date.year, date.month, date.day,
                             hour, minute, 0, tzinfo=BRAZIL_TZ)
             slot_key  = slot.isoformat()                    # para state.json
@@ -350,6 +361,50 @@ def upload_short(yt, video_path: str, title: str, description: str,
     return response["id"]
 
 
+# ── Métricas do YouTube ──────────────────────────────────────────────────────
+def fetch_and_save_metrics(yt, report: dict):
+    metrics = {"channel": {}, "videos": [],
+               "last_updated": datetime.now(BRAZIL_TZ).isoformat()}
+    try:
+        ch = yt.channels().list(part="statistics", mine=True).execute()
+        if ch.get("items"):
+            s = ch["items"][0]["statistics"]
+            metrics["channel"] = {
+                "subscribers": int(s.get("subscriberCount", 0)),
+                "total_views":  int(s.get("viewCount", 0)),
+                "video_count":  int(s.get("videoCount", 0)),
+            }
+
+        video_ids = [v["id"] for v in report.get("videos", []) if v.get("id")]
+        id_to_meta = {v["id"]: v for v in report.get("videos", [])}
+        for i in range(0, len(video_ids), 50):
+            batch = video_ids[i:i + 50]
+            resp = yt.videos().list(part="statistics", id=",".join(batch)).execute()
+            for item in resp.get("items", []):
+                vid = item["id"]
+                s   = item.get("statistics", {})
+                meta = id_to_meta.get(vid, {})
+                metrics["videos"].append({
+                    "id":            vid,
+                    "title":         meta.get("title", ""),
+                    "scheduled_for": meta.get("scheduled_for", ""),
+                    "url":           meta.get("url", ""),
+                    "thumbnail":     meta.get("thumbnail", ""),
+                    "views":         int(s.get("viewCount",   0)),
+                    "likes":         int(s.get("likeCount",   0)),
+                    "comments":      int(s.get("commentCount", 0)),
+                })
+
+        metrics["videos"].sort(key=lambda v: v["views"], reverse=True)
+
+    except Exception as e:
+        print(f"  Aviso ao buscar metricas: {e}")
+
+    with open(METRICS_FILE, "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False)
+    print("  Metricas salvas.")
+
+
 # ── Relatório ────────────────────────────────────────────────────────────────
 REPORT_FILE = "report.json"
 
@@ -386,12 +441,16 @@ def main():
     groq_client = Groq(api_key=GROQ_API_KEY)
     drive = drive_service()
     yt    = youtube_service()
+    schedule = load_schedule()
+    print(f"Horarios configurados: {schedule}")
 
     new_videos = list_new_videos(drive, state["processed"])
     agendados_id = get_or_create_agendados_folder(drive) if new_videos else None
 
     if not new_videos:
         print("Nenhum video novo na pasta do Drive.")
+        print("Atualizando metricas...")
+        fetch_and_save_metrics(yt, report)
         return
 
     print(f"{len(new_videos)} video(s) novo(s) encontrado(s).\n")
@@ -402,7 +461,7 @@ def main():
         print(f"  Slots ocupados: {sorted(yt_booked)}")
 
     for video in new_videos:
-        slot = next_available_slot(state, yt_booked)
+        slot = next_available_slot(state, yt_booked, schedule)
         if not slot:
             print("Sem slots disponiveis nos proximos 60 dias.")
             break
@@ -452,6 +511,9 @@ def main():
             Path(tmp_path).unlink(missing_ok=True)
             if optimized_path and optimized_path != tmp_path:
                 Path(optimized_path).unlink(missing_ok=True)
+
+    print("Atualizando metricas...")
+    fetch_and_save_metrics(yt, report)
 
 
 if __name__ == "__main__":
