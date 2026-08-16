@@ -256,6 +256,58 @@ def generate_caption(video_path: str, groq_client: Groq) -> str:
     return resp.choices[0].message.content.strip()
 
 
+# ── Otimização de vídeo para Shorts ─────────────────────────────────────────
+def prepare_for_upload(input_path: str) -> str:
+    """
+    Re-encoda o vídeo para o formato ideal do YouTube Shorts:
+    - MP4 / H.264 + AAC
+    - CRF 18 (qualidade alta, sem perdas perceptíveis)
+    - Mantém a resolução original se já for vertical; caso contrário,
+      faz crop/pad para 9:16 preservando o conteúdo central.
+    Retorna o caminho do arquivo otimizado (tmp).
+    """
+    out_path = input_path + "_optimized.mp4"
+
+    # Detecta dimensões do vídeo original
+    probe = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=width,height",
+         "-of", "csv=p=0", input_path],
+        capture_output=True, text=True, timeout=30
+    )
+    dims = probe.stdout.strip().split(",")
+    try:
+        orig_w, orig_h = int(dims[0]), int(dims[1])
+    except Exception:
+        orig_w, orig_h = 1080, 1920
+
+    # Se já é vertical (9:16 ±10%) não faz pad/crop, só re-encoda
+    ratio = orig_w / orig_h if orig_h else 1
+    if ratio <= 0.6:   # já é vertical
+        vf = "scale=trunc(iw/2)*2:trunc(ih/2)*2"  # garante múltiplos de 2
+    else:              # horizontal ou quadrado → pad para 9:16
+        vf = ("scale=1080:1920:force_original_aspect_ratio=decrease,"
+              "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black")
+
+    result = subprocess.run(
+        ["ffmpeg", "-i", input_path,
+         "-vf", vf,
+         "-c:v", "libx264", "-crf", "18", "-preset", "slow",
+         "-c:a", "aac", "-b:a", "192k",
+         "-movflags", "+faststart",
+         "-pix_fmt", "yuv420p",
+         out_path, "-y", "-loglevel", "error"],
+        capture_output=True, timeout=600
+    )
+
+    if result.returncode != 0 or not Path(out_path).exists():
+        print(f"  Aviso: otimizacao falhou, usando arquivo original. stderr={result.stderr.decode(errors='replace')[:200]}")
+        return input_path   # fallback: usa o original
+
+    print(f"  Video otimizado para Shorts.")
+    return out_path
+
+
 # ── YouTube Upload ───────────────────────────────────────────────────────────
 def upload_short(yt, video_path: str, title: str, description: str,
                  scheduled_dt: datetime) -> str:
@@ -361,6 +413,7 @@ def main():
         with tempfile.NamedTemporaryFile(suffix=ext, delete=False) as tmp:
             tmp_path = tmp.name
 
+        optimized_path = None
         try:
             print("  Baixando do Drive...")
             download_video(drive, video["id"], tmp_path)
@@ -371,8 +424,11 @@ def main():
 
             title = caption
 
+            print("  Otimizando video para Shorts...")
+            optimized_path = prepare_for_upload(tmp_path)
+
             print("  Enviando para o YouTube...")
-            video_id = upload_short(yt, tmp_path, title, "", slot)
+            video_id = upload_short(yt, optimized_path, title, "", slot)
 
             print(f"  OK! youtube.com/shorts/{video_id}\n")
 
@@ -393,6 +449,8 @@ def main():
             raise
         finally:
             Path(tmp_path).unlink(missing_ok=True)
+            if optimized_path and optimized_path != tmp_path:
+                Path(optimized_path).unlink(missing_ok=True)
 
 
 if __name__ == "__main__":
