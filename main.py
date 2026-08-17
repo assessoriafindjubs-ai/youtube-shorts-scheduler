@@ -419,7 +419,7 @@ def fetch_and_save_metrics(yt, report: dict):
                     "subscribers_gained": subs_by_video.get(vid, 0),
                 })
 
-        metrics["videos"].sort(key=lambda v: v["views"], reverse=True)
+        metrics["videos"].sort(key=lambda v: v["subscribers_gained"], reverse=True)
 
     except Exception as e:
         print(f"  Aviso ao buscar metricas: {e}")
