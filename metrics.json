@@ -1953,11 +1953,33 @@
       "subscribers_gained": 0
     },
     {
+      "id": "MzYNPXbhEyQ",
+      "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
+      "scheduled_for": "2026-08-18T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
+      "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
       "id": "fV-SPM1JdIE",
       "title": "Você usaria?\nEu estou usando e minha vida é outra.",
       "scheduled_for": "2026-08-18T09:00:00-03:00",
       "url": "https://youtube.com/shorts/fV-SPM1JdIE",
       "thumbnail": "https://img.youtube.com/vi/fV-SPM1JdIE/hqdefault.jpg",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "TNdDMzEkDjw",
+      "title": "Qual dica que vc tem, que quase ninguém faz, mas que muda a sua vida?",
+      "scheduled_for": "2026-08-17T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/TNdDMzEkDjw",
+      "thumbnail": "https://img.youtube.com/vi/TNdDMzEkDjw/hqdefault.jpg",
       "views": 2,
       "likes": 0,
       "comments": 0,
@@ -1970,28 +1992,6 @@
       "url": "https://youtube.com/shorts/7hunwjCPKls",
       "thumbnail": "https://img.youtube.com/vi/7hunwjCPKls/hqdefault.jpg",
       "views": 2,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "MzYNPXbhEyQ",
-      "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
-      "scheduled_for": "2026-08-18T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
-      "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 1,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "TNdDMzEkDjw",
-      "title": "Qual dica que vc tem, que quase ninguém faz, mas que muda a sua vida?",
-      "scheduled_for": "2026-08-17T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/TNdDMzEkDjw",
-      "thumbnail": "https://img.youtube.com/vi/TNdDMzEkDjw/hqdefault.jpg",
-      "views": 1,
       "likes": 0,
       "comments": 0,
       "subscribers_gained": 0
@@ -2019,5 +2019,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-16T21:33:39.875019-03:00"
+  "last_updated": "2026-08-16T21:57:26.688381-03:00"
 }
