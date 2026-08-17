@@ -737,7 +737,7 @@ async function renderMetrics() {
     if(!res.ok) throw new Error('metrics.json ainda não existe — aguarde o próximo ciclo da automação.');
     const data=await res.json();
     const ch=data.channel||{};
-    const videos=data.videos||[];
+    const videos=(data.videos||[]).slice().sort((a,b)=>(b.subscribers_gained||0)-(a.subscribers_gained||0));
 
     const channelHtml=`<div class="metrics-stats">
       <div class="metrics-card"><div class="number">${fmtNum(ch.subscribers||0)}</div><div class="label">Inscritos</div></div>
