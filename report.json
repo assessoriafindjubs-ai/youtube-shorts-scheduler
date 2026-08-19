@@ -24,28 +24,6 @@
       "created_at": "2026-08-19T11:27:24.641908-03:00"
     },
     {
-      "id": "pCKuNFWRms4",
-      "drive_file": "copy_5ABE0E53-BB48-4B35-B93C-E6B453CE3DD9.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-09-03T18:00:00-03:00",
-      "scheduled_fmt": "03/09/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/pCKuNFWRms4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/pCKuNFWRms4",
-      "created_at": "2026-08-19T11:23:59.738023-03:00"
-    },
-    {
-      "id": "rUO9YhRpuQU",
-      "drive_file": "copy_1AC84540-669F-47C1-8F9C-BC6ED135E6CD.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-09-03T12:30:00-03:00",
-      "scheduled_fmt": "03/09/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/rUO9YhRpuQU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/rUO9YhRpuQU",
-      "created_at": "2026-08-19T11:23:15.856593-03:00"
-    },
-    {
       "id": "qyrkDimmIrc",
       "drive_file": "F62393DD-0F55-472D-AB5A-40ECC15B06D3.MP4",
       "title": "",
@@ -79,39 +57,6 @@
       "created_at": "2026-08-19T11:16:12.914546-03:00"
     },
     {
-      "id": "dpEVL_mHZB8",
-      "drive_file": "copy_6064A2B4-B805-4120-AE32-823D7C161AEC.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-09-01T12:30:00-03:00",
-      "scheduled_fmt": "01/09/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/dpEVL_mHZB8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/dpEVL_mHZB8",
-      "created_at": "2026-08-19T11:13:57.636485-03:00"
-    },
-    {
-      "id": "2MmuoKPr-AU",
-      "drive_file": "copy_AEB1C4AB-3CF2-40C8-96A0-A09814EB5501.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-31T18:00:00-03:00",
-      "scheduled_fmt": "31/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/2MmuoKPr-AU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/2MmuoKPr-AU",
-      "created_at": "2026-08-19T11:13:36.781384-03:00"
-    },
-    {
-      "id": "b4QWf6aFpTs",
-      "drive_file": "copy_D2280891-8063-4740-A2D8-05F6964F6B33.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-31T12:30:00-03:00",
-      "scheduled_fmt": "31/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/b4QWf6aFpTs/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/b4QWf6aFpTs",
-      "created_at": "2026-08-19T11:13:23.133550-03:00"
-    },
-    {
       "id": "dGRXm1h3r_8",
       "drive_file": "72C99145-9866-40F4-96DC-C1EF28F94E83.MOV",
       "title": "",
@@ -123,94 +68,6 @@
       "created_at": "2026-08-19T11:12:50.939603-03:00"
     },
     {
-      "id": "TwvMK9XKZp4",
-      "drive_file": "copy_85379625-2337-417E-BA20-CAD45F25402D.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-30T12:30:00-03:00",
-      "scheduled_fmt": "30/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/TwvMK9XKZp4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/TwvMK9XKZp4",
-      "created_at": "2026-08-19T11:12:39.868793-03:00"
-    },
-    {
-      "id": "SJTdnT9WUK4",
-      "drive_file": "copy_96A448F8-676B-4117-B219-7345F22FF42E.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-29T18:00:00-03:00",
-      "scheduled_fmt": "29/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/SJTdnT9WUK4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/SJTdnT9WUK4",
-      "created_at": "2026-08-19T11:12:07.347434-03:00"
-    },
-    {
-      "id": "8PM-r63YipM",
-      "drive_file": "copy_E68710A4-F787-4260-99B5-811751DC93D6.mov",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-29T12:30:00-03:00",
-      "scheduled_fmt": "29/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/8PM-r63YipM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/8PM-r63YipM",
-      "created_at": "2026-08-19T11:10:16.899900-03:00"
-    },
-    {
-      "id": "G1EKGdxDgM8",
-      "drive_file": "copy_3B31085F-8A36-4435-9F15-AF756A8C7A57.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-28T18:00:00-03:00",
-      "scheduled_fmt": "28/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/G1EKGdxDgM8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/G1EKGdxDgM8",
-      "created_at": "2026-08-19T11:08:23.629407-03:00"
-    },
-    {
-      "id": "vieo7gQ987M",
-      "drive_file": "copy_92041FAD-1A28-4665-82BC-B78BF24516C9.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-28T12:30:00-03:00",
-      "scheduled_fmt": "28/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/vieo7gQ987M/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/vieo7gQ987M",
-      "created_at": "2026-08-19T11:06:41.376183-03:00"
-    },
-    {
-      "id": "R3dB7nR8LEU",
-      "drive_file": "copy_85D81F63-2538-4508-A6BD-FE5E311C82FC.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-27T18:00:00-03:00",
-      "scheduled_fmt": "27/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/R3dB7nR8LEU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/R3dB7nR8LEU",
-      "created_at": "2026-08-19T11:04:48.293419-03:00"
-    },
-    {
-      "id": "Zd3IV1IW4B4",
-      "drive_file": "copy_4263133F-5E6C-4AD1-84B5-2CF02413CDA2.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-26T18:00:00-03:00",
-      "scheduled_fmt": "26/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/Zd3IV1IW4B4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Zd3IV1IW4B4",
-      "created_at": "2026-08-19T11:02:03.570273-03:00"
-    },
-    {
-      "id": "quWePOwx9d8",
-      "drive_file": "copy_9E4FB7C0-1BE5-49FC-96D1-BBF16086690E.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-26T12:30:00-03:00",
-      "scheduled_fmt": "26/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/quWePOwx9d8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/quWePOwx9d8",
-      "created_at": "2026-08-19T11:00:27.532001-03:00"
-    },
-    {
       "id": "ok4BmjKSloo",
       "drive_file": "ba227686013c475ba9b2a1db4ad18757.MP4",
       "title": "",
@@ -220,50 +77,6 @@
       "thumbnail": "https://img.youtube.com/vi/ok4BmjKSloo/hqdefault.jpg",
       "url": "https://youtube.com/shorts/ok4BmjKSloo",
       "created_at": "2026-08-19T10:58:55.620318-03:00"
-    },
-    {
-      "id": "mTwuZDBQ6j0",
-      "drive_file": "copy_EB74B1C8-FC84-4A48-B895-27E73B570713.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-25T12:30:00-03:00",
-      "scheduled_fmt": "25/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/mTwuZDBQ6j0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/mTwuZDBQ6j0",
-      "created_at": "2026-08-19T10:58:12.204923-03:00"
-    },
-    {
-      "id": "z45a8AzAjl8",
-      "drive_file": "copy_DE8B4CBB-9FDF-431F-9A94-0FAC71F6CBA2.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-24T18:00:00-03:00",
-      "scheduled_fmt": "24/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/z45a8AzAjl8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/z45a8AzAjl8",
-      "created_at": "2026-08-19T10:56:53.707717-03:00"
-    },
-    {
-      "id": "3lztqJwkw7w",
-      "drive_file": "copy_4866D90B-76FB-4A5E-A80D-9CC446A97F05.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-24T12:30:00-03:00",
-      "scheduled_fmt": "24/08/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/3lztqJwkw7w/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/3lztqJwkw7w",
-      "created_at": "2026-08-19T10:56:26.447467-03:00"
-    },
-    {
-      "id": "VYQCxzZYFS8",
-      "drive_file": "copy_945BE164-BB9A-4EAA-9719-5859E6E9D5E5.MOV",
-      "title": "",
-      "caption": "",
-      "scheduled_for": "2026-08-23T18:00:00-03:00",
-      "scheduled_fmt": "23/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/VYQCxzZYFS8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/VYQCxzZYFS8",
-      "created_at": "2026-08-19T10:55:36.700497-03:00"
     },
     {
       "id": "FITtZizm-X4",
@@ -308,17 +121,6 @@
       "thumbnail": "https://img.youtube.com/vi/fV-SPM1JdIE/hqdefault.jpg",
       "url": "https://youtube.com/shorts/fV-SPM1JdIE",
       "created_at": "2026-08-16T19:48:23.570989-03:00"
-    },
-    {
-      "id": "TNdDMzEkDjw",
-      "drive_file": "copy_A0437193-2F1D-4778-B94D-FE8713232B1D.mov",
-      "title": "Qual dica que vc tem, que quase ninguém faz, mas que muda a sua vida?",
-      "caption": "Qual dica que vc tem, que quase ninguém faz, mas que muda a sua vida?",
-      "scheduled_for": "2026-08-17T18:00:00-03:00",
-      "scheduled_fmt": "17/08/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/TNdDMzEkDjw/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/TNdDMzEkDjw",
-      "created_at": "2026-08-16T19:48:19.088386-03:00"
     },
     {
       "id": "no7srIzvRr8",
@@ -387,17 +189,6 @@
       "created_at": "2026-05-15T07:05:52.060190-03:00"
     },
     {
-      "id": "fvY2JCi7vdI",
-      "drive_file": "copy_2FFEAE93-5174-4CFF-8A52-C97D67C48030.MOV",
-      "title": "Que momentos de reflexão! #Fé #Esperança #PazInterior",
-      "caption": "Que momentos de reflexão! #Fé #Esperança #PazInterior",
-      "scheduled_for": "2026-07-02T12:30:00-03:00",
-      "scheduled_fmt": "02/07/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/fvY2JCi7vdI/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/fvY2JCi7vdI",
-      "created_at": "2026-05-15T07:05:45.457226-03:00"
-    },
-    {
       "id": "Nh8EO_tPGmI",
       "drive_file": "135B2C4E-24DA-4A1B-8291-AF09AFCB8ADA.MP4",
       "title": "E aí galera, o que ta rolando? #YouTube #Instagram #Reels",
@@ -409,17 +200,6 @@
       "created_at": "2026-05-15T07:05:40.519872-03:00"
     },
     {
-      "id": "z6WJB0UP2sk",
-      "drive_file": "copy_FC315800-F119-4B15-8067-9404B3CFA7F6.MOV",
-      "title": "Legendas personalizadas para seu sucesso nas redes #YouTube #Instagram #Legendas",
-      "caption": "Legendas personalizadas para seu sucesso nas redes #YouTube #Instagram #Legendas",
-      "scheduled_for": "2026-07-01T18:00:00-03:00",
-      "scheduled_fmt": "01/07/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/z6WJB0UP2sk/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/z6WJB0UP2sk",
-      "created_at": "2026-05-15T07:05:31.412861-03:00"
-    },
-    {
       "id": "bavaa1yucNU",
       "drive_file": "CEADC06C-B000-48AC-B454-F805DFF6B623.MP4",
       "title": "Descubra o poder da transcrição automática com Pedro R #Transcrição #Legendas #EdiçãoDeVideo",
@@ -429,28 +209,6 @@
       "thumbnail": "https://img.youtube.com/vi/bavaa1yucNU/hqdefault.jpg",
       "url": "https://youtube.com/shorts/bavaa1yucNU",
       "created_at": "2026-05-15T07:05:27.665316-03:00"
-    },
-    {
-      "id": "WvN3fA7FJF4",
-      "drive_file": "copy_64A9524F-338F-437C-AB1B-78C4663066CB.MOV",
-      "title": "Vibe musical perfeita #Musica #Vibe #Diversao",
-      "caption": "Vibe musical perfeita #Musica #Vibe #Diversao",
-      "scheduled_for": "2026-07-01T09:00:00-03:00",
-      "scheduled_fmt": "01/07/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/WvN3fA7FJF4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/WvN3fA7FJF4",
-      "created_at": "2026-05-15T07:05:16.959289-03:00"
-    },
-    {
-      "id": "RRedAhoc-1Y",
-      "drive_file": "copy_312D3865-F24B-4108-91B6-88B215F7E8DD.MOV",
-      "title": "Senti que a tristeza ia chegar e tomar conta #Tristeza #SaudamentoMental #Reflexao",
-      "caption": "Senti que a tristeza ia chegar e tomar conta #Tristeza #SaudamentoMental #Reflexao",
-      "scheduled_for": "2026-06-30T18:00:00-03:00",
-      "scheduled_fmt": "30/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/RRedAhoc-1Y/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/RRedAhoc-1Y",
-      "created_at": "2026-05-15T07:05:11.886754-03:00"
     },
     {
       "id": "XVaIM51X7jA",
@@ -530,17 +288,6 @@
       "created_at": "2026-05-14T05:19:10.278250-03:00"
     },
     {
-      "id": "NsHouQWkBMA",
-      "drive_file": "copy_68CCFF41-7D25-40A0-AF28-03D2DA921787.MOV",
-      "title": "E aí tudo bem #YouTube #Instagram #Reels",
-      "caption": "E aí tudo bem #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-28T09:00:00-03:00",
-      "scheduled_fmt": "28/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/NsHouQWkBMA/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/NsHouQWkBMA",
-      "created_at": "2026-05-14T05:19:05.181731-03:00"
-    },
-    {
       "id": "Deg3xKDDcIU",
       "drive_file": "E15BB4E9-7128-4B6D-9B57-65C0AD5A73F5.MP4",
       "title": "E aí, o que está rolando? #YouTube #Instagram #Reels",
@@ -550,215 +297,6 @@
       "thumbnail": "https://img.youtube.com/vi/Deg3xKDDcIU/hqdefault.jpg",
       "url": "https://youtube.com/shorts/Deg3xKDDcIU",
       "created_at": "2026-05-14T05:18:59.734923-03:00"
-    },
-    {
-      "id": "wLhw3tcqtfM",
-      "drive_file": "copy_4DD82FCE-9D0A-4394-B77D-6AFADCD703FC.MOV",
-      "title": "Vibrações perfeitas! #Musica #Vibes #MúsicaLinda",
-      "caption": "Vibrações perfeitas! #Musica #Vibes #MúsicaLinda",
-      "scheduled_for": "2026-06-27T12:30:00-03:00",
-      "scheduled_fmt": "27/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/wLhw3tcqtfM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/wLhw3tcqtfM",
-      "created_at": "2026-05-14T05:18:55.912169-03:00"
-    },
-    {
-      "id": "tZETyX_Y5HI",
-      "drive_file": "copy_5600F24B-2B7D-415E-82FF-39913A934B09.MOV",
-      "title": "Vibe musical perfeita #Musica #Vibe #MúsicaBrasileira",
-      "caption": "Vibe musical perfeita #Musica #Vibe #MúsicaBrasileira",
-      "scheduled_for": "2026-06-27T09:00:00-03:00",
-      "scheduled_fmt": "27/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/tZETyX_Y5HI/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/tZETyX_Y5HI",
-      "created_at": "2026-05-14T05:18:51.388300-03:00"
-    },
-    {
-      "id": "FJdmC5GyRbU",
-      "drive_file": "copy_7CF42A0E-5D5D-409D-8F0A-0DE467E77850.MOV",
-      "title": "Muito obrigada por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigada por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-26T18:00:00-03:00",
-      "scheduled_fmt": "26/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/FJdmC5GyRbU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/FJdmC5GyRbU",
-      "created_at": "2026-05-14T05:18:47.569754-03:00"
-    },
-    {
-      "id": "spA3LyYA_0s",
-      "drive_file": "copy_8CB1A403-22AD-4D77-84C9-817B88A85BA2.MOV",
-      "title": "Fim do video obrigado por assistir #YouTube #Instagram #Reels",
-      "caption": "Fim do video obrigado por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-26T12:30:00-03:00",
-      "scheduled_fmt": "26/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/spA3LyYA_0s/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/spA3LyYA_0s",
-      "created_at": "2026-05-14T05:18:42.990943-03:00"
-    },
-    {
-      "id": "jsgStgHZh4o",
-      "drive_file": "copy_20DBE93D-558A-4DEE-8C25-A0D8B6755D7E.MOV",
-      "title": "Vibrações positivas com boa música #Musica #Vibes #MúsicaLinda",
-      "caption": "Vibrações positivas com boa música #Musica #Vibes #MúsicaLinda",
-      "scheduled_for": "2026-06-26T09:00:00-03:00",
-      "scheduled_fmt": "26/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/jsgStgHZh4o/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/jsgStgHZh4o",
-      "created_at": "2026-05-14T05:18:38.614487-03:00"
-    },
-    {
-      "id": "7Q5Sg6cjUDc",
-      "drive_file": "copy_29B0764B-5D3E-44CE-BF7F-C638BE4943A3.MOV",
-      "title": "Sinta o ritmo! #Musica #Vibes #Entretenimento",
-      "caption": "Sinta o ritmo! #Musica #Vibes #Entretenimento",
-      "scheduled_for": "2026-06-25T18:00:00-03:00",
-      "scheduled_fmt": "25/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/7Q5Sg6cjUDc/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/7Q5Sg6cjUDc",
-      "created_at": "2026-05-14T05:18:33.430246-03:00"
-    },
-    {
-      "id": "UixP0CoPWgw",
-      "drive_file": "copy_4C4BD0DC-DB91-4722-B94F-0E729D30F520.MOV",
-      "title": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-25T12:30:00-03:00",
-      "scheduled_fmt": "25/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/UixP0CoPWgw/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/UixP0CoPWgw",
-      "created_at": "2026-05-14T05:18:28.102685-03:00"
-    },
-    {
-      "id": "dWIN5xSsQgk",
-      "drive_file": "copy_389D7414-C7D7-4E66-9676-B1EF08964C99.MOV",
-      "title": "Vibe musical perfeita #Musica #Vibe #MúsicaParaTodasAsIdades",
-      "caption": "Vibe musical perfeita #Musica #Vibe #MúsicaParaTodasAsIdades",
-      "scheduled_for": "2026-06-25T09:00:00-03:00",
-      "scheduled_fmt": "25/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/dWIN5xSsQgk/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/dWIN5xSsQgk",
-      "created_at": "2026-05-14T05:18:23.438796-03:00"
-    },
-    {
-      "id": "JYTju_qL-Gw",
-      "drive_file": "copy_9D229C3C-9379-44D3-945C-F2C98332FDD5.MOV",
-      "title": "Até logo! #Tchau #Despedida #Adeus",
-      "caption": "Até logo! #Tchau #Despedida #Adeus",
-      "scheduled_for": "2026-06-24T18:00:00-03:00",
-      "scheduled_fmt": "24/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/JYTju_qL-Gw/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/JYTju_qL-Gw",
-      "created_at": "2026-05-14T05:18:18.968167-03:00"
-    },
-    {
-      "id": "WspdvMDhilc",
-      "drive_file": "copy_996AA902-5C75-4A0B-B476-E6A65D21CA17.MOV",
-      "title": "Descubra o conteúdo exclusivo agora #YouTubeShorts #InstagramReels #ConteudoExclusivo",
-      "caption": "Descubra o conteúdo exclusivo agora #YouTubeShorts #InstagramReels #ConteudoExclusivo",
-      "scheduled_for": "2026-06-24T12:30:00-03:00",
-      "scheduled_fmt": "24/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/WspdvMDhilc/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/WspdvMDhilc",
-      "created_at": "2026-05-14T05:18:13.910098-03:00"
-    },
-    {
-      "id": "r6GZjlsaStQ",
-      "drive_file": "copy_7B589295-B310-4979-8364-16CAD6099189.MOV",
-      "title": "Vibrações musicais perfeitas #Musica #YouTubeShorts #Reels",
-      "caption": "Vibrações musicais perfeitas #Musica #YouTubeShorts #Reels",
-      "scheduled_for": "2026-06-24T09:00:00-03:00",
-      "scheduled_fmt": "24/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/r6GZjlsaStQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/r6GZjlsaStQ",
-      "created_at": "2026-05-14T05:18:09.529636-03:00"
-    },
-    {
-      "id": "vRJLcCp5eoQ",
-      "drive_file": "copy_48A357D7-1F95-4CBA-834A-86697FA3698C.MOV",
-      "title": "Descubra dicas incríveis com Adriana Zanotto #Dicas #VidaSaudavel #BemEstar",
-      "caption": "Descubra dicas incríveis com Adriana Zanotto #Dicas #VidaSaudavel #BemEstar",
-      "scheduled_for": "2026-06-23T18:00:00-03:00",
-      "scheduled_fmt": "23/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/vRJLcCp5eoQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/vRJLcCp5eoQ",
-      "created_at": "2026-05-14T05:18:05.135602-03:00"
-    },
-    {
-      "id": "aOs1wP3PpZE",
-      "drive_file": "copy_8D935109-3678-40A0-84FE-B2F0E7BE3237.MOV",
-      "title": "Luar iluminando tudo! Meu coração está cheio de poesia #Luar #Poesia #NoiteEstrelada",
-      "caption": "Luar iluminando tudo! Meu coração está cheio de poesia #Luar #Poesia #NoiteEstrelada",
-      "scheduled_for": "2026-06-23T12:30:00-03:00",
-      "scheduled_fmt": "23/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/aOs1wP3PpZE/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/aOs1wP3PpZE",
-      "created_at": "2026-05-14T05:18:00.775124-03:00"
-    },
-    {
-      "id": "hV0Cfhj75cI",
-      "drive_file": "copy_CF1F9117-E391-493A-BC98-CD202E75412E.MOV",
-      "title": "Descubra o poder da criatividade com Adriana Zanotto #Inspiracao #Criatividade #Motivacao",
-      "caption": "Descubra o poder da criatividade com Adriana Zanotto #Inspiracao #Criatividade #Motivacao",
-      "scheduled_for": "2026-06-23T09:00:00-03:00",
-      "scheduled_fmt": "23/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/hV0Cfhj75cI/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/hV0Cfhj75cI",
-      "created_at": "2026-05-14T05:17:56.130899-03:00"
-    },
-    {
-      "id": "uVkQQWQOfrE",
-      "drive_file": "copy_90836E5F-59F0-44CD-ADF9-D6B734B4DAFC.MOV",
-      "title": "E aí galera tudo bem #YouTube #Instagram #Reels",
-      "caption": "E aí galera tudo bem #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-22T18:00:00-03:00",
-      "scheduled_fmt": "22/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/uVkQQWQOfrE/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/uVkQQWQOfrE",
-      "created_at": "2026-05-14T05:17:51.816478-03:00"
-    },
-    {
-      "id": "iQZiEWAOli0",
-      "drive_file": "copy_A653A395-4BC8-4F9F-9D78-A2597F6F1270.MOV",
-      "title": "Vibrações positivas! Música para todos os momentos #Musica #Vibes #MúsicaParaSempre",
-      "caption": "Vibrações positivas! Música para todos os momentos #Musica #Vibes #MúsicaParaSempre",
-      "scheduled_for": "2026-06-22T12:30:00-03:00",
-      "scheduled_fmt": "22/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/iQZiEWAOli0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/iQZiEWAOli0",
-      "created_at": "2026-05-14T05:17:47.641464-03:00"
-    },
-    {
-      "id": "Ra8lK5_kPcg",
-      "drive_file": "copy_1C37018C-1326-4415-9F38-14D00526C547.MOV",
-      "title": "E aí? O que está rolando? #Vlog #Momentos #Diversao",
-      "caption": "E aí? O que está rolando? #Vlog #Momentos #Diversao",
-      "scheduled_for": "2026-06-22T09:00:00-03:00",
-      "scheduled_fmt": "22/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/Ra8lK5_kPcg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Ra8lK5_kPcg",
-      "created_at": "2026-05-14T05:17:43.476075-03:00"
-    },
-    {
-      "id": "Ld4FMPWzl40",
-      "drive_file": "copy_16DD53A1-20A7-46F3-90B1-961D0019907E.MOV",
-      "title": "Vibrações positivas com boa música #Musica #VibraçõesPositivas #MúsicaBoa",
-      "caption": "Vibrações positivas com boa música #Musica #VibraçõesPositivas #MúsicaBoa",
-      "scheduled_for": "2026-06-21T18:00:00-03:00",
-      "scheduled_fmt": "21/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/Ld4FMPWzl40/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Ld4FMPWzl40",
-      "created_at": "2026-05-14T05:17:40.450123-03:00"
-    },
-    {
-      "id": "1o2l252HHik",
-      "drive_file": "copy_C4C43B1F-EAF2-4608-853E-BDDA0A3F9C3C.MOV",
-      "title": "Relógio estilo luxo com toque de cores suaves #Moda #Relogios #Estilo",
-      "caption": "Relógio estilo luxo com toque de cores suaves #Moda #Relogios #Estilo",
-      "scheduled_for": "2026-06-21T12:30:00-03:00",
-      "scheduled_fmt": "21/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/1o2l252HHik/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/1o2l252HHik",
-      "created_at": "2026-05-14T05:17:35.860095-03:00"
     },
     {
       "id": "egT0B1xN8rg",
@@ -772,358 +310,6 @@
       "created_at": "2026-05-14T05:17:31.806799-03:00"
     },
     {
-      "id": "NEuAAPK8Ikc",
-      "drive_file": "copy_CD9E876F-88D3-42FA-83E3-5B0305F59A2F.MOV",
-      "title": "Mudança começa agora! Vamos juntas em busca do nosso objetivo #MudançaPositiva #AutoCuidado #Motivação",
-      "caption": "Mudança começa agora! Vamos juntas em busca do nosso objetivo #MudançaPositiva #AutoCuidado #Motivação",
-      "scheduled_for": "2026-06-20T18:00:00-03:00",
-      "scheduled_fmt": "20/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/NEuAAPK8Ikc/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/NEuAAPK8Ikc",
-      "created_at": "2026-05-14T05:17:27.516758-03:00"
-    },
-    {
-      "id": "HKf_u_7lGSg",
-      "drive_file": "copy_DE031FA1-76D9-46FB-97FA-7184C00AF6DA.MOV",
-      "title": "Vibrações positivas com boa música #Musica #VibraçõesPositivas #MúsicaParaTodasAsIdades",
-      "caption": "Vibrações positivas com boa música #Musica #VibraçõesPositivas #MúsicaParaTodasAsIdades",
-      "scheduled_for": "2026-06-20T12:30:00-03:00",
-      "scheduled_fmt": "20/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/HKf_u_7lGSg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/HKf_u_7lGSg",
-      "created_at": "2026-05-14T05:17:18.325240-03:00"
-    },
-    {
-      "id": "Pza39poN6do",
-      "drive_file": "copy_875C7149-4356-4B4A-BE6E-762E31ABEDD8.MOV",
-      "title": "Vibrações musicais que te levam a outro nível #Musica #Vibes #Som",
-      "caption": "Vibrações musicais que te levam a outro nível #Musica #Vibes #Som",
-      "scheduled_for": "2026-06-20T09:00:00-03:00",
-      "scheduled_fmt": "20/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/Pza39poN6do/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Pza39poN6do",
-      "created_at": "2026-05-14T05:17:12.629271-03:00"
-    },
-    {
-      "id": "m27jQOsQypM",
-      "drive_file": "copy_03C11CDF-7040-41DB-BB82-B3C41BFAC53D.MOV",
-      "title": "Descubra o melhor do estilo com Adriana Zanotto #Moda #Estilo #Beleza",
-      "caption": "Descubra o melhor do estilo com Adriana Zanotto #Moda #Estilo #Beleza",
-      "scheduled_for": "2026-06-19T18:00:00-03:00",
-      "scheduled_fmt": "19/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/m27jQOsQypM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/m27jQOsQypM",
-      "created_at": "2026-05-14T05:17:07.821266-03:00"
-    },
-    {
-      "id": "6AAN9mzlIOQ",
-      "drive_file": "copy_99ECFD4E-AE86-470A-974C-5A6A50FCC3D9.MOV",
-      "title": "Descubra o poder da criatividade com Adriana Zanotto #arte #inspiracao #criatividade",
-      "caption": "Descubra o poder da criatividade com Adriana Zanotto #arte #inspiracao #criatividade",
-      "scheduled_for": "2026-06-19T12:30:00-03:00",
-      "scheduled_fmt": "19/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/6AAN9mzlIOQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/6AAN9mzlIOQ",
-      "created_at": "2026-05-14T05:17:04.029025-03:00"
-    },
-    {
-      "id": "Wj81SLg17xA",
-      "drive_file": "copy_91C971D9-2189-49D8-B464-196F271F7D29.MOV",
-      "title": "E aí, o que está rolando? #Vlog #Comedia #Entretenimento",
-      "caption": "E aí, o que está rolando? #Vlog #Comedia #Entretenimento",
-      "scheduled_for": "2026-06-19T09:00:00-03:00",
-      "scheduled_fmt": "19/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/Wj81SLg17xA/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Wj81SLg17xA",
-      "created_at": "2026-05-14T05:17:00.644136-03:00"
-    },
-    {
-      "id": "ORtckh5nNW0",
-      "drive_file": "copy_D50A63BA-215A-49E7-A676-F451B909FDF9.MOV",
-      "title": "Rebolar é arte #Danca #Rebolar #Musica",
-      "caption": "Rebolar é arte #Danca #Rebolar #Musica",
-      "scheduled_for": "2026-06-18T18:00:00-03:00",
-      "scheduled_fmt": "18/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/ORtckh5nNW0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/ORtckh5nNW0",
-      "created_at": "2026-05-14T05:16:57.592485-03:00"
-    },
-    {
-      "id": "M6Q1ODXDJQE",
-      "drive_file": "copy_633F529E-AF2F-4595-8DF0-759744C4410B.MOV",
-      "title": "Vibrações positivas com boa música #Musica #VibesPositivas #MúsicaBoa",
-      "caption": "Vibrações positivas com boa música #Musica #VibesPositivas #MúsicaBoa",
-      "scheduled_for": "2026-06-18T12:30:00-03:00",
-      "scheduled_fmt": "18/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/M6Q1ODXDJQE/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/M6Q1ODXDJQE",
-      "created_at": "2026-05-14T05:16:53.214928-03:00"
-    },
-    {
-      "id": "1W2slZ5emuY",
-      "drive_file": "copy_25FB8D33-5DA1-4EC0-A7EC-470380785380.MOV",
-      "title": "Amor que não foi correspondido ai, ai, ai #AmorNãoCorrespondido #MusicaSaudade #AmorPerdido",
-      "caption": "Amor que não foi correspondido ai, ai, ai #AmorNãoCorrespondido #MusicaSaudade #AmorPerdido",
-      "scheduled_for": "2026-06-18T09:00:00-03:00",
-      "scheduled_fmt": "18/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/1W2slZ5emuY/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/1W2slZ5emuY",
-      "created_at": "2026-05-14T05:16:48.653886-03:00"
-    },
-    {
-      "id": "kwpF4CL97kc",
-      "drive_file": "copy_5D4FF030-F4DD-4990-B21B-7ECEE8D2D8FE.MOV",
-      "title": "Até o próximo vídeo, tchau #YouTube #Instagram #Tchau",
-      "caption": "Até o próximo vídeo, tchau #YouTube #Instagram #Tchau",
-      "scheduled_for": "2026-06-17T18:00:00-03:00",
-      "scheduled_fmt": "17/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/kwpF4CL97kc/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/kwpF4CL97kc",
-      "created_at": "2026-05-14T05:16:44.326623-03:00"
-    },
-    {
-      "id": "IaGeqFB2-S4",
-      "drive_file": "copy_4F3D0328-C0EC-498A-9C4A-7D05A91B2B41.MOV",
-      "title": "Vibrações positivas com boa música #Musica #VibraçõesPositivas #MúsicaBoa",
-      "caption": "Vibrações positivas com boa música #Musica #VibraçõesPositivas #MúsicaBoa",
-      "scheduled_for": "2026-06-17T12:30:00-03:00",
-      "scheduled_fmt": "17/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/IaGeqFB2-S4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/IaGeqFB2-S4",
-      "created_at": "2026-05-14T05:16:40.364218-03:00"
-    },
-    {
-      "id": "00g_wFG0VYA",
-      "drive_file": "copy_DD0DC662-4452-418E-AF49-6658ADEF11D7.MP4",
-      "title": "Momento de reflexão após uma separação #AmorPerdido #MusicaSoul #SaudeMental",
-      "caption": "Momento de reflexão após uma separação #AmorPerdido #MusicaSoul #SaudeMental",
-      "scheduled_for": "2026-06-17T09:00:00-03:00",
-      "scheduled_fmt": "17/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/00g_wFG0VYA/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/00g_wFG0VYA",
-      "created_at": "2026-05-14T05:16:36.279680-03:00"
-    },
-    {
-      "id": "NXmJZ9gxH3k",
-      "drive_file": "copy_CD65F611-9453-4758-8755-0E76B92C3F09.MOV",
-      "title": "Deixe a fofoca de lado e se concentre nas coisas certas #Foco #Motivacao #Produtividade",
-      "caption": "Deixe a fofoca de lado e se concentre nas coisas certas #Foco #Motivacao #Produtividade",
-      "scheduled_for": "2026-06-16T18:00:00-03:00",
-      "scheduled_fmt": "16/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/NXmJZ9gxH3k/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/NXmJZ9gxH3k",
-      "created_at": "2026-05-14T05:16:30.701482-03:00"
-    },
-    {
-      "id": "dM-wr-pJ_0I",
-      "drive_file": "copy_34E48BC1-DF49-401F-B53F-DD6B36B62831.MOV",
-      "title": "Quem sou eu mesmo? Descubra comigo #QuemSouEu #Autoconhecimento #DescubraSeuEu",
-      "caption": "Quem sou eu mesmo? Descubra comigo #QuemSouEu #Autoconhecimento #DescubraSeuEu",
-      "scheduled_for": "2026-06-16T12:30:00-03:00",
-      "scheduled_fmt": "16/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/dM-wr-pJ_0I/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/dM-wr-pJ_0I",
-      "created_at": "2026-05-14T05:16:26.010507-03:00"
-    },
-    {
-      "id": "EooADbqenVo",
-      "drive_file": "copy_BD771B3D-45C5-4798-A579-B5EF8AD719BA.MOV",
-      "title": "Mude sua rotina, mude sua vida! #AutoAjuda #MudancaPositiva #Motivacao",
-      "caption": "Mude sua rotina, mude sua vida! #AutoAjuda #MudancaPositiva #Motivacao",
-      "scheduled_for": "2026-06-16T09:00:00-03:00",
-      "scheduled_fmt": "16/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/EooADbqenVo/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/EooADbqenVo",
-      "created_at": "2026-05-14T05:16:20.758899-03:00"
-    },
-    {
-      "id": "38yA0J7jFy8",
-      "drive_file": "copy_801E84FF-B569-4189-9E50-4D846DD663D8.MOV",
-      "title": "Levanta daí, mulher! Vai se mexer e melhorar sua vida #Motivação #Saúde #BemEstar",
-      "caption": "Levanta daí, mulher! Vai se mexer e melhorar sua vida #Motivação #Saúde #BemEstar",
-      "scheduled_for": "2026-06-15T18:00:00-03:00",
-      "scheduled_fmt": "15/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/38yA0J7jFy8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/38yA0J7jFy8",
-      "created_at": "2026-05-14T05:16:15.725625-03:00"
-    },
-    {
-      "id": "2TjP2QtwbQU",
-      "drive_file": "copy_2F5DFA7F-B629-4FBB-935E-12EFE2AE7735.MOV",
-      "title": "Enfrente o monstro! #FimDoMundo #Aventura #Sobrevivencia",
-      "caption": "Enfrente o monstro! #FimDoMundo #Aventura #Sobrevivencia",
-      "scheduled_for": "2026-06-15T12:30:00-03:00",
-      "scheduled_fmt": "15/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/2TjP2QtwbQU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/2TjP2QtwbQU",
-      "created_at": "2026-05-14T05:16:09.048964-03:00"
-    },
-    {
-      "id": "ptpM3HO0sno",
-      "drive_file": "copy_16C14714-2D3F-4159-A3B1-439F1790FD18.MOV",
-      "title": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-15T09:00:00-03:00",
-      "scheduled_fmt": "15/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/ptpM3HO0sno/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/ptpM3HO0sno",
-      "created_at": "2026-05-14T05:16:02.483270-03:00"
-    },
-    {
-      "id": "bC2seQKntsI",
-      "drive_file": "copy_416F0A6D-F354-40A4-B3FF-C8558A4A3984.MOV",
-      "title": "Música para todos os momentos #Musica #Vibe #Som",
-      "caption": "Música para todos os momentos #Musica #Vibe #Som",
-      "scheduled_for": "2026-06-14T18:00:00-03:00",
-      "scheduled_fmt": "14/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/bC2seQKntsI/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/bC2seQKntsI",
-      "created_at": "2026-05-14T05:15:57.962501-03:00"
-    },
-    {
-      "id": "Ybzt4z-t_FU",
-      "drive_file": "copy_7A02BEC1-26E5-464B-AE5B-5AA19BFC9A6A.MOV",
-      "title": "Vibrações positivas ao vivo #Musica #Vibes #MúsicaLivre",
-      "caption": "Vibrações positivas ao vivo #Musica #Vibes #MúsicaLivre",
-      "scheduled_for": "2026-06-14T12:30:00-03:00",
-      "scheduled_fmt": "14/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/Ybzt4z-t_FU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Ybzt4z-t_FU",
-      "created_at": "2026-05-14T05:15:54.000563-03:00"
-    },
-    {
-      "id": "pohGoTXkv9E",
-      "drive_file": "copy_A77D4C06-5391-485D-B297-72724D8104B2.MOV",
-      "title": "Música para todos os momentos #Musica #Vibes #MúsicaLivre",
-      "caption": "Música para todos os momentos #Musica #Vibes #MúsicaLivre",
-      "scheduled_for": "2026-06-14T09:00:00-03:00",
-      "scheduled_fmt": "14/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/pohGoTXkv9E/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/pohGoTXkv9E",
-      "created_at": "2026-05-14T05:15:49.528274-03:00"
-    },
-    {
-      "id": "b7WIbnGR9j8",
-      "drive_file": "copy_E19B6367-04A6-4BEC-81B8-AFDE0149CDF8.MOV",
-      "title": "Até logo, pessoal #Tchau #AteLogo #Despedida",
-      "caption": "Até logo, pessoal #Tchau #AteLogo #Despedida",
-      "scheduled_for": "2026-06-13T18:00:00-03:00",
-      "scheduled_fmt": "13/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/b7WIbnGR9j8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/b7WIbnGR9j8",
-      "created_at": "2026-05-14T05:15:43.624730-03:00"
-    },
-    {
-      "id": "5AC2lv5QBdI",
-      "drive_file": "copy_AE28E135-8F49-494A-9D8D-4E7DC56E7DE4.MOV",
-      "title": "Descubra a resposta mais profunda! #Dor #Reflexao #Vida",
-      "caption": "Descubra a resposta mais profunda! #Dor #Reflexao #Vida",
-      "scheduled_for": "2026-06-13T12:30:00-03:00",
-      "scheduled_fmt": "13/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/5AC2lv5QBdI/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/5AC2lv5QBdI",
-      "created_at": "2026-05-14T05:15:39.608078-03:00"
-    },
-    {
-      "id": "FmoI_stEUbw",
-      "drive_file": "copy_34810906-E29C-4E7C-AF5B-5405CB5978ED.MOV",
-      "title": "Vai começar a festa, prepara a dança! #WM #Dancinha #MusicaParaDançar",
-      "caption": "Vai começar a festa, prepara a dança! #WM #Dancinha #MusicaParaDançar",
-      "scheduled_for": "2026-06-13T09:00:00-03:00",
-      "scheduled_fmt": "13/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/FmoI_stEUbw/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/FmoI_stEUbw",
-      "created_at": "2026-05-14T05:15:34.681419-03:00"
-    },
-    {
-      "id": "y1gpSHNh0Z4",
-      "drive_file": "copy_75EC8F6F-9472-4092-BA93-9310C0BB7C54.MOV",
-      "title": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-12T18:00:00-03:00",
-      "scheduled_fmt": "12/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/y1gpSHNh0Z4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/y1gpSHNh0Z4",
-      "created_at": "2026-05-14T05:15:30.369546-03:00"
-    },
-    {
-      "id": "_yw3UziGDhM",
-      "drive_file": "copy_BD321055-F1FB-4EDD-A0E1-E7D97FBE06B1.MOV",
-      "title": "Criando legendas incríveis com Tiago Anderson! #Legendas #Video #CriacaoDeConteudo",
-      "caption": "Criando legendas incríveis com Tiago Anderson! #Legendas #Video #CriacaoDeConteudo",
-      "scheduled_for": "2026-06-12T12:30:00-03:00",
-      "scheduled_fmt": "12/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/_yw3UziGDhM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/_yw3UziGDhM",
-      "created_at": "2026-05-14T05:15:27.051247-03:00"
-    },
-    {
-      "id": "r6GUE26zne0",
-      "drive_file": "copy_8BFC9FB1-E518-40E1-83EC-B3CA7C9BA894.MOV",
-      "title": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-12T09:00:00-03:00",
-      "scheduled_fmt": "12/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/r6GUE26zne0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/r6GUE26zne0",
-      "created_at": "2026-05-14T05:15:20.772875-03:00"
-    },
-    {
-      "id": "SAG6Fbb8tvg",
-      "drive_file": "copy_66FEAFD6-765C-4E7A-9515-5C6ED8430DF8.MOV",
-      "title": "Vibe dançante e letra contagiante #MusicaBrasileira #Dance #MúsicaNova",
-      "caption": "Vibe dançante e letra contagiante #MusicaBrasileira #Dance #MúsicaNova",
-      "scheduled_for": "2026-06-11T18:00:00-03:00",
-      "scheduled_fmt": "11/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/SAG6Fbb8tvg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/SAG6Fbb8tvg",
-      "created_at": "2026-05-14T05:15:16.239811-03:00"
-    },
-    {
-      "id": "1pI4tTPb2Us",
-      "drive_file": "copy_E00015C8-C642-49B8-A958-45D9A7C49C5E.MOV",
-      "title": "Até o próximo vídeo #YouTube #Instagram #Reels",
-      "caption": "Até o próximo vídeo #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-11T12:30:00-03:00",
-      "scheduled_fmt": "11/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/1pI4tTPb2Us/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/1pI4tTPb2Us",
-      "created_at": "2026-05-14T05:15:11.037253-03:00"
-    },
-    {
-      "id": "tWj1r4QstFM",
-      "drive_file": "copy_7ED9F24C-7E85-4F03-BD1D-390DB266C5CC.MOV",
-      "title": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigado por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-11T09:00:00-03:00",
-      "scheduled_fmt": "11/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/tWj1r4QstFM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/tWj1r4QstFM",
-      "created_at": "2026-05-14T05:15:06.970194-03:00"
-    },
-    {
-      "id": "i2aWG1Dr5Ys",
-      "drive_file": "copy_2496CC6B-F8F7-4A71-8182-3E64ECE3A388.MOV",
-      "title": "Até logo, nos vemos em breve! #Tchau #AteLogo #NosVemos",
-      "caption": "Até logo, nos vemos em breve! #Tchau #AteLogo #NosVemos",
-      "scheduled_for": "2026-06-10T18:00:00-03:00",
-      "scheduled_fmt": "10/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/i2aWG1Dr5Ys/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/i2aWG1Dr5Ys",
-      "created_at": "2026-05-14T05:15:02.527139-03:00"
-    },
-    {
-      "id": "wEdWLFqycLU",
-      "drive_file": "copy_03313864-242F-4CFD-B1A3-075DE7AB2766.MOV",
-      "title": "Música animada no banco #Musica #Diversao #BankStyle",
-      "caption": "Música animada no banco #Musica #Diversao #BankStyle",
-      "scheduled_for": "2026-06-10T12:30:00-03:00",
-      "scheduled_fmt": "10/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/wEdWLFqycLU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/wEdWLFqycLU",
-      "created_at": "2026-05-14T05:14:57.802244-03:00"
-    },
-    {
       "id": "aaPCmlwc9d0",
       "drive_file": "export_1708894805029.MOV",
       "title": "Descubra a Mari Mari Makeup, uma marca incrível! #Makeup #Beleza #Maquiagem",
@@ -1133,83 +319,6 @@
       "thumbnail": "https://img.youtube.com/vi/aaPCmlwc9d0/hqdefault.jpg",
       "url": "https://youtube.com/shorts/aaPCmlwc9d0",
       "created_at": "2026-05-14T05:14:53.551570-03:00"
-    },
-    {
-      "id": "Tdal9M86vE4",
-      "drive_file": "copy_675C2B14-DCB2-414D-98B5-21C180397A9C.MOV",
-      "title": "Criando legenda com carinho por Sônia Ruberti #YouTube #Instagram #Legenda",
-      "caption": "Criando legenda com carinho por Sônia Ruberti #YouTube #Instagram #Legenda",
-      "scheduled_for": "2026-06-09T18:00:00-03:00",
-      "scheduled_fmt": "09/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/Tdal9M86vE4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Tdal9M86vE4",
-      "created_at": "2026-05-14T05:14:48.322973-03:00"
-    },
-    {
-      "id": "P860fj8mZRM",
-      "drive_file": "copy_1ADE4FCE-2213-47EF-8EC0-5B1657F85D5E.MOV",
-      "title": "Vibrações perfeitas para o seu dia #Musica #Vibes #Som",
-      "caption": "Vibrações perfeitas para o seu dia #Musica #Vibes #Som",
-      "scheduled_for": "2026-06-09T12:30:00-03:00",
-      "scheduled_fmt": "09/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/P860fj8mZRM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/P860fj8mZRM",
-      "created_at": "2026-05-14T05:14:44.817652-03:00"
-    },
-    {
-      "id": "wyRO8kMxLao",
-      "drive_file": "copy_629EA920-EE9C-4264-89D8-7F9148631683.MOV",
-      "title": "E aí, o que tá rolando? #VidaDiaria #MomentosDivertidos #Eai",
-      "caption": "E aí, o que tá rolando? #VidaDiaria #MomentosDivertidos #Eai",
-      "scheduled_for": "2026-06-09T09:00:00-03:00",
-      "scheduled_fmt": "09/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/wyRO8kMxLao/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/wyRO8kMxLao",
-      "created_at": "2026-05-14T05:14:39.903937-03:00"
-    },
-    {
-      "id": "aby3GgHjf-Y",
-      "drive_file": "copy_847930CA-AA33-40E8-B5AA-4FE5B581B97B.MOV",
-      "title": "Descubra o que Adriana Zanotto tem para você #AdrianaZanotto #Legenda #VideoNovo",
-      "caption": "Descubra o que Adriana Zanotto tem para você #AdrianaZanotto #Legenda #VideoNovo",
-      "scheduled_for": "2026-06-08T18:00:00-03:00",
-      "scheduled_fmt": "08/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/aby3GgHjf-Y/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/aby3GgHjf-Y",
-      "created_at": "2026-05-14T05:14:36.291325-03:00"
-    },
-    {
-      "id": "W-3u7LCy09w",
-      "drive_file": "copy_A685DC58-6BCC-4304-9A2A-605A41559094.MOV",
-      "title": "E aí, o que você acha? #YouTubeShorts #InstagramReels #Viral",
-      "caption": "E aí, o que você acha? #YouTubeShorts #InstagramReels #Viral",
-      "scheduled_for": "2026-06-08T12:30:00-03:00",
-      "scheduled_fmt": "08/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/W-3u7LCy09w/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/W-3u7LCy09w",
-      "created_at": "2026-05-14T05:14:31.770706-03:00"
-    },
-    {
-      "id": "X-Y4OU2jhnQ",
-      "drive_file": "copy_29FEBBFC-86DE-43E5-9AE4-B967D1B401FB.MOV",
-      "title": "Vibe com a melhor música #Musica #Vibes #MúsicaParaTudo",
-      "caption": "Vibe com a melhor música #Musica #Vibes #MúsicaParaTudo",
-      "scheduled_for": "2026-06-08T09:00:00-03:00",
-      "scheduled_fmt": "08/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/X-Y4OU2jhnQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/X-Y4OU2jhnQ",
-      "created_at": "2026-05-14T05:14:27.959534-03:00"
-    },
-    {
-      "id": "8Publ30xjpE",
-      "drive_file": "copy_B84D729F-142B-4FB5-9D24-A6DA2EA71D9F.MOV",
-      "title": "Me segue #emagrecimento",
-      "caption": "Me segue #emagrecimento",
-      "scheduled_for": "2026-06-07T18:00:00-03:00",
-      "scheduled_fmt": "07/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/8Publ30xjpE/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/8Publ30xjpE",
-      "created_at": "2026-05-14T05:14:22.956999-03:00"
     },
     {
       "id": "Bg7Dr9xsyFY",
@@ -1223,105 +332,6 @@
       "created_at": "2026-05-14T05:14:17.950692-03:00"
     },
     {
-      "id": "1B38-rPRrTQ",
-      "drive_file": "copy_7865F4AC-EFA2-4847-994C-4EA8CB649434.MOV",
-      "title": "Amen, que a paz esteja conosco #Fé #Esperança #PazInterior",
-      "caption": "Amen, que a paz esteja conosco #Fé #Esperança #PazInterior",
-      "scheduled_for": "2026-06-07T09:00:00-03:00",
-      "scheduled_fmt": "07/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/1B38-rPRrTQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/1B38-rPRrTQ",
-      "created_at": "2026-05-14T05:14:13.454809-03:00"
-    },
-    {
-      "id": "5Jq2JIQUuxk",
-      "drive_file": "copy_40785587-5525-456D-BAA3-2B27F8AA4929.MOV",
-      "title": "Cai de cabeça no amor #Amor #Relacionamentos #Paixao",
-      "caption": "Cai de cabeça no amor #Amor #Relacionamentos #Paixao",
-      "scheduled_for": "2026-06-06T18:00:00-03:00",
-      "scheduled_fmt": "06/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/5Jq2JIQUuxk/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/5Jq2JIQUuxk",
-      "created_at": "2026-05-14T05:14:09.743908-03:00"
-    },
-    {
-      "id": "rXQdU44ONpY",
-      "drive_file": "copy_DABA994E-4841-44F0-BF56-295867D4CC20.MOV",
-      "title": "Obrigado por assistir #Valeu #YouTube #Reels",
-      "caption": "Obrigado por assistir #Valeu #YouTube #Reels",
-      "scheduled_for": "2026-06-06T12:30:00-03:00",
-      "scheduled_fmt": "06/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/rXQdU44ONpY/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/rXQdU44ONpY",
-      "created_at": "2026-05-14T05:14:05.682647-03:00"
-    },
-    {
-      "id": "KFCcUU3S2qA",
-      "drive_file": "copy_95D87A8B-3E6F-4BFE-A804-C3834BA97C05.MOV",
-      "title": "E aí, o que está acontecendo? #YouTube #Instagram #Reels",
-      "caption": "E aí, o que está acontecendo? #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-06-06T09:00:00-03:00",
-      "scheduled_fmt": "06/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/KFCcUU3S2qA/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/KFCcUU3S2qA",
-      "created_at": "2026-05-14T05:14:01.713655-03:00"
-    },
-    {
-      "id": "oRKkMqEAYLM",
-      "drive_file": "copy_E132CDFC-28EE-4422-84EE-8E0ED5A7F60B.MOV",
-      "title": "Você é um guerreiro, se levante e siga em frente #Motivacao #Autoestima #ForcaInterior",
-      "caption": "Você é um guerreiro, se levante e siga em frente #Motivacao #Autoestima #ForcaInterior",
-      "scheduled_for": "2026-06-05T18:00:00-03:00",
-      "scheduled_fmt": "05/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/oRKkMqEAYLM/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/oRKkMqEAYLM",
-      "created_at": "2026-05-14T05:13:57.686440-03:00"
-    },
-    {
-      "id": "6GvAsrRwRjg",
-      "drive_file": "copy_95DAABE4-61C8-4C46-AF75-BA699D65BA29.MOV",
-      "title": "Amor que não passa! #musica #amor #saudade",
-      "caption": "Amor que não passa! #musica #amor #saudade",
-      "scheduled_for": "2026-06-05T12:30:00-03:00",
-      "scheduled_fmt": "05/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/6GvAsrRwRjg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/6GvAsrRwRjg",
-      "created_at": "2026-05-14T05:13:51.811772-03:00"
-    },
-    {
-      "id": "lxtRtPXLSdk",
-      "drive_file": "copy_58B1EA07-8B75-496A-A036-99687578DA96.MOV",
-      "title": "E aí, o que está rolando? #YouTubeShorts #InstagramReels #Vlog",
-      "caption": "E aí, o que está rolando? #YouTubeShorts #InstagramReels #Vlog",
-      "scheduled_for": "2026-06-05T09:00:00-03:00",
-      "scheduled_fmt": "05/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/lxtRtPXLSdk/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/lxtRtPXLSdk",
-      "created_at": "2026-05-14T05:13:47.147653-03:00"
-    },
-    {
-      "id": "3uyCxDJoQ20",
-      "drive_file": "copy_AA38C8E5-A6EE-46B4-AF83-EB574164E94C.MOV",
-      "title": "Melodias que tocam o coração #Musica #Vibes #MúsicaLinda",
-      "caption": "Melodias que tocam o coração #Musica #Vibes #MúsicaLinda",
-      "scheduled_for": "2026-06-04T18:00:00-03:00",
-      "scheduled_fmt": "04/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/3uyCxDJoQ20/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/3uyCxDJoQ20",
-      "created_at": "2026-05-14T05:13:42.096190-03:00"
-    },
-    {
-      "id": "lQe9KKnQqUg",
-      "drive_file": "copy_AF934902-D545-4E2E-AD6D-507548B8C331.MOV",
-      "title": "Música para todos os momentos #Musica #Vibes #Entretenimento",
-      "caption": "Música para todos os momentos #Musica #Vibes #Entretenimento",
-      "scheduled_for": "2026-06-04T12:30:00-03:00",
-      "scheduled_fmt": "04/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/lQe9KKnQqUg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/lQe9KKnQqUg",
-      "created_at": "2026-05-14T05:13:38.422514-03:00"
-    },
-    {
       "id": "hgPpjgJrv6M",
       "drive_file": "14fdb23ce530474e9d323fa8a5400aa2.MOV",
       "title": "Corpo mudou, vida mudou! Transformação física depois da academia #Academia #Transformacao #Fitness",
@@ -1331,72 +341,6 @@
       "thumbnail": "https://img.youtube.com/vi/hgPpjgJrv6M/hqdefault.jpg",
       "url": "https://youtube.com/shorts/hgPpjgJrv6M",
       "created_at": "2026-05-14T05:13:34.288324-03:00"
-    },
-    {
-      "id": "lUEIXzJ_yq4",
-      "drive_file": "copy_E5BA9BDA-F23B-4C2D-9826-47E61A7F6B73.MOV",
-      "title": "Preparados para o caos na vizinhança #Tumulto #Vizinhanca #Caos",
-      "caption": "Preparados para o caos na vizinhança #Tumulto #Vizinhanca #Caos",
-      "scheduled_for": "2026-06-03T18:00:00-03:00",
-      "scheduled_fmt": "03/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/lUEIXzJ_yq4/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/lUEIXzJ_yq4",
-      "created_at": "2026-05-14T05:13:29.172052-03:00"
-    },
-    {
-      "id": "2mqj8pBzr7M",
-      "drive_file": "copy_0F876DE2-8A73-4339-A60E-0888494B359F.MOV",
-      "title": "Mantenha a motivação e não desista! #Fitness #Motivação #Academia",
-      "caption": "Mantenha a motivação e não desista! #Fitness #Motivação #Academia",
-      "scheduled_for": "2026-06-03T12:30:00-03:00",
-      "scheduled_fmt": "03/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/2mqj8pBzr7M/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/2mqj8pBzr7M",
-      "created_at": "2026-05-14T05:13:24.507437-03:00"
-    },
-    {
-      "id": "dqWT1VNR1Wo",
-      "drive_file": "copy_1C76098F-8C37-4AB8-845A-83CC62C0D033.MOV",
-      "title": "Vibrações perfeitas! #Musica #Vibes #Melodia",
-      "caption": "Vibrações perfeitas! #Musica #Vibes #Melodia",
-      "scheduled_for": "2026-06-03T09:00:00-03:00",
-      "scheduled_fmt": "03/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/dqWT1VNR1Wo/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/dqWT1VNR1Wo",
-      "created_at": "2026-05-14T05:13:19.085462-03:00"
-    },
-    {
-      "id": "wdZ5NZac5O8",
-      "drive_file": "copy_2D42EE3E-2591-44F6-A1AE-54D771C8EFB1.MOV",
-      "title": "Motivação para vencer os desafios! #Superacao #Motivacao #ForcaInterior",
-      "caption": "Motivação para vencer os desafios! #Superacao #Motivacao #ForcaInterior",
-      "scheduled_for": "2026-06-02T18:00:00-03:00",
-      "scheduled_fmt": "02/06/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/wdZ5NZac5O8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/wdZ5NZac5O8",
-      "created_at": "2026-05-14T05:13:14.387640-03:00"
-    },
-    {
-      "id": "StYilVZK0F0",
-      "drive_file": "copy_7A0B07BD-987E-4A8E-9DBD-B393C8F2F70E.MOV",
-      "title": "E aí que rolou hoje #Vlog #Comedia #Diversao",
-      "caption": "E aí que rolou hoje #Vlog #Comedia #Diversao",
-      "scheduled_for": "2026-06-02T12:30:00-03:00",
-      "scheduled_fmt": "02/06/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/StYilVZK0F0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/StYilVZK0F0",
-      "created_at": "2026-05-14T05:13:10.695254-03:00"
-    },
-    {
-      "id": "HsiXzS46Ff8",
-      "drive_file": "copy_C146A1D3-FEC7-4D79-8289-A08E9AE44790.MOV",
-      "title": "Vibrações ao vivo! #Musica #YouTubeShorts #ReelsMusic",
-      "caption": "Vibrações ao vivo! #Musica #YouTubeShorts #ReelsMusic",
-      "scheduled_for": "2026-06-02T09:00:00-03:00",
-      "scheduled_fmt": "02/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/HsiXzS46Ff8/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/HsiXzS46Ff8",
-      "created_at": "2026-05-14T05:13:05.827776-03:00"
     },
     {
       "id": "Wkq_e_U2DBM",
@@ -1421,17 +365,6 @@
       "created_at": "2026-05-14T05:12:56.832693-03:00"
     },
     {
-      "id": "DUMaVuMeAoo",
-      "drive_file": "copy_1AE4E195-5AD5-4376-9C50-8C1FA1A2352F.MOV",
-      "title": "Mente forte corpo forte #Motivacao #SaudeMental #Superacao",
-      "caption": "Mente forte corpo forte #Motivacao #SaudeMental #Superacao",
-      "scheduled_for": "2026-06-01T09:00:00-03:00",
-      "scheduled_fmt": "01/06/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/DUMaVuMeAoo/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/DUMaVuMeAoo",
-      "created_at": "2026-05-14T05:12:51.662457-03:00"
-    },
-    {
       "id": "xjXVhG1p3kY",
       "drive_file": "E72C2AB0-B608-48E5-88C3-7CDA9830BB5E.MOV",
       "title": "Vibrações positivas com boa música #Musica #VibesPositivas #MúsicaBoa",
@@ -1441,28 +374,6 @@
       "thumbnail": "https://img.youtube.com/vi/xjXVhG1p3kY/hqdefault.jpg",
       "url": "https://youtube.com/shorts/xjXVhG1p3kY",
       "created_at": "2026-05-14T05:12:47.545928-03:00"
-    },
-    {
-      "id": "Gw54Ix7wj3s",
-      "drive_file": "copy_E55C0EDF-6BE2-42AD-BB35-AD84A3DF1525.MOV",
-      "title": "Vamos subir juntos #Motivacao #Superacao #Foco",
-      "caption": "Vamos subir juntos #Motivacao #Superacao #Foco",
-      "scheduled_for": "2026-05-31T12:30:00-03:00",
-      "scheduled_fmt": "31/05/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/Gw54Ix7wj3s/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/Gw54Ix7wj3s",
-      "created_at": "2026-05-14T05:12:42.736010-03:00"
-    },
-    {
-      "id": "tkOegJlYq9k",
-      "drive_file": "copy_003D019E-6212-4BFA-9995-CE6985CF770A.MOV",
-      "title": "Legendas personalizadas para seu conteúdo Quintena Coelho #Legendas #Video #Conteudo",
-      "caption": "Legendas personalizadas para seu conteúdo Quintena Coelho #Legendas #Video #Conteudo",
-      "scheduled_for": "2026-05-31T09:00:00-03:00",
-      "scheduled_fmt": "31/05/2026 às 09h",
-      "thumbnail": "https://img.youtube.com/vi/tkOegJlYq9k/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/tkOegJlYq9k",
-      "created_at": "2026-05-14T05:12:37.709538-03:00"
     },
     {
       "id": "AQSv0Fk1LEk",
@@ -1507,17 +418,6 @@
       "thumbnail": "https://img.youtube.com/vi/wSYqqBGNXs8/hqdefault.jpg",
       "url": "https://youtube.com/shorts/wSYqqBGNXs8",
       "created_at": "2026-05-14T05:12:19.833741-03:00"
-    },
-    {
-      "id": "r0RKd6mTMvU",
-      "drive_file": "copy_434981F2-BF03-4DCA-82F8-D9C5358102C1.MOV",
-      "title": "Treino não é treino sem bumerangue no espelho #Fitness #Academia #Motivação",
-      "caption": "Treino não é treino sem bumerangue no espelho #Fitness #Academia #Motivação",
-      "scheduled_for": "2026-05-29T12:30:00-03:00",
-      "scheduled_fmt": "29/05/2026 às 12h",
-      "thumbnail": "https://img.youtube.com/vi/r0RKd6mTMvU/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/r0RKd6mTMvU",
-      "created_at": "2026-05-14T05:12:15.243404-03:00"
     },
     {
       "id": "P6HtheRbZvs",
@@ -1949,17 +849,6 @@
       "created_at": "2026-05-08T03:27:37.051184-03:00"
     },
     {
-      "id": "AOwx52o4Ox0",
-      "drive_file": "copy_CCBCAC06-6C74-4030-AD00-9BDB3D26DB49.mov",
-      "title": "Sintonize no ritmo! #Musica #Vibes #Som",
-      "caption": "Sintonize no ritmo! #Musica #Vibes #Som",
-      "scheduled_for": "2026-05-08T18:00:00-03:00",
-      "scheduled_fmt": "08/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/AOwx52o4Ox0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/AOwx52o4Ox0",
-      "created_at": "2026-05-08T03:27:33.336837-03:00"
-    },
-    {
       "id": "uL23LfPTQAg",
       "drive_file": "51d435779e934d7cb86fced15a73037d.mp4",
       "title": "Não compare seu tempo com o dos outros! Cada corpo é único #Emagrecimento #SaúdeMental #Auto amour",
@@ -2037,17 +926,6 @@
       "created_at": "2026-05-04T22:50:26.470722-03:00"
     },
     {
-      "id": "NWZJle_0g2c",
-      "drive_file": "copy_EC559365-9F99-4504-9ABE-70246EF4B054.mov",
-      "title": "Priorizei atividade física, autocuidado e auxílio na faxina para uma vida mais saudável #Emagrecimento #Autocuidado #SaudeMental",
-      "caption": "Priorizei atividade física, autocuidado e auxílio na faxina para uma vida mais saudável #Emagrecimento #Autocuidado #SaudeMental",
-      "scheduled_for": "2026-05-22T21:00:00-03:00",
-      "scheduled_fmt": "22/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/NWZJle_0g2c/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/NWZJle_0g2c",
-      "created_at": "2026-05-04T22:50:20.727762-03:00"
-    },
-    {
       "id": "WnxVv0kSFec",
       "drive_file": "20AEF376-0CA6-4584-97F3-B3ED2EEE0F76.mp4",
       "title": "E aí, o que está rolando? #YouTubeShorts #InstagramReels #Viral",
@@ -2068,17 +946,6 @@
       "thumbnail": "https://img.youtube.com/vi/vZDmT7Ld_xA/hqdefault.jpg",
       "url": "https://youtube.com/shorts/vZDmT7Ld_xA",
       "created_at": "2026-05-04T22:50:08.484901-03:00"
-    },
-    {
-      "id": "DkmzGdIZmpc",
-      "drive_file": "copy_D603BC02-3590-4A7C-BDD2-41ED22B08F66.mov",
-      "title": "Momento de coragem para conquistar o crush #Amor #Conquista #Relacionamentos",
-      "caption": "Momento de coragem para conquistar o crush #Amor #Conquista #Relacionamentos",
-      "scheduled_for": "2026-05-21T18:00:00-03:00",
-      "scheduled_fmt": "21/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/DkmzGdIZmpc/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/DkmzGdIZmpc",
-      "created_at": "2026-05-04T22:50:03.552631-03:00"
     },
     {
       "id": "umb1KvJo3v4",
@@ -2125,50 +992,6 @@
       "created_at": "2026-05-04T22:49:43.161161-03:00"
     },
     {
-      "id": "60AICi1gSPg",
-      "drive_file": "copy_FE8D2E5A-719F-41DB-8D70-130150B6A165.mov",
-      "title": "Descubra o poder da transcrição automática #Transcrição #Legendas #Video",
-      "caption": "Descubra o poder da transcrição automática #Transcrição #Legendas #Video",
-      "scheduled_for": "2026-05-18T21:00:00-03:00",
-      "scheduled_fmt": "18/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/60AICi1gSPg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/60AICi1gSPg",
-      "created_at": "2026-05-04T22:49:38.270217-03:00"
-    },
-    {
-      "id": "t-rWALiZMqc",
-      "drive_file": "copy_A74B277C-AAB5-46F0-9E9E-CD82E826B02B.mov",
-      "title": "Arma monumental! #MegaMetrallhadora #ArmasIncriveis #TecnologiaMilitar",
-      "caption": "Arma monumental! #MegaMetrallhadora #ArmasIncriveis #TecnologiaMilitar",
-      "scheduled_for": "2026-05-18T18:00:00-03:00",
-      "scheduled_fmt": "18/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/t-rWALiZMqc/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/t-rWALiZMqc",
-      "created_at": "2026-05-04T22:49:32.897436-03:00"
-    },
-    {
-      "id": "ElajifSTiAQ",
-      "drive_file": "copy_7E73FF3F-60FA-40FA-808B-80183120A9BC.mov",
-      "title": "Sonhando em fugir para longe, com o vento a me levar #ViagemDosSonhos #Liberdade #Aventura",
-      "caption": "Sonhando em fugir para longe, com o vento a me levar #ViagemDosSonhos #Liberdade #Aventura",
-      "scheduled_for": "2026-05-17T21:00:00-03:00",
-      "scheduled_fmt": "17/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/ElajifSTiAQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/ElajifSTiAQ",
-      "created_at": "2026-05-04T22:49:27.070389-03:00"
-    },
-    {
-      "id": "TKpKDgnbeKQ",
-      "drive_file": "copy_0441CF92-3B3C-4E15-9FFB-786041F3BF52.mov",
-      "title": "E aí galera! O que está rolando? #Vibe #Eaí #FiquePorDentro",
-      "caption": "E aí galera! O que está rolando? #Vibe #Eaí #FiquePorDentro",
-      "scheduled_for": "2026-05-17T18:00:00-03:00",
-      "scheduled_fmt": "17/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/TKpKDgnbeKQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/TKpKDgnbeKQ",
-      "created_at": "2026-05-04T22:49:21.934244-03:00"
-    },
-    {
       "id": "D8NHp9YMzEQ",
       "drive_file": "9DE09636-D6BF-4801-8FA9-67B77F09CB2D.mp4",
       "title": "Amen ao final de um dia bem vivido #Felicidade #PazInterior #BemEstar",
@@ -2180,105 +1003,6 @@
       "created_at": "2026-05-04T22:49:17.517830-03:00"
     },
     {
-      "id": "dp52lw9Q018",
-      "drive_file": "copy_A7C00B4E-8995-4136-B772-98848515BE2F.mov",
-      "title": "Legendas personalizadas para você #Legendas #Video #Edicao",
-      "caption": "Legendas personalizadas para você #Legendas #Video #Edicao",
-      "scheduled_for": "2026-05-16T18:00:00-03:00",
-      "scheduled_fmt": "16/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/dp52lw9Q018/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/dp52lw9Q018",
-      "created_at": "2026-05-04T22:49:13.504053-03:00"
-    },
-    {
-      "id": "ILfHxHLSeUk",
-      "drive_file": "copy_9297B00B-7488-4540-B391-18E73C73B96A.mov",
-      "title": "Vibrações positivas ao vivo #Musica #Vibes #MúsicaLivre",
-      "caption": "Vibrações positivas ao vivo #Musica #Vibes #MúsicaLivre",
-      "scheduled_for": "2026-05-15T21:00:00-03:00",
-      "scheduled_fmt": "15/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/ILfHxHLSeUk/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/ILfHxHLSeUk",
-      "created_at": "2026-05-04T22:49:09.022756-03:00"
-    },
-    {
-      "id": "vOpPVIijG7s",
-      "drive_file": "copy_DBB862F1-19B8-459B-8D52-62905C368887.mov",
-      "title": "Viva a vida ao máximo! #VivaAVIDA #FloresNaVida #Positividade",
-      "caption": "Viva a vida ao máximo! #VivaAVIDA #FloresNaVida #Positividade",
-      "scheduled_for": "2026-05-15T18:00:00-03:00",
-      "scheduled_fmt": "15/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/vOpPVIijG7s/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/vOpPVIijG7s",
-      "created_at": "2026-05-04T22:49:04.692235-03:00"
-    },
-    {
-      "id": "tvhssj38lvo",
-      "drive_file": "copy_3E7CCD2D-9683-4FC0-A3EA-1933258D46AE.mov",
-      "title": "Conheça o conteúdo de Sônia Ruberti #SoniaRuberti #Legenda #Video",
-      "caption": "Conheça o conteúdo de Sônia Ruberti #SoniaRuberti #Legenda #Video",
-      "scheduled_for": "2026-05-14T21:00:00-03:00",
-      "scheduled_fmt": "14/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/tvhssj38lvo/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/tvhssj38lvo",
-      "created_at": "2026-05-04T22:49:01.095177-03:00"
-    },
-    {
-      "id": "-UiPfOD39f0",
-      "drive_file": "copy_28C64943-9C40-42CE-A1DC-B896F51F062B.mov",
-      "title": "Muito obrigada por assistir #YouTube #Instagram #Reels",
-      "caption": "Muito obrigada por assistir #YouTube #Instagram #Reels",
-      "scheduled_for": "2026-05-14T18:00:00-03:00",
-      "scheduled_fmt": "14/05/2026 às 18h",
-      "thumbnail": "https://img.youtube.com/vi/-UiPfOD39f0/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/-UiPfOD39f0",
-      "created_at": "2026-05-04T22:48:57.394023-03:00"
-    },
-    {
-      "id": "DTS7Reedm2c",
-      "drive_file": "copy_6C912CFD-53AC-49A0-9A83-EF41D754C2D7.mov",
-      "title": "Me segue #emagrecimento",
-      "caption": "Me segue #emagrecimento",
-      "scheduled_for": "2026-05-12T21:00:00-03:00",
-      "scheduled_fmt": "12/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/DTS7Reedm2c/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/DTS7Reedm2c",
-      "created_at": "2026-05-04T22:48:54.505031-03:00"
-    },
-    {
-      "id": "2jd4lDZW-zQ",
-      "drive_file": "copy_812C8CD7-6289-4075-AEA4-4A1C98A09671.mov",
-      "title": "Algo especial está no meio da multidão #Música #Vibes #Foco",
-      "caption": "Algo especial está no meio da multidão #Música #Vibes #Foco",
-      "scheduled_for": "2026-05-10T21:00:00-03:00",
-      "scheduled_fmt": "10/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/2jd4lDZW-zQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/2jd4lDZW-zQ",
-      "created_at": "2026-05-04T22:48:51.519830-03:00"
-    },
-    {
-      "id": "IAIVMgSUScQ",
-      "drive_file": "copy_5E14056A-3513-4719-A8F0-4B75DB13A6DE.mov",
-      "title": "Me segue #emagrecimento",
-      "caption": "Me segue #emagrecimento",
-      "scheduled_for": "2026-05-09T21:00:00-03:00",
-      "scheduled_fmt": "09/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/IAIVMgSUScQ/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/IAIVMgSUScQ",
-      "created_at": "2026-05-04T22:48:47.950486-03:00"
-    },
-    {
-      "id": "6HHV2XE6gLg",
-      "drive_file": "copy_64FB8EB5-FDCC-4CE0-A5D9-023A7AD330A2.mov",
-      "title": "Até mais, pessoal! #Tchau #AteMais #Despedida",
-      "caption": "Até mais, pessoal! #Tchau #AteMais #Despedida",
-      "scheduled_for": "2026-05-07T21:00:00-03:00",
-      "scheduled_fmt": "07/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/6HHV2XE6gLg/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/6HHV2XE6gLg",
-      "created_at": "2026-05-04T18:45:19.202046-03:00"
-    },
-    {
       "id": "zzFuYywqArA",
       "drive_file": "ca9fed5180b9466ca9425eed65658536.mp4",
       "title": "ca9fed5180b9466ca9425eed65658536",
@@ -2288,28 +1012,6 @@
       "thumbnail": "https://img.youtube.com/vi/zzFuYywqArA/hqdefault.jpg",
       "url": "https://youtube.com/shorts/zzFuYywqArA",
       "created_at": "2026-05-04T06:44:17.402411-03:00"
-    },
-    {
-      "id": "R_Egy4v4ZSI",
-      "drive_file": "copy_1F546E02-D1C3-4A4E-B875-288D20902F7F.mov",
-      "title": "copy 1F546E02 D1C3 4A4E B875 288D20902F7F",
-      "caption": "Descubra o verdadeiro motivo que impede o emagrecimento! #Autoconhecimento #RelaçãoComida #SaúdeMental",
-      "scheduled_for": "2026-05-05T21:00:00-03:00",
-      "scheduled_fmt": "05/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/R_Egy4v4ZSI/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/R_Egy4v4ZSI",
-      "created_at": "2026-05-04T06:44:04.236558-03:00"
-    },
-    {
-      "id": "wtV2GHjcgME",
-      "drive_file": "copy_EF541B40-A05D-4B7F-9EFA-B6768B69017E.mov",
-      "title": "copy EF541B40 A05D 4B7F 9EFA B6768B69017E",
-      "caption": "Descubra as verdadeiras razões do seu emagrecimento e rompa com os mitos #emagrecimento #saudeemocional #autocuidado",
-      "scheduled_for": "2026-05-04T21:00:00-03:00",
-      "scheduled_fmt": "04/05/2026 às 21h",
-      "thumbnail": "https://img.youtube.com/vi/wtV2GHjcgME/hqdefault.jpg",
-      "url": "https://youtube.com/shorts/wtV2GHjcgME",
-      "created_at": "2026-05-04T06:43:55.488525-03:00"
     }
   ]
 }

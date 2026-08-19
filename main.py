@@ -155,7 +155,11 @@ def list_new_videos(drive, processed_ids: list) -> list[dict]:
         orderBy="createdTime"
     ).execute()
 
-    return [f for f in result.get("files", []) if f["id"] not in processed_ids]
+    return [
+        f for f in result.get("files", [])
+        if f["id"] not in processed_ids
+        and not f["name"].lower().startswith("copy")
+    ]
 
 
 def get_or_create_agendados_folder(drive) -> str:
