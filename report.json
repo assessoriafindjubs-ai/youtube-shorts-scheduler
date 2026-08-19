@@ -1,6 +1,94 @@
 {
-  "last_updated": "2026-08-16T19:48:42.947723-03:00",
+  "last_updated": "2026-08-19T11:02:03.570281-03:00",
   "videos": [
+    {
+      "id": "Zd3IV1IW4B4",
+      "drive_file": "copy_4263133F-5E6C-4AD1-84B5-2CF02413CDA2.MOV",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-26T18:00:00-03:00",
+      "scheduled_fmt": "26/08/2026 às 18h",
+      "thumbnail": "https://img.youtube.com/vi/Zd3IV1IW4B4/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/Zd3IV1IW4B4",
+      "created_at": "2026-08-19T11:02:03.570273-03:00"
+    },
+    {
+      "id": "quWePOwx9d8",
+      "drive_file": "copy_9E4FB7C0-1BE5-49FC-96D1-BBF16086690E.MOV",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-26T12:30:00-03:00",
+      "scheduled_fmt": "26/08/2026 às 12h",
+      "thumbnail": "https://img.youtube.com/vi/quWePOwx9d8/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/quWePOwx9d8",
+      "created_at": "2026-08-19T11:00:27.532001-03:00"
+    },
+    {
+      "id": "ok4BmjKSloo",
+      "drive_file": "ba227686013c475ba9b2a1db4ad18757.MP4",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-25T18:00:00-03:00",
+      "scheduled_fmt": "25/08/2026 às 18h",
+      "thumbnail": "https://img.youtube.com/vi/ok4BmjKSloo/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/ok4BmjKSloo",
+      "created_at": "2026-08-19T10:58:55.620318-03:00"
+    },
+    {
+      "id": "mTwuZDBQ6j0",
+      "drive_file": "copy_EB74B1C8-FC84-4A48-B895-27E73B570713.MOV",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-25T12:30:00-03:00",
+      "scheduled_fmt": "25/08/2026 às 12h",
+      "thumbnail": "https://img.youtube.com/vi/mTwuZDBQ6j0/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/mTwuZDBQ6j0",
+      "created_at": "2026-08-19T10:58:12.204923-03:00"
+    },
+    {
+      "id": "z45a8AzAjl8",
+      "drive_file": "copy_DE8B4CBB-9FDF-431F-9A94-0FAC71F6CBA2.MOV",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-24T18:00:00-03:00",
+      "scheduled_fmt": "24/08/2026 às 18h",
+      "thumbnail": "https://img.youtube.com/vi/z45a8AzAjl8/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/z45a8AzAjl8",
+      "created_at": "2026-08-19T10:56:53.707717-03:00"
+    },
+    {
+      "id": "3lztqJwkw7w",
+      "drive_file": "copy_4866D90B-76FB-4A5E-A80D-9CC446A97F05.MOV",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-24T12:30:00-03:00",
+      "scheduled_fmt": "24/08/2026 às 12h",
+      "thumbnail": "https://img.youtube.com/vi/3lztqJwkw7w/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/3lztqJwkw7w",
+      "created_at": "2026-08-19T10:56:26.447467-03:00"
+    },
+    {
+      "id": "VYQCxzZYFS8",
+      "drive_file": "copy_945BE164-BB9A-4EAA-9719-5859E6E9D5E5.MOV",
+      "title": "",
+      "caption": "",
+      "scheduled_for": "2026-08-23T18:00:00-03:00",
+      "scheduled_fmt": "23/08/2026 às 18h",
+      "thumbnail": "https://img.youtube.com/vi/VYQCxzZYFS8/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/VYQCxzZYFS8",
+      "created_at": "2026-08-19T10:55:36.700497-03:00"
+    },
+    {
+      "id": "FITtZizm-X4",
+      "drive_file": "783816979a8b4941953ea233429926d0.MP4",
+      "title": "Desculpe, preciso de mais detalhes sobre o vídeo para criar uma legenda adequada. Pode compartilhar mais informações?",
+      "caption": "Desculpe, preciso de mais detalhes sobre o vídeo para criar uma legenda adequada. Pode compartilhar mais informações?",
+      "scheduled_for": "2026-08-23T12:30:00-03:00",
+      "scheduled_fmt": "23/08/2026 às 12h",
+      "thumbnail": "https://img.youtube.com/vi/FITtZizm-X4/hqdefault.jpg",
+      "url": "https://youtube.com/shorts/FITtZizm-X4",
+      "created_at": "2026-08-19T10:55:15.443997-03:00"
+    },
     {
       "id": "MzYNPXbhEyQ",
       "drive_file": "43DE34E0-64ED-48F8-B7E7-448350E3F6A3.mp4",
