@@ -247,7 +247,7 @@ def generate_caption(video_path: str, groq_client: Groq) -> str:
     print(f"  Transcricao: {transcription[:120]}{'...' if len(transcription) > 120 else ''}")
 
     resp = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="meta-llama/llama-4-maverick-17b-128e-instruct",
         messages=[
             {
                 "role": "system",
