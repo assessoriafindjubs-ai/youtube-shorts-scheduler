@@ -1,7 +1,7 @@
 {
   "channel": {
     "subscribers": 194,
-    "total_views": 281938,
+    "total_views": 283506,
     "video_count": 153
   },
   "videos": [
@@ -347,67 +347,12 @@
       "subscribers_gained": 1
     },
     {
-      "id": "LEA6aTM439w",
-      "title": "",
-      "scheduled_for": "2026-09-04T12:30:00-03:00",
-      "url": "https://youtube.com/shorts/LEA6aTM439w",
-      "thumbnail": "https://img.youtube.com/vi/LEA6aTM439w/hqdefault.jpg",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "qyrkDimmIrc",
-      "title": "",
-      "scheduled_for": "2026-09-02T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/qyrkDimmIrc",
-      "thumbnail": "https://img.youtube.com/vi/qyrkDimmIrc/hqdefault.jpg",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "dGRXm1h3r_8",
-      "title": "",
-      "scheduled_for": "2026-08-30T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/dGRXm1h3r_8",
-      "thumbnail": "https://img.youtube.com/vi/dGRXm1h3r_8/hqdefault.jpg",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "ok4BmjKSloo",
-      "title": "",
-      "scheduled_for": "2026-08-25T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/ok4BmjKSloo",
-      "thumbnail": "https://img.youtube.com/vi/ok4BmjKSloo/hqdefault.jpg",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "FITtZizm-X4",
-      "title": "Desculpe, preciso de mais detalhes sobre o vídeo para criar uma legenda adequada. Pode compartilhar mais informações?",
-      "scheduled_for": "2026-08-23T12:30:00-03:00",
-      "url": "https://youtube.com/shorts/FITtZizm-X4",
-      "thumbnail": "https://img.youtube.com/vi/FITtZizm-X4/hqdefault.jpg",
-      "views": 3,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
       "id": "MzYNPXbhEyQ",
       "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 1286,
+      "views": 1267,
       "likes": 17,
       "comments": 0,
       "subscribers_gained": 0
@@ -418,7 +363,7 @@
       "scheduled_for": "2026-08-18T12:30:00-03:00",
       "url": "https://youtube.com/shorts/tXXMO9_yPWI",
       "thumbnail": "https://img.youtube.com/vi/tXXMO9_yPWI/hqdefault.jpg",
-      "views": 1409,
+      "views": 1410,
       "likes": 12,
       "comments": 0,
       "subscribers_gained": 0
@@ -963,5 +908,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-19T12:00:38.883391-03:00"
+  "last_updated": "2026-08-19T12:36:05.828101-03:00"
 }
