@@ -50,6 +50,17 @@
       "subscribers_gained": 3
     },
     {
+      "id": "tXXMO9_yPWI",
+      "title": "Visual novo!! O que achou?",
+      "scheduled_for": "2026-08-18T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/tXXMO9_yPWI",
+      "thumbnail": "https://img.youtube.com/vi/tXXMO9_yPWI/hqdefault.jpg",
+      "views": 1412,
+      "likes": 12,
+      "comments": 0,
+      "subscribers_gained": 2
+    },
+    {
       "id": "egT0B1xN8rg",
       "title": "Muito obrigado por assistir #YouTube #Instagram #Reels",
       "scheduled_for": "2026-06-21T09:00:00-03:00",
@@ -352,19 +363,8 @@
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 1973,
-      "likes": 39,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "tXXMO9_yPWI",
-      "title": "Visual novo!! O que achou?",
-      "scheduled_for": "2026-08-18T12:30:00-03:00",
-      "url": "https://youtube.com/shorts/tXXMO9_yPWI",
-      "thumbnail": "https://img.youtube.com/vi/tXXMO9_yPWI/hqdefault.jpg",
-      "views": 1412,
-      "likes": 12,
+      "views": 2105,
+      "likes": 41,
       "comments": 0,
       "subscribers_gained": 0
     },
@@ -908,5 +908,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-20T15:21:37.149024-03:00"
+  "last_updated": "2026-08-20T16:08:36.718071-03:00"
 }
