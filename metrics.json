@@ -1,7 +1,7 @@
 {
   "channel": {
     "subscribers": 195,
-    "total_views": 206182,
+    "total_views": 206767,
     "video_count": 154
   },
   "videos": [
@@ -358,13 +358,156 @@
       "subscribers_gained": 1
     },
     {
+      "id": "dar9h_ZSAZY",
+      "title": "",
+      "scheduled_for": "2026-08-29T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
+      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "60G6XdpMNRM",
+      "title": "",
+      "scheduled_for": "2026-08-29T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/60G6XdpMNRM",
+      "thumbnail": "https://img.youtube.com/vi/60G6XdpMNRM/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "d_loiRMeH-0",
+      "title": "",
+      "scheduled_for": "2026-08-28T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/d_loiRMeH-0",
+      "thumbnail": "https://img.youtube.com/vi/d_loiRMeH-0/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "24IQfgkOMo4",
+      "title": "",
+      "scheduled_for": "2026-08-28T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/24IQfgkOMo4",
+      "thumbnail": "https://img.youtube.com/vi/24IQfgkOMo4/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "Augk5vx6IDM",
+      "title": "",
+      "scheduled_for": "2026-08-27T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/Augk5vx6IDM",
+      "thumbnail": "https://img.youtube.com/vi/Augk5vx6IDM/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "E_596P4MVhU",
+      "title": "",
+      "scheduled_for": "2026-08-27T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/E_596P4MVhU",
+      "thumbnail": "https://img.youtube.com/vi/E_596P4MVhU/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "ggCD1pLQhEw",
+      "title": "",
+      "scheduled_for": "2026-08-26T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/ggCD1pLQhEw",
+      "thumbnail": "https://img.youtube.com/vi/ggCD1pLQhEw/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "NzCBn3E1wjg",
+      "title": "",
+      "scheduled_for": "2026-08-26T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/NzCBn3E1wjg",
+      "thumbnail": "https://img.youtube.com/vi/NzCBn3E1wjg/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "CX3PuL0AYlc",
+      "title": "",
+      "scheduled_for": "2026-08-25T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/CX3PuL0AYlc",
+      "thumbnail": "https://img.youtube.com/vi/CX3PuL0AYlc/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "b0ApvL1krLg",
+      "title": "",
+      "scheduled_for": "2026-08-24T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/b0ApvL1krLg",
+      "thumbnail": "https://img.youtube.com/vi/b0ApvL1krLg/hqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "sCdCAMDU5jA",
+      "title": "",
+      "scheduled_for": "2026-08-24T12:30:00-03:00",
+      "url": "https://youtube.com/shorts/sCdCAMDU5jA",
+      "thumbnail": "https://img.youtube.com/vi/sCdCAMDU5jA/hqdefault.jpg",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "PZYh4oc_CrY",
+      "title": "",
+      "scheduled_for": "2026-08-23T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/PZYh4oc_CrY",
+      "thumbnail": "https://img.youtube.com/vi/PZYh4oc_CrY/hqdefault.jpg",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
+      "id": "xVVsLO-zl3A",
+      "title": "",
+      "scheduled_for": "2026-08-22T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/xVVsLO-zl3A",
+      "thumbnail": "https://img.youtube.com/vi/xVVsLO-zl3A/hqdefault.jpg",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 0
+    },
+    {
       "id": "MzYNPXbhEyQ",
       "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 3881,
-      "likes": 70,
+      "views": 3920,
+      "likes": 72,
       "comments": 0,
       "subscribers_gained": 0
     },
@@ -908,5 +1051,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-22T14:10:58.809784-03:00"
+  "last_updated": "2026-08-22T15:05:27.712538-03:00"
 }
