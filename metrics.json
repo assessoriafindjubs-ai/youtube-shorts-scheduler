@@ -369,17 +369,6 @@
       "subscribers_gained": 0
     },
     {
-      "id": "60G6XdpMNRM",
-      "title": "",
-      "scheduled_for": "2026-08-29T12:30:00-03:00",
-      "url": "https://youtube.com/shorts/60G6XdpMNRM",
-      "thumbnail": "https://img.youtube.com/vi/60G6XdpMNRM/hqdefault.jpg",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
       "id": "d_loiRMeH-0",
       "title": "",
       "scheduled_for": "2026-08-28T18:00:00-03:00",
@@ -484,7 +473,7 @@
       "scheduled_for": "2026-08-22T18:00:00-03:00",
       "url": "https://youtube.com/shorts/xVVsLO-zl3A",
       "thumbnail": "https://img.youtube.com/vi/xVVsLO-zl3A/hqdefault.jpg",
-      "views": 647,
+      "views": 948,
       "likes": 21,
       "comments": 0,
       "subscribers_gained": 0
@@ -1040,5 +1029,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-22T21:36:26.002927-03:00"
+  "last_updated": "2026-08-22T23:17:35.289843-03:00"
 }
