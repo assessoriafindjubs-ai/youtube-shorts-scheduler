@@ -193,6 +193,17 @@
       "subscribers_gained": 2
     },
     {
+      "id": "MzYNPXbhEyQ",
+      "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
+      "scheduled_for": "2026-08-18T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
+      "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
+      "views": 4382,
+      "likes": 80,
+      "comments": 0,
+      "subscribers_gained": 1
+    },
+    {
       "id": "bavaa1yucNU",
       "title": "Descubra o poder da transcrição automática com Pedro R #Transcrição #Legendas #EdiçãoDeVideo",
       "scheduled_for": "2026-07-01T12:30:00-03:00",
@@ -429,8 +440,8 @@
       "scheduled_for": "2026-08-25T12:30:00-03:00",
       "url": "https://youtube.com/shorts/CX3PuL0AYlc",
       "thumbnail": "https://img.youtube.com/vi/CX3PuL0AYlc/hqdefault.jpg",
-      "views": 648,
-      "likes": 10,
+      "views": 851,
+      "likes": 17,
       "comments": 0,
       "subscribers_gained": 0
     },
@@ -451,7 +462,7 @@
       "scheduled_for": "2026-08-23T18:00:00-03:00",
       "url": "https://youtube.com/shorts/PZYh4oc_CrY",
       "thumbnail": "https://img.youtube.com/vi/PZYh4oc_CrY/hqdefault.jpg",
-      "views": 939,
+      "views": 920,
       "likes": 14,
       "comments": 0,
       "subscribers_gained": 0
@@ -462,20 +473,9 @@
       "scheduled_for": "2026-08-22T18:00:00-03:00",
       "url": "https://youtube.com/shorts/xVVsLO-zl3A",
       "thumbnail": "https://img.youtube.com/vi/xVVsLO-zl3A/hqdefault.jpg",
-      "views": 2206,
-      "likes": 26,
+      "views": 2193,
+      "likes": 25,
       "comments": 1,
-      "subscribers_gained": 0
-    },
-    {
-      "id": "MzYNPXbhEyQ",
-      "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
-      "scheduled_for": "2026-08-18T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
-      "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 4382,
-      "likes": 80,
-      "comments": 0,
       "subscribers_gained": 0
     },
     {
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-25T15:22:09.080725-03:00"
+  "last_updated": "2026-08-25T16:06:25.263687-03:00"
 }
