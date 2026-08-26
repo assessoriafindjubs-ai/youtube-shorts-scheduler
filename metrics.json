@@ -1,7 +1,7 @@
 {
   "channel": {
-    "subscribers": 200,
-    "total_views": 211289,
+    "subscribers": 199,
+    "total_views": 212596,
     "video_count": 158
   },
   "videos": [
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-26T02:02:02.252348-03:00"
+  "last_updated": "2026-08-26T02:56:35.012395-03:00"
 }
