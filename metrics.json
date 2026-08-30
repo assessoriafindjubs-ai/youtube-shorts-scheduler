@@ -1,7 +1,7 @@
 {
   "channel": {
-    "subscribers": 209,
-    "total_views": 224277,
+    "subscribers": 210,
+    "total_views": 225515,
     "video_count": 166
   },
   "videos": [
@@ -100,7 +100,7 @@
       "url": "https://youtube.com/shorts/qz6Zq6NiOYI",
       "thumbnail": "https://img.youtube.com/vi/qz6Zq6NiOYI/hqdefault.jpg",
       "views": 1024,
-      "likes": 17,
+      "likes": 16,
       "comments": 0,
       "subscribers_gained": 2
     },
@@ -209,7 +209,7 @@
       "scheduled_for": "2026-08-27T12:30:00-03:00",
       "url": "https://youtube.com/shorts/E_596P4MVhU",
       "thumbnail": "https://img.youtube.com/vi/E_596P4MVhU/hqdefault.jpg",
-      "views": 1970,
+      "views": 1989,
       "likes": 29,
       "comments": 1,
       "subscribers_gained": 1
@@ -407,8 +407,8 @@
       "scheduled_for": "2026-08-29T18:00:00-03:00",
       "url": "https://youtube.com/shorts/dar9h_ZSAZY",
       "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
-      "views": 1005,
-      "likes": 23,
+      "views": 1285,
+      "likes": 27,
       "comments": 1,
       "subscribers_gained": 0
     },
@@ -418,7 +418,7 @@
       "scheduled_for": "2026-08-28T18:00:00-03:00",
       "url": "https://youtube.com/shorts/d_loiRMeH-0",
       "thumbnail": "https://img.youtube.com/vi/d_loiRMeH-0/hqdefault.jpg",
-      "views": 1030,
+      "views": 1031,
       "likes": 3,
       "comments": 0,
       "subscribers_gained": 0
@@ -440,7 +440,7 @@
       "scheduled_for": "2026-08-27T18:00:00-03:00",
       "url": "https://youtube.com/shorts/Augk5vx6IDM",
       "thumbnail": "https://img.youtube.com/vi/Augk5vx6IDM/hqdefault.jpg",
-      "views": 1454,
+      "views": 1458,
       "likes": 7,
       "comments": 1,
       "subscribers_gained": 0
@@ -451,7 +451,7 @@
       "scheduled_for": "2026-08-26T18:00:00-03:00",
       "url": "https://youtube.com/shorts/ggCD1pLQhEw",
       "thumbnail": "https://img.youtube.com/vi/ggCD1pLQhEw/hqdefault.jpg",
-      "views": 2360,
+      "views": 2369,
       "likes": 24,
       "comments": 0,
       "subscribers_gained": 0
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-29T23:07:59.570766-03:00"
+  "last_updated": "2026-08-30T05:24:53.035161-03:00"
 }
