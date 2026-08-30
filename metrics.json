@@ -1,8 +1,8 @@
 {
   "channel": {
-    "subscribers": 210,
-    "total_views": 225515,
-    "video_count": 166
+    "subscribers": 211,
+    "total_views": 225674,
+    "video_count": 167
   },
   "videos": [
     {
@@ -209,7 +209,7 @@
       "scheduled_for": "2026-08-27T12:30:00-03:00",
       "url": "https://youtube.com/shorts/E_596P4MVhU",
       "thumbnail": "https://img.youtube.com/vi/E_596P4MVhU/hqdefault.jpg",
-      "views": 1994,
+      "views": 2003,
       "likes": 29,
       "comments": 1,
       "subscribers_gained": 1
@@ -242,7 +242,7 @@
       "scheduled_for": "2026-07-01T12:30:00-03:00",
       "url": "https://youtube.com/shorts/bavaa1yucNU",
       "thumbnail": "https://img.youtube.com/vi/bavaa1yucNU/hqdefault.jpg",
-      "views": 949,
+      "views": 950,
       "likes": 2,
       "comments": 0,
       "subscribers_gained": 1
@@ -407,8 +407,8 @@
       "scheduled_for": "2026-08-29T18:00:00-03:00",
       "url": "https://youtube.com/shorts/dar9h_ZSAZY",
       "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
-      "views": 1304,
-      "likes": 28,
+      "views": 1328,
+      "likes": 32,
       "comments": 1,
       "subscribers_gained": 0
     },
@@ -429,7 +429,7 @@
       "scheduled_for": "2026-08-28T12:30:00-03:00",
       "url": "https://youtube.com/shorts/24IQfgkOMo4",
       "thumbnail": "https://img.youtube.com/vi/24IQfgkOMo4/hqdefault.jpg",
-      "views": 1248,
+      "views": 1253,
       "likes": 11,
       "comments": 0,
       "subscribers_gained": 0
@@ -440,7 +440,7 @@
       "scheduled_for": "2026-08-27T18:00:00-03:00",
       "url": "https://youtube.com/shorts/Augk5vx6IDM",
       "thumbnail": "https://img.youtube.com/vi/Augk5vx6IDM/hqdefault.jpg",
-      "views": 1460,
+      "views": 1464,
       "likes": 7,
       "comments": 1,
       "subscribers_gained": 0
@@ -451,7 +451,7 @@
       "scheduled_for": "2026-08-26T18:00:00-03:00",
       "url": "https://youtube.com/shorts/ggCD1pLQhEw",
       "thumbnail": "https://img.youtube.com/vi/ggCD1pLQhEw/hqdefault.jpg",
-      "views": 2369,
+      "views": 2373,
       "likes": 24,
       "comments": 0,
       "subscribers_gained": 0
@@ -517,7 +517,7 @@
       "scheduled_for": "2026-07-03T12:30:00-03:00",
       "url": "https://youtube.com/shorts/JMuc9oyseYQ",
       "thumbnail": "https://img.youtube.com/vi/JMuc9oyseYQ/hqdefault.jpg",
-      "views": 157,
+      "views": 159,
       "likes": 0,
       "comments": 0,
       "subscribers_gained": 0
@@ -528,7 +528,7 @@
       "scheduled_for": "2026-07-03T09:00:00-03:00",
       "url": "https://youtube.com/shorts/fo-KjD8UXUA",
       "thumbnail": "https://img.youtube.com/vi/fo-KjD8UXUA/hqdefault.jpg",
-      "views": 163,
+      "views": 164,
       "likes": 1,
       "comments": 0,
       "subscribers_gained": 0
@@ -539,7 +539,7 @@
       "scheduled_for": "2026-07-02T18:00:00-03:00",
       "url": "https://youtube.com/shorts/AXjwrSYJ8L8",
       "thumbnail": "https://img.youtube.com/vi/AXjwrSYJ8L8/hqdefault.jpg",
-      "views": 138,
+      "views": 139,
       "likes": 0,
       "comments": 0,
       "subscribers_gained": 0
@@ -550,7 +550,7 @@
       "scheduled_for": "2026-07-02T09:00:00-03:00",
       "url": "https://youtube.com/shorts/Nh8EO_tPGmI",
       "thumbnail": "https://img.youtube.com/vi/Nh8EO_tPGmI/hqdefault.jpg",
-      "views": 75,
+      "views": 76,
       "likes": 0,
       "comments": 0,
       "subscribers_gained": 0
@@ -594,7 +594,7 @@
       "scheduled_for": "2026-06-29T12:30:00-03:00",
       "url": "https://youtube.com/shorts/awXtUGnfOeE",
       "thumbnail": "https://img.youtube.com/vi/awXtUGnfOeE/hqdefault.jpg",
-      "views": 1127,
+      "views": 1129,
       "likes": 10,
       "comments": 0,
       "subscribers_gained": 0
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-08-30T10:52:10.902326-03:00"
+  "last_updated": "2026-08-30T14:49:39.343197-03:00"
 }
