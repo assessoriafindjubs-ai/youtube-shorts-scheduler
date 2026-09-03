@@ -17,6 +17,17 @@
       "subscribers_gained": 4
     },
     {
+      "id": "dar9h_ZSAZY",
+      "title": "",
+      "scheduled_for": "2026-08-29T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
+      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
+      "views": 6368,
+      "likes": 183,
+      "comments": 2,
+      "subscribers_gained": 3
+    },
+    {
       "id": "hQrYjC00rDc",
       "title": "Não deixe que ninguém desmereça o seu processo #Motivação #Autoestima #EvoluçãoPessoal",
       "scheduled_for": "2026-05-15T09:00:00-03:00",
@@ -48,17 +59,6 @@
       "likes": 28,
       "comments": 0,
       "subscribers_gained": 3
-    },
-    {
-      "id": "dar9h_ZSAZY",
-      "title": "",
-      "scheduled_for": "2026-08-29T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
-      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
-      "views": 6360,
-      "likes": 183,
-      "comments": 2,
-      "subscribers_gained": 2
     },
     {
       "id": "PZYh4oc_CrY",
@@ -451,7 +451,7 @@
       "scheduled_for": "2026-08-27T18:00:00-03:00",
       "url": "https://youtube.com/shorts/Augk5vx6IDM",
       "thumbnail": "https://img.youtube.com/vi/Augk5vx6IDM/hqdefault.jpg",
-      "views": 1513,
+      "views": 1514,
       "likes": 7,
       "comments": 1,
       "subscribers_gained": 0
@@ -561,7 +561,7 @@
       "scheduled_for": "2026-06-30T12:30:00-03:00",
       "url": "https://youtube.com/shorts/XVaIM51X7jA",
       "thumbnail": "https://img.youtube.com/vi/XVaIM51X7jA/hqdefault.jpg",
-      "views": 995,
+      "views": 994,
       "likes": 4,
       "comments": 0,
       "subscribers_gained": 0
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-03T06:58:20.446388-03:00"
+  "last_updated": "2026-09-03T17:14:55.978345-03:00"
 }
