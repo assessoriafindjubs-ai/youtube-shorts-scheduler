@@ -1,21 +1,10 @@
 {
   "channel": {
-    "subscribers": 223,
-    "total_views": 236276,
-    "video_count": 170
+    "subscribers": 224,
+    "total_views": 236398,
+    "video_count": 169
   },
   "videos": [
-    {
-      "id": "dar9h_ZSAZY",
-      "title": "",
-      "scheduled_for": "2026-08-29T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
-      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
-      "views": 6205,
-      "likes": 182,
-      "comments": 2,
-      "subscribers_gained": 8
-    },
     {
       "id": "WUTVU7fMvhw",
       "title": "Momento de reflexão #Esperança #Motivação #Fé",
@@ -59,6 +48,17 @@
       "likes": 28,
       "comments": 0,
       "subscribers_gained": 3
+    },
+    {
+      "id": "dar9h_ZSAZY",
+      "title": "",
+      "scheduled_for": "2026-08-29T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
+      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
+      "views": 6360,
+      "likes": 183,
+      "comments": 2,
+      "subscribers_gained": 2
     },
     {
       "id": "PZYh4oc_CrY",
@@ -473,7 +473,7 @@
       "scheduled_for": "2026-08-22T18:00:00-03:00",
       "url": "https://youtube.com/shorts/xVVsLO-zl3A",
       "thumbnail": "https://img.youtube.com/vi/xVVsLO-zl3A/hqdefault.jpg",
-      "views": 2497,
+      "views": 2499,
       "likes": 26,
       "comments": 1,
       "subscribers_gained": 0
@@ -539,7 +539,7 @@
       "scheduled_for": "2026-07-02T18:00:00-03:00",
       "url": "https://youtube.com/shorts/AXjwrSYJ8L8",
       "thumbnail": "https://img.youtube.com/vi/AXjwrSYJ8L8/hqdefault.jpg",
-      "views": 140,
+      "views": 143,
       "likes": 0,
       "comments": 0,
       "subscribers_gained": 0
@@ -561,7 +561,7 @@
       "scheduled_for": "2026-06-30T12:30:00-03:00",
       "url": "https://youtube.com/shorts/XVaIM51X7jA",
       "thumbnail": "https://img.youtube.com/vi/XVaIM51X7jA/hqdefault.jpg",
-      "views": 994,
+      "views": 995,
       "likes": 4,
       "comments": 0,
       "subscribers_gained": 0
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-02T19:43:01.664362-03:00"
+  "last_updated": "2026-09-03T06:58:20.446388-03:00"
 }
