@@ -6,6 +6,17 @@
   },
   "videos": [
     {
+      "id": "dar9h_ZSAZY",
+      "title": "",
+      "scheduled_for": "2026-08-29T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
+      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
+      "views": 6380,
+      "likes": 183,
+      "comments": 2,
+      "subscribers_gained": 4
+    },
+    {
       "id": "WUTVU7fMvhw",
       "title": "Momento de reflexão #Esperança #Motivação #Fé",
       "scheduled_for": "2026-05-26T21:00:00-03:00",
@@ -15,17 +26,6 @@
       "likes": 26,
       "comments": 0,
       "subscribers_gained": 4
-    },
-    {
-      "id": "dar9h_ZSAZY",
-      "title": "",
-      "scheduled_for": "2026-08-29T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/dar9h_ZSAZY",
-      "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
-      "views": 6380,
-      "likes": 183,
-      "comments": 2,
-      "subscribers_gained": 3
     },
     {
       "id": "hQrYjC00rDc",
@@ -275,7 +275,7 @@
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 6332,
+      "views": 6381,
       "likes": 96,
       "comments": 0,
       "subscribers_gained": 1
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-04T14:14:30.162871-03:00"
+  "last_updated": "2026-09-04T16:43:57.691910-03:00"
 }
