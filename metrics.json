@@ -17,6 +17,17 @@
       "subscribers_gained": 4
     },
     {
+      "id": "MzYNPXbhEyQ",
+      "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
+      "scheduled_for": "2026-08-18T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
+      "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
+      "views": 7389,
+      "likes": 131,
+      "comments": 1,
+      "subscribers_gained": 4
+    },
+    {
       "id": "WUTVU7fMvhw",
       "title": "Momento de reflexão #Esperança #Motivação #Fé",
       "scheduled_for": "2026-05-26T21:00:00-03:00",
@@ -68,17 +79,6 @@
       "thumbnail": "https://img.youtube.com/vi/PZYh4oc_CrY/hqdefault.jpg",
       "views": 1304,
       "likes": 15,
-      "comments": 0,
-      "subscribers_gained": 2
-    },
-    {
-      "id": "MzYNPXbhEyQ",
-      "title": "O emagrecimento parece difícil e impossível, mas o resultado é maravilhoso.",
-      "scheduled_for": "2026-08-18T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
-      "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 7299,
-      "likes": 121,
       "comments": 0,
       "subscribers_gained": 2
     },
@@ -561,7 +561,7 @@
       "scheduled_for": "2026-06-30T12:30:00-03:00",
       "url": "https://youtube.com/shorts/XVaIM51X7jA",
       "thumbnail": "https://img.youtube.com/vi/XVaIM51X7jA/hqdefault.jpg",
-      "views": 995,
+      "views": 996,
       "likes": 4,
       "comments": 0,
       "subscribers_gained": 0
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-07T14:59:08.909690-03:00"
+  "last_updated": "2026-09-07T18:07:58.749650-03:00"
 }
