@@ -1,6 +1,6 @@
 {
   "channel": {
-    "subscribers": 227,
+    "subscribers": 228,
     "total_views": 243209,
     "video_count": 172
   },
@@ -11,7 +11,7 @@
       "scheduled_for": "2026-08-29T18:00:00-03:00",
       "url": "https://youtube.com/shorts/dar9h_ZSAZY",
       "thumbnail": "https://img.youtube.com/vi/dar9h_ZSAZY/hqdefault.jpg",
-      "views": 6396,
+      "views": 6397,
       "likes": 182,
       "comments": 2,
       "subscribers_gained": 10
@@ -22,7 +22,7 @@
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 8081,
+      "views": 8103,
       "likes": 151,
       "comments": 1,
       "subscribers_gained": 4
@@ -561,7 +561,7 @@
       "scheduled_for": "2026-06-30T12:30:00-03:00",
       "url": "https://youtube.com/shorts/XVaIM51X7jA",
       "thumbnail": "https://img.youtube.com/vi/XVaIM51X7jA/hqdefault.jpg",
-      "views": 996,
+      "views": 997,
       "likes": 4,
       "comments": 0,
       "subscribers_gained": 0
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-12T20:31:14.201182-03:00"
+  "last_updated": "2026-09-12T22:48:43.805712-03:00"
 }
