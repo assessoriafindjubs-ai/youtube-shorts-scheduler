@@ -1,6 +1,6 @@
 {
   "channel": {
-    "subscribers": 234,
+    "subscribers": 225,
     "total_views": 246683,
     "video_count": 173
   },
@@ -595,7 +595,7 @@
       "url": "https://youtube.com/shorts/awXtUGnfOeE",
       "thumbnail": "https://img.youtube.com/vi/awXtUGnfOeE/hqdefault.jpg",
       "views": 1135,
-      "likes": 10,
+      "likes": 9,
       "comments": 0,
       "subscribers_gained": 0
     },
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-20T04:49:29.121404-03:00"
+  "last_updated": "2026-09-20T09:43:14.146890-03:00"
 }
