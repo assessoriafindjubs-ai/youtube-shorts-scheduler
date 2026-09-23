@@ -202,7 +202,8 @@ def download_video(drive, file_id: str, dest: str):
 
 
 # ── Legenda com IA ───────────────────────────────────────────────────────────
-SILENT_CAPTION = "Me segue #emagrecimento"
+CAPTION_SUFFIX  = "\nMe segue pra acompanhar!"
+SILENT_CAPTION  = "Me segue #emagrecimento" + CAPTION_SUFFIX
 
 def transcribe_video(video_path: str, groq_client: Groq) -> str:
     """Extrai áudio do vídeo e transcreve com Whisper. Retorna '' se mudo."""
@@ -275,7 +276,8 @@ def generate_caption(video_path: str, groq_client: Groq) -> str:
         max_tokens=150,
         temperature=0.85,
     )
-    return resp.choices[0].message.content.strip()
+    caption = resp.choices[0].message.content.strip()
+    return caption + CAPTION_SUFFIX
 
 
 # ── Otimização de vídeo para Shorts ─────────────────────────────────────────
