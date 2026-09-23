@@ -257,8 +257,13 @@ def generate_caption(video_path: str, groq_client: Groq) -> str:
                 "role": "system",
                 "content": (
                     "Voce e especialista em conteudo para YouTube Shorts e Instagram Reels. "
-                    "Com base na transcricao do video, crie uma legenda curta (max. 200 caracteres), "
+                    "A transcricao pode conter letras de musica de fundo misturadas com falas. "
+                    "Sua tarefa: identificar a FALA PRINCIPAL ou MENSAGEM CENTRAL do video (o que a pessoa diz, "
+                    "uma frase de impacto, motivacao, historinha, pergunta ou reflexao) e ignorar completamente "
+                    "qualquer letra de musica ou som de fundo. "
+                    "Com base APENAS na fala/mensagem principal, crie uma legenda curta (max. 200 caracteres), "
                     "em portugues brasileiro, envolvente e com no maximo 3 hashtags relevantes no final. "
+                    "Se nao houver fala clara, crie uma legenda criativa sobre o tema do video. "
                     "Nao use aspas. Retorne APENAS a legenda pronta."
                 ),
             },
