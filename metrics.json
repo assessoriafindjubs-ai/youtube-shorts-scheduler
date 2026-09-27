@@ -1,7 +1,7 @@
 {
   "channel": {
     "subscribers": 235,
-    "total_views": 249332,
+    "total_views": 249338,
     "video_count": 175
   },
   "videos": [
@@ -22,7 +22,7 @@
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 8419,
+      "views": 8421,
       "likes": 158,
       "comments": 1,
       "subscribers_gained": 7
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-09-27T02:56:37.920330-03:00"
+  "last_updated": "2026-09-27T08:05:47.832942-03:00"
 }
