@@ -1,7 +1,7 @@
 {
   "channel": {
     "subscribers": 236,
-    "total_views": 249552,
+    "total_views": 249565,
     "video_count": 176
   },
   "videos": [
@@ -22,7 +22,7 @@
       "scheduled_for": "2026-08-18T18:00:00-03:00",
       "url": "https://youtube.com/shorts/MzYNPXbhEyQ",
       "thumbnail": "https://img.youtube.com/vi/MzYNPXbhEyQ/hqdefault.jpg",
-      "views": 8508,
+      "views": 8512,
       "likes": 158,
       "comments": 1,
       "subscribers_gained": 7
@@ -398,6 +398,17 @@
       "thumbnail": "https://img.youtube.com/vi/uL23LfPTQAg/hqdefault.jpg",
       "views": 51,
       "likes": 0,
+      "comments": 0,
+      "subscribers_gained": 1
+    },
+    {
+      "id": "KtZU2lVnU5M",
+      "title": "Medo não é opção! #Coragem #VidaReal #Inspiração",
+      "scheduled_for": "2026-05-25T18:00:00-03:00",
+      "url": "https://youtube.com/shorts/KtZU2lVnU5M",
+      "thumbnail": "https://img.youtube.com/vi/KtZU2lVnU5M/hqdefault.jpg",
+      "views": 2786,
+      "likes": 11,
       "comments": 0,
       "subscribers_gained": 1
     },
@@ -941,17 +952,6 @@
       "subscribers_gained": 0
     },
     {
-      "id": "KtZU2lVnU5M",
-      "title": "Medo não é opção! #Coragem #VidaReal #Inspiração",
-      "scheduled_for": "2026-05-25T18:00:00-03:00",
-      "url": "https://youtube.com/shorts/KtZU2lVnU5M",
-      "thumbnail": "https://img.youtube.com/vi/KtZU2lVnU5M/hqdefault.jpg",
-      "views": 2786,
-      "likes": 11,
-      "comments": 0,
-      "subscribers_gained": 0
-    },
-    {
       "id": "ouYogtf1l30",
       "title": "Criatividade em ação com Sonia Ruberti #arte #criatividade #inspiracao",
       "scheduled_for": "2026-05-24T18:00:00-03:00",
@@ -1018,5 +1018,5 @@
       "subscribers_gained": 0
     }
   ],
-  "last_updated": "2026-10-17T15:37:26.274311-03:00"
+  "last_updated": "2026-10-17T18:07:40.425084-03:00"
 }
